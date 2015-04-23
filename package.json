@@ -1,0 +1,11 @@
+{
+  "name": "prionailurus",
+  "version": "0.0.1",
+  "description": "石虎專題",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pomin Wu <pomin5@gmail.com>",
+  "license": "MIT"
+}
