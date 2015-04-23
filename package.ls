@@ -1,6 +1,6 @@
 name: "prionailurus"
 version: "0.0.1"
-description: "石虎"
+description: "石虎相關資料"
 private: true
 scripts:
   env: "env"
