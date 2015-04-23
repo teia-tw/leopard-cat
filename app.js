@@ -14,7 +14,8 @@
   map = L.map("map").addLayer(osmLayer()).addLayer(markerLayer);
   addMarker = function(layer){
     return function(it){
-      var x;
+      var time, x;
+      time = it.CollectedDateTime.format('YYYY-MM-DD HH:mm:ss+01');
       return L.marker((function(){
         var i$, ref$, len$, results$ = [];
         for (i$ = 0, len$ = (ref$ = ['Latitude', 'Longitude']).length; i$ < len$; ++i$) {
@@ -23,8 +24,8 @@
         }
         return results$;
       }()), {
-        time: it.CollectedDateTime.format('YYYY-MM-DD HH:mm:ss+01')
-      }).bindPopup(it.CollectedDateTime).addTo(layer);
+        time: time
+      }).bindPopup(time).addTo(layer);
     };
   };
   addPoint = addMarker(markerLayer);
