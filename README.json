@@ -1,0 +1,12 @@
+{
+  "datasources": [
+    {
+      "name": "林務局- 跨單位物種查詢平台",
+      "link": "http://ngismap.forest.gov.tw/speciesquery/TopicImage.aspx"
+    },
+    {
+      "name": "特生中心 - 台灣野生動物資料庫",
+      "link": "http://www.tbn.org.tw/twd97/SpeciesDetail.asp?id=MCFe0101&SDay=&LDay=&county=&town=&MapKind=http://www.tbn.org.tw/twd97/SpeciesDetail.asp?id=MCFe0101&SDay=&LDay=&county=&town=&MapKind="
+    }
+  ]
+}
