@@ -1,0 +1,53 @@
+{
+  "permalink": "http://www.taibif.tw/zh/namecode/416107",
+  "name": "Prionailurus bengalensis (Kerr, 1792)",
+  "name_zhtw": "石虎",
+  "hierarchy": {
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Mammalia",
+    "order": "Carnivora",
+    "family": "Felidae",
+    "genus": "Prionailurus",
+    "species": "Prionailurus bengalensis (Kerr, 1792)"
+  },
+  "distribution": {
+    "download": "http://www.taibif.tw/zh/namecode/416107#test_sarnia_view"
+  },
+  "images": {
+    "10257921_10200845730465416_554160647587371886_o.jpg": {
+      "path": "http://eoldata.taibif.tw/files/eoldata/imagecache/taibif_big/images/1/10257921_10200845730465416_554160647587371886_o.jpg",
+      "alt": "石虎,華南豹貓,豹貓,山貓,金錢貓",
+      "title": "石虎",
+      "author": "余建勳",
+      "license": "BY-NC-SA",
+      "attributes": {
+        "data-description": "Author: 余建勳, CC BY-NC-SA, From: http://eol.taibif.tw/taieol/416107"
+      }
+    },
+    "10250764_10200862624607759_2126593842_n.jpg": {
+      "path": "http://eoldata.taibif.tw/files/eoldata/imagecache/taibif_big/images/1/10250764_10200862624607759_2126593842_n.jpg",
+      "alt": "石虎,華南豹貓,豹貓,山貓,金錢貓",
+      "title": "石虎",
+      "author": "余建勳",
+      "license": "BY-NC-SA",
+      "attributes": {
+        "data-description": "Author: 余建勳, CC BY-NC-SA, From: http://eol.taibif.tw/taieol/416107"
+      }
+    },
+    "1655810_760262613998969_1895458491571755383_o.jpg": {
+      "path": "http://eoldata.taibif.tw/files/eoldata/imagecache/taibif_big/images/1/1655810_760262613998969_1895458491571755383_o.jpg",
+      "alt": "石虎,華南豹貓,豹貓,山貓,金錢貓",
+      "title": "石虎",
+      "author": "陳桂珠",
+      "license": "BY-NC-SA",
+      "attributes": {
+        "data-description": "Author: 陳桂珠, CC BY-NC-SA, From: http://eol.taibif.tw/taieol/416107"
+      }
+    }
+  },
+  "description": "頭體長55～65公分，尾長27～30公分，體重3～6公斤。體形似家貓而略大，又稱山貓。頭圓吻短，軀幹圓長，體色為灰褐色，具黑褐色點狀斑，亦有金錢貓、華南豹貓之稱呼。額頭有兩條灰白色縱帶，耳後黑底有一塊圓白斑，為其最明顯的特徵，可與家貓或野貓區分之，尾部具有15-18個半環狀斑紋。夜視力佳、聽覺敏銳、犬齒發達，齒式：門齒3/3，犬齒1/1，前臼齒3/2，臼齒1/1；全齒數= 30。",
+  "author": "鄭錫奇",
+  "provider": "臺灣生命大百科",
+  "license": "CC BY-NC"
+}
