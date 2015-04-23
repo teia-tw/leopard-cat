@@ -11,8 +11,9 @@ map = L.map "map"
 
 addMarker = (layer) ->
   ->
-    L.marker [it[x] for x in <[Latitude Longitude]>], {time: it.CollectedDateTime.format 'YYYY-MM-DD HH:mm:ss+01'}
-      .bindPopup it.CollectedDateTime
+    time = it.CollectedDateTime.format 'YYYY-MM-DD HH:mm:ss+01'
+    L.marker [it[x] for x in <[Latitude Longitude]>], {time}
+      .bindPopup time
       .addTo layer
 addPoint = addMarker markerLayer
 
