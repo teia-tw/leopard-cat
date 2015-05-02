@@ -19,11 +19,23 @@ addPoint = addMarker markerLayer
 
 topicAnimal <- $.get "topic_animal.csv"
 err, data <- $.csv.toObjects topicAnimal, {}
-
 console.log err if err
 [ d for d in data when d.CollectedDateTime and +d['iPrecision '] > 0 ]
   .map ->
     it.CollectedDateTime = moment it.CollectedDateTime
+    it
+  .sort (a, b) ->
+    a.CollectedDateTime.valueOf! - b.CollectedDateTime.valueOf!
+  .forEach -> addPoint it
+
+roadKill <- $.get "roadkill.csv"
+err, data <- $.csv.toObjects roadKill, {}
+console.log err if err
+[ d for d in data ]
+  .map ->
+    it.CollectedDateTime = moment it.ObserveDate
+    it.Latitude = it.WGS84Lat
+    it.Longitude = it.WGS84Lon
     it
   .sort (a, b) ->
     a.CollectedDateTime.valueOf! - b.CollectedDateTime.valueOf!
