@@ -52,8 +52,33 @@
       }).forEach(function(it){
         return addPoint(it);
       });
-      map.addControl(sliderControl).setView([24.5, 121], 10);
-      return sliderControl.startSlider();
+      return $.get("roadkill.csv", function(roadKill){
+        return $.csv.toObjects(roadKill, {}, function(err, data){
+          var d;
+          if (err) {
+            console.log(err);
+          }
+          (function(){
+            var i$, ref$, len$, results$ = [];
+            for (i$ = 0, len$ = (ref$ = data).length; i$ < len$; ++i$) {
+              d = ref$[i$];
+              results$.push(d);
+            }
+            return results$;
+          }()).map(function(it){
+            it.CollectedDateTime = moment(it.ObserveDate);
+            it.Latitude = it.WGS84Lat;
+            it.Longitude = it.WGS84Lon;
+            return it;
+          }).sort(function(a, b){
+            return a.CollectedDateTime.valueOf() - b.CollectedDateTime.valueOf();
+          }).forEach(function(it){
+            return addPoint(it);
+          });
+          map.addControl(sliderControl).setView([24.5, 121], 10);
+          return sliderControl.startSlider();
+        });
+      });
     });
   });
 }).call(this);
