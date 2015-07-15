@@ -2,6 +2,8 @@ doctype
 html
   head
     title Timeline
+    if env === "dev"
+      script(src="//localhost:9090/")
   body
     #timeline
     script(src="timeline.js")
