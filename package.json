@@ -6,6 +6,7 @@
   "scripts": {
     "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "update:data": "sh script/update-timeline",
     "build:data": "copyup src/**/*.json src/**/*.csv public/data",
     "build:vendor": "npm run vendor:css && npm run vendor:asset",
     "vendor:css": "cssmin node_modules/leaflet/dist/leaflet.css > public/vendor.css",
@@ -16,9 +17,10 @@
     "build:asset": "true",
     "dev:html": "npm run build:html -- -w -O '{env:\"dev\"}' -P",
     "build:html": "jade -o public/ src/*.jade",
-    "dev:js": "watch 'browserify -do public/app.js src/app.js' src",
-    "build:js": "browserify -o public/app.js src/app.js",
+    "dev:js": "watch 'npm run build:js' src",
+    "build:js": "parallelshell 'browserify -o public/app.js src/app.js' 'browserify -o public/timeline.js src/timeline.js'",
     "livereload": "live-reload --port 9090 public/",
+    "update": "npm run update:data",
     "serve": "http-server public/",
     "dev": "rimraf public && parallelshell 'npm run build:data' 'npm run build:vendor' 'npm run dev:html' 'npm run dev:css' 'npm run dev:js' 'npm run dev:asset' 'npm run livereload' 'npm run serve'",
     "build": "rimraf public && parallelshell 'npm run build:data' 'npm run build:vendor' 'npm run build:html' 'npm run build:css' 'npm run build:js' 'npm run build:asset'"
