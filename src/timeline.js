@@ -8,9 +8,7 @@ function timeline (selection) {
   var height
   var margin = { top: 0, right: 0, bottom: 0, left: 30 }
 
-  //d3.csv('/data/timeline.csv', function (err, data) {
-  d3.csv('https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv', function (err, data) {
-    console.log(data)
+  d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv', function (err, data) {
     height = data.length * 100
 
     var svg = selection.append('svg')
