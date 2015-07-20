@@ -22,8 +22,8 @@
     "livereload": "live-reload --port 9090 public/",
     "update": "npm run update:data",
     "serve": "http-server public/",
-    "dev": "rimraf public && parallelshell 'npm run build:data' 'npm run build:vendor' 'npm run dev:html' 'npm run dev:css' 'npm run dev:js' 'npm run dev:asset' 'npm run livereload' 'npm run serve'",
-    "build": "rimraf public && parallelshell 'npm run build:data' 'npm run build:vendor' 'npm run build:html' 'npm run build:css' 'npm run build:js' 'npm run build:asset'",
+    "dev": "rimraf public/* && parallelshell 'npm run build:data' 'npm run build:vendor' 'npm run dev:html' 'npm run dev:css' 'npm run dev:js' 'npm run dev:asset' 'npm run livereload' 'npm run serve'",
+    "build": "rimraf public/* && parallelshell 'npm run build:data' 'npm run build:vendor' 'npm run build:html' 'npm run build:css' 'npm run build:js' 'npm run build:asset'",
     "deploy": "npm run build && git-directory-deploy --directory public/"
   },
   "author": "Pomin Wu <pomin5@gmail.com>",

@@ -9,7 +9,7 @@ function timeline (selection) {
   var margin = { top: 0, right: 0, bottom: 0, left: 30 }
 
   d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv', function (err, data) {
-    height = data.length * 100
+    height = data.length * 120
 
     var svg = selection.append('svg')
       .attr('width', width + margin.left + margin.right)
@@ -39,7 +39,7 @@ function timeline (selection) {
       .data(nodes)
     .enter().append('g')
       .attr('class', 'event')
-      .attr('transform', function (d) { return 'translate(0,' + (d.x + 20) + ')' })
+      .attr('transform', function (d) { return 'translate(0,' + (d.x + 10) + ')' })
 
     node.append('circle')
       .attr('r', 5)

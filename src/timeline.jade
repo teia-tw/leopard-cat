@@ -4,6 +4,15 @@ html
     title Timeline
     if env === "dev"
       script(src="//localhost:9090/")
+    style.
+      #timeline {
+        position: relative;
+      }
+
+      #timeline .content h3 {
+        margin-top: 0px;
+        font-size: 20px;
+      }
   body
     #timeline
     script(src="timeline.js")
