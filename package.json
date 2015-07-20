@@ -30,7 +30,6 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^5.2.0",
     "browserify": "^10.2.6",
     "copyfiles": "^0.2.1",
     "cssmin": "^0.4.3",
