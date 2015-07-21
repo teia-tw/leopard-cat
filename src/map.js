@@ -1,64 +1,39 @@
 'use strict'
 
-var L = require('leaflet')
-L.Icon.Default.imagePath = '/assets/leaflet/dist/images/'
-
 var d3 = require('d3')
-var moment = require('moment')
+var topojson = require('topojson')
 
-var osmLayer = function () {
-  return L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  })
-}
+var map = function (selection) {
+  var width = 800
+  var height = 600
+  var margin = { top: 0, right: 0, bottom: 0, left: 0 }
 
-var markerLayer = L.layerGroup()
-L.map('map')
-  .addLayer(osmLayer())
-  .addLayer(markerLayer)
-  .setView([24, 121], 8)
+  function draw (selection) {
+    d3.json('data/twCounty2010.topo.json', function (err, data) {
+      if (err) {
+        console.error('Error retrieving topojson: %s', err)
+        return
+      }
+      var topo = topojson.feature(data, data.objects['layer1'])
+      var projection = d3.geo.mercator().center([120.979, 23.978]).scale(5000)
+      var path = d3.geo.path().projection(projection)
 
-var addMarker = function (layer) {
-  return function (it) {
-    var time = it.CollectedDateTime.format('YYYY-MM-DD HH:mm:ss+01')
-    return L.marker(
-      ['Latitude', 'Longitude'].map(function (x) { return it[x] })
-    ).bindPopup(time).addTo(layer)
-  }
-}
+      var svg = selection.append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+      .append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
-var addPoint = addMarker(markerLayer)
-
-d3.csv('data/topic_animal.csv', function (err, topicAnimal) {
-  if (err) {
-    return console.log(err)
-  }
-  topicAnimal
-    .filter(function (d) {
-      return d.CollectedDateTime && +d['iPrecision '] > 0
-    }).map(function (it) {
-    it.CollectedDateTime = moment(it.CollectedDateTime)
-    return it
-  }).sort(function (a, b) {
-    return a.CollectedDateTime.valueOf() - b.CollectedDateTime.valueOf()
-  }).forEach(function (it) {
-    return addPoint(it)
-  })
-
-  return d3.csv('data/roadkill.csv', function (err, roadKill) {
-    if (err) {
-      return console.log(err)
-    }
-    roadKill
-      .map(function (it) {
-        it.CollectedDateTime = moment(it.ObserveDate)
-        it.Latitude = it.WGS84Lat
-        it.Longitude = it.WGS84Lon
-        return it
-      }).sort(function (a, b) {
-      return a.CollectedDateTime.valueOf() - b.CollectedDateTime.valueOf()
-    }).forEach(function (it) {
-      return addPoint(it)
+      var county = svg.selectAll('path')
+        .data(topo.features)
+      .enter().append('path')
+        .attr('d', path)
+        .attr('fill', 'green')
     })
-  })
-})
+  }
+
+  return draw
+}
+
+d3.select('.map')
+  .call(map())

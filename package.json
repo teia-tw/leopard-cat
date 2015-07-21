@@ -15,7 +15,7 @@
     "dev:html": "npm run build:html -- -w -O '{env:\"dev\"}' -P",
     "build:html": "jade -o public/ src/*.jade",
     "dev:js": "watch 'npm run build:js' src",
-    "build:js": "parallelshell 'browserify -o public/app.js src/app.js' 'browserify -o public/timeline.js src/timeline.js'",
+    "build:js": "parallelshell 'browserify -o public/app.js src/app.js' 'browserify -o public/timeline.js src/timeline.js' 'browserify -o public/map.js src/map.js'",
     "livereload": "live-reload --port 9090 public/",
     "update": "npm run update:data",
     "serve": "http-server public/",
@@ -38,6 +38,7 @@
     "parallelshell": "^1.0.3",
     "rimraf": "^2.4.1",
     "stylus": "^0.50.0",
+    "topojson": "^1.6.19",
     "watch": "^0.16.0"
   }
 }
