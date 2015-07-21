@@ -1,6 +1,8 @@
 doctype
 html
   head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
     title Timeline
     if env === "dev"
       script(src="//localhost:9090/")
@@ -15,4 +17,4 @@ html
       }
   body
     .timeline
-    script(src="timeline.js")
+   script(src="timeline.js")
