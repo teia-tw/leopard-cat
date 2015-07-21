@@ -54,5 +54,5 @@ function timeline (selection) {
   })
 }
 
-d3.select('#timeline')
+d3.select('.timeline')
   .call(timeline)

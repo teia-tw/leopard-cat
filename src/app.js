@@ -4,6 +4,8 @@ var d3 = require('d3')
 var breakPoint = 800
 var $content, $sidebar, $trend, $map, $timeline
 
+var timeline = require('./timeline')
+
 function resetLayout () {
   var bodyWidth = parseInt(d3.select('body').style('width'), 10)
   console.log(bodyWidth)
@@ -22,10 +24,6 @@ function initialize () {
   $timeline = d3.select('.timeline')
 
   resetLayout()
-  draw()
-}
-
-function draw() {
 }
 
 function debounce (func) {
