@@ -1,7 +1,7 @@
 'use strict'
 
 var d3 = require('d3')
-require('./d3-timeline')
+d3.layout.timeline = require('./d3-timeline')
 
 function timeline (selection) {
   var width = 30
