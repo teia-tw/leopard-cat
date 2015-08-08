@@ -14,21 +14,23 @@ var data = {}
 var dataByName = {
   roadkill: {
     url: '/data/roadkill.csv',
-    cleaner: function (d) {
+    cleanup: function (d) {
       return {
         id: 'roadkill-' + d.SerialNo,
         date: new Date(d.ObserveDate),
+        lngLat: [+d.WGS84Lon, +d.WGS84Lat],
         latLng: [+d.WGS84Lat, +d.WGS84Lon]
       }
     }
   },
   tesri: {
     url: '/data/topic_animal.csv',
-    cleaner: function (d) {
+    cleanup: function (d) {
       var date = new Date(d.CollectedDateTime)
       return {
         id: 'tesri-' + date.getTime(),
         date: date,
+        lngLat: [+d.Longitude, +d.Latitude],
         latLng: [+d.Latitude, +d.Longitude]
       }
     }
@@ -66,7 +68,7 @@ store.getCleaned = function (name) {
  * Shorthands for each of the data sources.
  */
 Object.keys(dataByName).forEach(function (name) {
-  store['load' + name[0].toUpperCase() + name.substr(1)] = store.load.bind(store, name, dataByName[name].url, dataByName[name].cleaner)
+  store['load' + name[0].toUpperCase() + name.substr(1)] = store.load.bind(store, name, dataByName[name].url, dataByName[name].cleanup)
 })
 
 module.exports = store
