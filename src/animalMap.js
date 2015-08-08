@@ -13,7 +13,8 @@ module.exports = function (name, p) {
   var state = {
     width: 800,
     height: 600,
-    projection: d3.geo.mercator().center([121.05, 24.50]).scale(40000)
+    projection: d3.geo.mercator().center([121.05, 24.50]).scale(40000),
+    date: (new Date('2006-01-01')).getTime()
   }
   var props = Object.assign(p || {}, {
     margin: { top: 0, right: 0, bottom: 0, left: 0 }
@@ -23,7 +24,7 @@ module.exports = function (name, p) {
     .size([state.width, state.height])
     .radius(10)
   var colorScale = d3.scale.linear()
-    .range([0, 1])
+    .range([0.1, 1.0])
     .domain([0, 15])
 
   function drawHexbin (selection, data) {
@@ -33,7 +34,7 @@ module.exports = function (name, p) {
       .attr('class', 'hexagon')
       .attr('d', hexbin.hexagon())
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
-      .style('fill', function (d) { return 'rgba(255, 0, 0, ' + colorScale(d.length) + ')' })
+      .style('fill', function (d) { return 'rgba(0, 140, 36, ' + colorScale(d.length) + ')' })
   }
 
   function draw (selection) {
