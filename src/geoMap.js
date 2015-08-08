@@ -4,7 +4,6 @@ require('debug').enable('*')
 var debug = require('debug')('geoMap')
 
 var d3 = require('d3')
-var topojson = require('topojson')
 var geoStore = require('./geoStore')
 
 var componentName
@@ -20,22 +19,40 @@ module.exports = function (name, p) {
     margin: { top: 0, right: 0, bottom: 0, left: 0 }
   })
 
+  var path = d3.geo.path().projection(state.projection)
+
   function draw (selection) {
-    var svg = selection.append('g')
-      .attr('class', 'geo-map')
+    var countySvg = selection.append('g')
+      .attr('class', componentName + ' county')
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     geoStore.on('countyReady', function (data) {
-      var topo = topojson.feature(data, data.objects['layer1'])
-      var path = d3.geo.path().projection(state.projection)
-
-      svg.selectAll('path')
-        .data(topo.features)
+      countySvg.selectAll('path')
+        .data(data)
       .enter().append('path')
         .attr('d', path)
-        .attr('fill', 'grey')
-
     })
-    geoStore.loadCounty()
+
+    var highwaySvg = selection.append('g')
+      .attr('class', componentName + ' highway')
+      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
+    geoStore.on('highwayReady', function (data) {
+      highwaySvg.selectAll('path')
+        .data(data)
+      .enter().append('path')
+        .attr('d', path)
+    })
+
+    var highway2Svg = selection.append('g')
+      .attr('class', componentName + ' highway2')
+      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
+    geoStore.on('highway2Ready', function (data) {
+      highway2Svg.selectAll('path')
+        .data(data)
+      .enter().append('path')
+        .attr('d', path)
+    })
+
+    geoStore.load()
   }
 
   return draw
