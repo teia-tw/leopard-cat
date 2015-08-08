@@ -7,7 +7,7 @@
     "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:data": "sh script/update-timeline",
-    "build:data": "copyup src/**/*.json src/**/*.csv public/data",
+    "build:data": "copyup src/**/*.json src/**/*.csv src/**/*.geojson public/data",
     "dev:css": "stylus -w -m -o public/ src/*.styl",
     "build:css": "stylus -c -o public/ src/*.styl",
     "dev:asset": "npm run build:asset",
@@ -25,7 +25,9 @@
   },
   "author": "Pomin Wu <pomin5@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "debug": "^2.2.0"
+  },
   "devDependencies": {
     "browserify": "^10.2.6",
     "copyfiles": "^0.2.1",
