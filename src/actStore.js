@@ -23,7 +23,7 @@ store.get = function (name, url, cleanup) {
 }
 
 store.loadAct = function () {
-  store.get('act', '/data/華南路.geojson', function (data) {
+  store.get('act', '/data/苗50線.geojson', function (data) {
     return data.features
   })
 }

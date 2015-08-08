@@ -9,7 +9,7 @@ var d3 = require('d3')
 var store = {}
 var data = {}
 
-var dispatch = d3.dispatch('countyLoading', 'countyReady', 'highwayLoading', 'highwayReady', 'highway2Loading', 'highway2Ready')
+var dispatch = d3.dispatch('countyLoading', 'countyReady', 'highwayLoading', 'highwayReady', 'highway2Loading', 'highway2Ready', 'highway3Loading', 'highway3Ready')
 d3.rebind(store, dispatch, 'on')
 
 store.get = function (name, url, cleanup) {
@@ -42,10 +42,17 @@ store.loadHighway2 = function () {
   })
 }
 
+store.loadHighway3 = function () {
+  store.get('highway3', '/data/highway-tertiary.geojson', function (data) {
+    return data.features
+  })
+}
+
 store.load = function () {
   store.loadCounty()
   store.loadHighway()
   store.loadHighway2()
+  store.loadHighway3()
 }
 
 module.exports = store

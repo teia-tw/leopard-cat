@@ -52,6 +52,16 @@ module.exports = function (name, p) {
         .attr('d', path)
     })
 
+    var highway3Svg = selection.append('g')
+      .attr('class', componentName + ' highway3')
+      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
+    geoStore.on('highway3Ready', function (data) {
+      highway3Svg.selectAll('path')
+        .data(data)
+      .enter().append('path')
+        .attr('d', path)
+    })
+
     geoStore.load()
   }
 
