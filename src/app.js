@@ -4,11 +4,13 @@ var d3 = require('d3')
 var breakPoint = 800
 var $content, $sidebar, $trend, $map, $timeline
 
+var animalStore = require('./animalStore')
+
 var timeline = require('./timeline')
+var map = require('./map')
 
 function resetLayout () {
   var bodyWidth = parseInt(d3.select('body').style('width'), 10)
-  console.log(bodyWidth)
   if (bodyWidth >= breakPoint) {
     $content.classed('double', true)
   } else {

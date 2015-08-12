@@ -1,4 +1,3 @@
-'use strict'
 
 var d3 = require('d3')
 d3.layout.timeline = require('./d3-timeline')
