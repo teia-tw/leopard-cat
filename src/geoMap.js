@@ -30,36 +30,8 @@ module.exports = function (name, p) {
         .data(data)
       .enter().append('path')
         .attr('d', path)
-    })
-
-    var highwaySvg = selection.append('g')
-      .attr('class', componentName + ' highway')
-      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    geoStore.on('highwayReady', function (data) {
-      highwaySvg.selectAll('path')
-        .data(data)
-      .enter().append('path')
-        .attr('d', path)
-    })
-
-    var highway2Svg = selection.append('g')
-      .attr('class', componentName + ' highway2')
-      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    geoStore.on('highway2Ready', function (data) {
-      highway2Svg.selectAll('path')
-        .data(data)
-      .enter().append('path')
-        .attr('d', path)
-    })
-
-    var highway3Svg = selection.append('g')
-      .attr('class', componentName + ' highway3')
-      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    geoStore.on('highway3Ready', function (data) {
-      highway3Svg.selectAll('path')
-        .data(data)
-      .enter().append('path')
-        .attr('d', path)
+        .attr('fill', function (d) { return d.properties.COUNTYNAME === '苗栗縣' ? '#fff' : '#ccc' })
+        .attr('stroke', function (d) { return d.properties.COUNTYNAME === '苗栗縣' ? '#333' : '#fff' })
     })
 
     geoStore.load()

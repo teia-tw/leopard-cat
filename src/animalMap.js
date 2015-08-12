@@ -22,10 +22,11 @@ module.exports = function (name, p) {
 
   var hexbin = d3.hexbin()
     .size([state.width, state.height])
-    .radius(10)
+    .radius(16)
   var colorScale = d3.scale.linear()
-    .range([0.1, 1.0])
-    .domain([0, 15])
+    .domain([1, 18])
+    .range(['rgb(253, 208, 162, 0.8)', 'rgb(230, 85, 13)'])
+    .interpolate(d3.interpolateLab)
 
   function drawHexbin (selection, data) {
     selection.selectAll('.hexagon')
@@ -34,7 +35,7 @@ module.exports = function (name, p) {
       .attr('class', 'hexagon')
       .attr('d', hexbin.hexagon())
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
-      .style('fill', function (d) { return 'rgba(0, 140, 36, ' + colorScale(d.length) + ')' })
+      .style('fill', function (d) { return colorScale(d.length) })
   }
 
   function draw (selection) {
