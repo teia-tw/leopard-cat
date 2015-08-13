@@ -51,7 +51,7 @@ module.exports = function (p) {
       var nodes = timeline.nodes(data)
       var node = svg.selectAll('g.event')
         .data(nodes)
-        .enter().append('g')
+      .enter().append('g')
         .attr('class', 'event')
         .attr('transform', function (d) { return 'translate(0,' + (d.x + 10) + ')' })
 
@@ -59,16 +59,13 @@ module.exports = function (p) {
         .attr('r', 5)
         .attr('fill', 'black')
 
-      node.each(function (d) {
-        selection.append('div')
-          .attr('class', 'content')
-          .html(d.content)
-          .attr('style', 'position: absolute; left: ' + (props.margin.left + 30) + 'px; top: ' + d.x + 'px;')
-      })
+      selection.selectAll('div.content')
+        .data(nodes)
+      .enter().append('div')
+        .attr('class', 'content')
+        .html(function (d) { return d.content })
+        .attr('style', function (d) { return 'position: absolute; left: ' + (props.margin.left + 30) + 'px; top: ' + d.x + 'px;' })
 
-      node.each(function (d) {
-        debug($(this).offset().top)
-      })
     })
   }
 
