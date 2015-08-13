@@ -20,7 +20,7 @@ module.exports = function (p) {
     margin: { top: 0, right: 0, bottom: 0, left: 30 }
   })
 
-  function draw (selection) {
+  function mount (selection) {
     store.on('timelineUpdate', function (data) {
       state.height = data.length * 120
 
@@ -30,7 +30,8 @@ module.exports = function (p) {
       .append('g')
         .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
 
-      var timeAxis = svg.append('line')
+      svg.append('line')
+        .classed('axis', true)
         .attr('x1', 0)
         .attr('y1', 0)
         .attr('x2', 0)
@@ -52,7 +53,7 @@ module.exports = function (p) {
       var node = svg.selectAll('g.event')
         .data(nodes)
       .enter().append('g')
-        .attr('class', 'event')
+        .classed('event', true)
         .attr('transform', function (d) { return 'translate(0,' + (d.x + 10) + ')' })
 
       node.append('circle')
@@ -62,12 +63,25 @@ module.exports = function (p) {
       selection.selectAll('div.content')
         .data(nodes)
       .enter().append('div')
-        .attr('class', 'content')
+        .classed('content', true)
         .html(function (d) { return d.content })
         .attr('style', function (d) { return 'position: absolute; left: ' + (props.margin.left + 30) + 'px; top: ' + d.x + 'px;' })
 
     })
   }
 
-  return draw
+  function draw () {
+
+  }
+
+  mount.state = function () {
+    if (arguments.length === 0) {
+      return state
+    }
+    state = Object.assign(state, arguments[0])
+    draw()
+    return mount
+  }
+
+  return mount
 }

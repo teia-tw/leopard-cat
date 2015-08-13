@@ -1,13 +1,16 @@
 'use strict'
 
-require('debug').enable('*')
 var debug = require('debug')('store')
 
 var d3 = require('d3')
+var $ = require('jquery')
 var topojson = require('topojson')
+var action = require('./action')
 
 var store = { data: {} }
 var dispatch = d3.dispatch(
+    'ready',
+    'resize', 'center',
     'geoLoading', 'geoUpdate',
     'animalLoading', 'animalUpdate',
     'timelineLoading', 'timelineUpdate'
@@ -69,11 +72,34 @@ store.loadTimeline = function () {
     })
 }
 
-store.load = function () {
+store.loadLayout = function () {
+  var width = parseInt(d3.select('body').style('width'), 10)
+  store.data.layout = {
+    width: width,
+    mapWidth: width / 2
+  }
+  store.data.mapProjection = d3.geo.mercator().center([121.28, 24.52]).scale(40000)
+}
+
+store.handle = function (act) {
+  debug('handle ' + act.name)
+  if (act.name === 'resize') {
+    store.loadLayout()
+    dispatch.resize()
+  } else if (act.name === 'center') {
+    store.loadLayout()
+    dispatch.center()
+  }
+}
+
+store.init = function () {
   store.data.scroll = 0
   store.loadGeo()
   store.loadAnimal()
   store.loadTimeline()
+  store.loadLayout()
+  action.on('action', store.handle.bind(store))
+  dispatch.ready()
 }
 
 store.get = function (name) {
