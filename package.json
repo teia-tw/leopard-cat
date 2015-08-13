@@ -7,7 +7,7 @@
     "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:data": "script/update-highway.sh",
-    "build:data": "copyup src/**/*.json src/**/*.csv src/**/*.geojson public/",
+    "build:data": "cp -R data public/",
     "dev:css": "watch 'stylus -m -p -o public/ src/*.styl > public/app.css' src",
     "build:css": "stylus -c -p src/*.styl > public/app.css",
     "dev:asset": "npm run build:asset",

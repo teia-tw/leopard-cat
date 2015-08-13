@@ -1,0 +1,6748 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/24051980",
+      "properties": {
+        "type": "way",
+        "id": 24051980,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "layer": "1",
+          "name": "新大安溪橋",
+          "name:en": "New Daan Si Bridge",
+          "name:zh": "新大安溪橋",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6435681,
+            24.3683736
+          ],
+          [
+            120.6485441,
+            24.3764678
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24051981",
+      "properties": {
+        "type": "way",
+        "id": 24051981,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6485441,
+            24.3764678
+          ],
+          [
+            120.6520341,
+            24.3835074
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24051982",
+      "properties": {
+        "type": "way",
+        "id": 24051982,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路",
+          "name:en": "Jingguo Road",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6180041,
+            24.3415109
+          ],
+          [
+            120.6391954,
+            24.3631268
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24051986",
+      "properties": {
+        "type": "way",
+        "id": 24051986,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6681474,
+            24.3909466
+          ],
+          [
+            120.6566566,
+            24.3465301
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24051987",
+      "properties": {
+        "type": "way",
+        "id": 24051987,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6685428,
+            24.3928715
+          ],
+          [
+            120.6681474,
+            24.3909466
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24051989",
+      "properties": {
+        "type": "way",
+        "id": 24051989,
+        "tags": {
+          "highway": "motorway",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6686917,
+            24.3929189
+          ],
+          [
+            120.6803531,
+            24.465351
+          ],
+          [
+            120.6811764,
+            24.467205
+          ],
+          [
+            120.7398257,
+            24.5386214
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24051990",
+      "properties": {
+        "type": "way",
+        "id": 24051990,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6683371,
+            24.3910121
+          ],
+          [
+            120.6686917,
+            24.3929189
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24052625",
+      "properties": {
+        "type": "way",
+        "id": 24052625,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7811936,
+            24.4588961
+          ],
+          [
+            120.7813193,
+            24.4574108
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/24052995",
+      "properties": {
+        "type": "way",
+        "id": 24052995,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7592265,
+            24.3953685
+          ],
+          [
+            120.7424407,
+            24.3659544
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25510241",
+      "properties": {
+        "type": "way",
+        "id": 25510241,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6564361,
+            24.3459353
+          ],
+          [
+            120.6683371,
+            24.3910121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25932992",
+      "properties": {
+        "type": "way",
+        "id": 25932992,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6837416,
+            24.4815302
+          ],
+          [
+            120.6754038,
+            24.4792878
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25937516",
+      "properties": {
+        "type": "way",
+        "id": 25937516,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "layer": "1",
+          "name": "新大安溪橋",
+          "name:en": "New Daan Si Bridge",
+          "name:zh": "新大安溪橋",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6484403,
+            24.3765402
+          ],
+          [
+            120.6432976,
+            24.3684477
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25937517",
+      "properties": {
+        "type": "way",
+        "id": 25937517,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6432976,
+            24.3684477
+          ],
+          [
+            120.6391525,
+            24.3632126
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25937544",
+      "properties": {
+        "type": "way",
+        "id": 25937544,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "layer": "1",
+          "name": "三義陸橋",
+          "ref": "13",
+          "source": "GNS"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7743489,
+            24.4245684
+          ],
+          [
+            120.7737098,
+            24.4223821
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25937545",
+      "properties": {
+        "type": "way",
+        "id": 25937545,
+        "tags": {
+          "created_by": "JOSM",
+          "embankment": "yes",
+          "highway": "primary",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7737098,
+            24.4223821
+          ],
+          [
+            120.7736508,
+            24.4218985
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25937556",
+      "properties": {
+        "type": "way",
+        "id": 25937556,
+        "tags": {
+          "embankment": "yes",
+          "highway": "primary",
+          "name": "尖豐公路",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7751327,
+            24.4269926
+          ],
+          [
+            120.7743489,
+            24.4245684
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25937557",
+      "properties": {
+        "type": "way",
+        "id": 25937557,
+        "tags": {
+          "highway": "primary",
+          "name": "中正路(尖豐公路)",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7736508,
+            24.4218985
+          ],
+          [
+            120.7730161,
+            24.4156621
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/25944721",
+      "properties": {
+        "type": "way",
+        "id": 25944721,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "lanes": "3",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "中山高速公路",
+          "name:en": "Sun Yat-sen Freeway",
+          "name:zh": "中山高速公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Freeway 1",
+          "ref:zh": "國道1號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7390816,
+            24.3614349
+          ],
+          [
+            120.7246687,
+            24.344958
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26744413",
+      "properties": {
+        "type": "way",
+        "id": 26744413,
+        "tags": {
+          "highway": "primary",
+          "name": "中山路二段",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6498255,
+            24.3921792
+          ],
+          [
+            120.6428771,
+            24.417881
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26747237",
+      "properties": {
+        "type": "way",
+        "id": 26747237,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7947083,
+            24.6142583
+          ],
+          [
+            120.7946824,
+            24.6142201
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750957",
+      "properties": {
+        "type": "way",
+        "id": 26750957,
+        "tags": {
+          "highway": "trunk",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6811937,
+            24.5054544
+          ],
+          [
+            120.6778931,
+            24.5001651
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750958",
+      "properties": {
+        "type": "way",
+        "id": 26750958,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6852092,
+            24.4837825
+          ],
+          [
+            120.6888321,
+            24.5046605
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750960",
+      "properties": {
+        "type": "way",
+        "id": 26750960,
+        "tags": {
+          "highway": "motorway",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7839869,
+            24.5956342
+          ],
+          [
+            120.7568298,
+            24.560659
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750962",
+      "properties": {
+        "type": "way",
+        "id": 26750962,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7872191,
+            24.5994834
+          ],
+          [
+            120.7839869,
+            24.5956342
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750963",
+      "properties": {
+        "type": "way",
+        "id": 26750963,
+        "tags": {
+          "highway": "motorway",
+          "layer": "2",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7874377,
+            24.5994296
+          ],
+          [
+            120.7901666,
+            24.6024058
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750964",
+      "properties": {
+        "type": "way",
+        "id": 26750964,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7841507,
+            24.5955818
+          ],
+          [
+            120.7874377,
+            24.5994296
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26750990",
+      "properties": {
+        "type": "way",
+        "id": 26750990,
+        "tags": {
+          "highway": "motorway",
+          "lanes": "3",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "中山高速公路",
+          "name:en": "Sun Yat-sen Freeway",
+          "name:zh": "中山高速公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Freeway 1",
+          "ref:zh": "國道1號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.863475,
+            24.6153152
+          ],
+          [
+            120.8266304,
+            24.5298241
+          ],
+          [
+            120.8264977,
+            24.5295747
+          ],
+          [
+            120.783671,
+            24.4955416
+          ],
+          [
+            120.7834381,
+            24.4950755
+          ],
+          [
+            120.7746747,
+            24.415962
+          ],
+          [
+            120.7744152,
+            24.4147407
+          ],
+          [
+            120.7390816,
+            24.3614349
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/26768813",
+      "properties": {
+        "type": "way",
+        "id": 26768813,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6428771,
+            24.417881
+          ],
+          [
+            120.6431018,
+            24.4204256
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/28761659",
+      "properties": {
+        "type": "way",
+        "id": 28761659,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "lanes": "3",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "中山高速公路",
+          "name:en": "Sun Yat-sen Freeway",
+          "name:zh": "中山高速公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Freeway 1",
+          "ref:zh": "國道1號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7247981,
+            24.3448511
+          ],
+          [
+            120.7391831,
+            24.3613378
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/28761662",
+      "properties": {
+        "type": "way",
+        "id": 28761662,
+        "tags": {
+          "highway": "motorway",
+          "lanes": "3",
+          "layer": "1",
+          "maxspeed": "110",
+          "name": "中山高速公路",
+          "name:en": "Sun Yat-sen Freeway",
+          "name:zh": "中山高速公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Freeway 1",
+          "ref:zh": "國道1號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7391831,
+            24.3613378
+          ],
+          [
+            120.7739569,
+            24.4129171
+          ],
+          [
+            120.77431,
+            24.4137612
+          ],
+          [
+            120.7836388,
+            24.4950666
+          ],
+          [
+            120.7838627,
+            24.4955403
+          ],
+          [
+            120.8257428,
+            24.5282554
+          ],
+          [
+            120.8260529,
+            24.528643
+          ],
+          [
+            120.863668,
+            24.6154828
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/30418232",
+      "properties": {
+        "type": "way",
+        "id": 30418232,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6458934,
+            24.4317932
+          ],
+          [
+            120.6569765,
+            24.4507553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/30841208",
+      "properties": {
+        "type": "way",
+        "id": 30841208,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6841306,
+            24.4819254
+          ],
+          [
+            120.6837416,
+            24.4815302
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/30841209",
+      "properties": {
+        "type": "way",
+        "id": 30841209,
+        "tags": {
+          "highway": "primary",
+          "layer": "-1",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6851052,
+            24.4838111
+          ],
+          [
+            120.6841306,
+            24.4819254
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/30841211",
+      "properties": {
+        "type": "way",
+        "id": 30841211,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6496586,
+            24.3920854
+          ],
+          [
+            120.6518411,
+            24.3836008
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/38094767",
+      "properties": {
+        "type": "way",
+        "id": 38094767,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.76036,
+            24.6110732
+          ],
+          [
+            120.7741088,
+            24.6048897
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/39315308",
+      "properties": {
+        "type": "way",
+        "id": 39315308,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8136461,
+            24.5624497
+          ],
+          [
+            120.8135412,
+            24.5564797
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/39315309",
+      "properties": {
+        "type": "way",
+        "id": 39315309,
+        "tags": {
+          "highway": "primary",
+          "layer": "-1",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8135412,
+            24.5564797
+          ],
+          [
+            120.8139349,
+            24.5554166
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/39315311",
+      "properties": {
+        "type": "way",
+        "id": 39315311,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8139349,
+            24.5554166
+          ],
+          [
+            120.8138772,
+            24.5509669
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/39315312",
+      "properties": {
+        "type": "way",
+        "id": 39315312,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7808469,
+            24.462298
+          ],
+          [
+            120.7811936,
+            24.4588961
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/40943166",
+      "properties": {
+        "type": "way",
+        "id": 40943166,
+        "tags": {
+          "highway": "trunk",
+          "name": "西部濱海快速公路",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7173015,
+            24.5716608
+          ],
+          [
+            120.7596648,
+            24.6108577
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/42409110",
+      "properties": {
+        "type": "way",
+        "id": 42409110,
+        "tags": {
+          "highway": "trunk",
+          "name": "西部濱海快速公路",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7562118,
+            24.6108161
+          ],
+          [
+            120.7172297,
+            24.5717528
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/42409113",
+      "properties": {
+        "type": "way",
+        "id": 42409113,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "name": "後龍觀海大橋",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7596648,
+            24.6108577
+          ],
+          [
+            120.7672237,
+            24.6197415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/42409114",
+      "properties": {
+        "type": "way",
+        "id": 42409114,
+        "tags": {
+          "highway": "trunk",
+          "name": "西部濱海快速公路",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7672237,
+            24.6197415
+          ],
+          [
+            120.8325412,
+            24.6670683
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112294278",
+      "properties": {
+        "type": "way",
+        "id": 112294278,
+        "tags": {
+          "bicycle": "no",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.791738,
+            24.6119285
+          ],
+          [
+            120.8180596,
+            24.600224
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112294280",
+      "properties": {
+        "type": "way",
+        "id": 112294280,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.842936,
+            24.5628333
+          ],
+          [
+            120.8457899,
+            24.5860934
+          ],
+          [
+            120.8456182,
+            24.5864153
+          ],
+          [
+            120.8180818,
+            24.6003039
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112294283",
+      "properties": {
+        "type": "way",
+        "id": 112294283,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "name": "北勢大橋",
+          "ref": "13甲",
+          "ref:en": "Provincial Highway 13A",
+          "ref:zh": "台13甲"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8244181,
+            24.5937324
+          ],
+          [
+            120.8268857,
+            24.5968223
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112299189",
+      "properties": {
+        "type": "way",
+        "id": 112299189,
+        "tags": {
+          "highway": "primary",
+          "name": "國華路",
+          "oneway": "yes",
+          "ref": "台13線",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8203778,
+            24.5753366
+          ],
+          [
+            120.8136461,
+            24.5624497
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112299195",
+      "properties": {
+        "type": "way",
+        "id": 112299195,
+        "tags": {
+          "highway": "primary",
+          "name": "為公路",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.842611,
+            24.5747264
+          ],
+          [
+            120.8345256,
+            24.5727479
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112299213",
+      "properties": {
+        "type": "way",
+        "id": 112299213,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8203991,
+            24.5752608
+          ],
+          [
+            120.8225759,
+            24.5755724
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112299221",
+      "properties": {
+        "type": "way",
+        "id": 112299221,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8225622,
+            24.5756699
+          ],
+          [
+            120.8203778,
+            24.5753366
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112299226",
+      "properties": {
+        "type": "way",
+        "id": 112299226,
+        "tags": {
+          "highway": "primary",
+          "name": "國華路",
+          "oneway": "yes",
+          "ref": "台13線",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8137859,
+            24.5624575
+          ],
+          [
+            120.8203991,
+            24.5752608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/112299229",
+      "properties": {
+        "type": "way",
+        "id": 112299229,
+        "tags": {
+          "highway": "primary",
+          "name": "國華路",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8225759,
+            24.5755724
+          ],
+          [
+            120.8343919,
+            24.572646
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121204763",
+      "properties": {
+        "type": "way",
+        "id": 121204763,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7848034,
+            24.6106381
+          ],
+          [
+            120.7851406,
+            24.6108008
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121204764",
+      "properties": {
+        "type": "way",
+        "id": 121204764,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7834983,
+            24.6071649
+          ],
+          [
+            120.781632,
+            24.6045497
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121204765",
+      "properties": {
+        "type": "way",
+        "id": 121204765,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7846018,
+            24.6106806
+          ],
+          [
+            120.784257,
+            24.6102079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121204766",
+      "properties": {
+        "type": "way",
+        "id": 121204766,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7835841,
+            24.6071219
+          ],
+          [
+            120.7848034,
+            24.6106381
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121656912",
+      "properties": {
+        "type": "way",
+        "id": 121656912,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "no",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7817845,
+            24.6007385
+          ],
+          [
+            120.7814737,
+            24.6009251
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121656913",
+      "properties": {
+        "type": "way",
+        "id": 121656913,
+        "tags": {
+          "highway": "primary",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7814737,
+            24.6009251
+          ],
+          [
+            120.7801612,
+            24.6017131
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121656914",
+      "properties": {
+        "type": "way",
+        "id": 121656914,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7801612,
+            24.6017131
+          ],
+          [
+            120.7797808,
+            24.6019415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/121750660",
+      "properties": {
+        "type": "way",
+        "id": 121750660,
+        "tags": {
+          "highway": "primary",
+          "ref": "13甲",
+          "ref:en": "Provincial Highway 13A",
+          "ref:zh": "台13甲"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8268857,
+            24.5968223
+          ],
+          [
+            120.8288169,
+            24.6002984
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/130448008",
+      "properties": {
+        "type": "way",
+        "id": 130448008,
+        "tags": {
+          "highway": "trunk",
+          "lanes": "2",
+          "maxspeed": "80",
+          "name": "西部濱海快速公路",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.759644,
+            24.6109525
+          ],
+          [
+            120.7562118,
+            24.6108161
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/130448010",
+      "properties": {
+        "type": "way",
+        "id": 130448010,
+        "tags": {
+          "highway": "trunk",
+          "lanes": "2",
+          "maxspeed": "80",
+          "name": "西部濱海快速公路",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.832469,
+            24.6671296
+          ],
+          [
+            120.76716,
+            24.6197789
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/130448016",
+      "properties": {
+        "type": "way",
+        "id": 130448016,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "lanes": "2",
+          "layer": "2",
+          "maxspeed": "80",
+          "name": "後龍觀海大橋",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.76716,
+            24.6197789
+          ],
+          [
+            120.759644,
+            24.6109525
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/130448027",
+      "properties": {
+        "type": "way",
+        "id": 130448027,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "lanes": "4",
+          "layer": "2",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7901666,
+            24.6024058
+          ],
+          [
+            120.8136447,
+            24.6239978
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/130448029",
+      "properties": {
+        "type": "way",
+        "id": 130448029,
+        "tags": {
+          "bridge": "yes",
+          "highway": "motorway",
+          "lanes": "4",
+          "layer": "2",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.813496,
+            24.6240137
+          ],
+          [
+            120.7900011,
+            24.6025452
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/130448030",
+      "properties": {
+        "type": "way",
+        "id": 130448030,
+        "tags": {
+          "highway": "motorway",
+          "layer": "2",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7900011,
+            24.6025452
+          ],
+          [
+            120.7872191,
+            24.5994834
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/138068483",
+      "properties": {
+        "type": "way",
+        "id": 138068483,
+        "tags": {
+          "highway": "primary",
+          "maxspeed": "60",
+          "name": "台六線",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8273363,
+            24.5034599
+          ],
+          [
+            120.832199,
+            24.467195
+          ],
+          [
+            120.832273,
+            24.467111
+          ],
+          [
+            120.8769757,
+            24.4599616
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/149578449",
+      "properties": {
+        "type": "way",
+        "id": 149578449,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7620909,
+            24.6113054
+          ],
+          [
+            120.7602887,
+            24.6112206
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181171434",
+      "properties": {
+        "type": "way",
+        "id": 181171434,
+        "tags": {
+          "highway": "primary",
+          "layer": "-1",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6842242,
+            24.4818553
+          ],
+          [
+            120.6852092,
+            24.4837825
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181171445",
+      "properties": {
+        "type": "way",
+        "id": 181171445,
+        "tags": {
+          "highway": "trunk",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6339239,
+            24.4349441
+          ],
+          [
+            120.6319598,
+            24.4326335
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181171449",
+      "properties": {
+        "type": "way",
+        "id": 181171449,
+        "tags": {
+          "bridge": "viaduct",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6778931,
+            24.5001651
+          ],
+          [
+            120.6382715,
+            24.4403245
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181171453",
+      "properties": {
+        "type": "way",
+        "id": 181171453,
+        "tags": {
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6340035,
+            24.4348654
+          ],
+          [
+            120.6346012,
+            24.4356221
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181171455",
+      "properties": {
+        "type": "way",
+        "id": 181171455,
+        "tags": {
+          "highway": "trunk",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6780275,
+            24.5001224
+          ],
+          [
+            120.6806758,
+            24.5043959
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181642121",
+      "properties": {
+        "type": "way",
+        "id": 181642121,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6382715,
+            24.4403245
+          ],
+          [
+            120.6375183,
+            24.4393838
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181642126",
+      "properties": {
+        "type": "way",
+        "id": 181642126,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6375738,
+            24.4392954
+          ],
+          [
+            120.6383286,
+            24.4402761
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181642127",
+      "properties": {
+        "type": "way",
+        "id": 181642127,
+        "tags": {
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6375183,
+            24.4393838
+          ],
+          [
+            120.6345646,
+            24.4357365
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/181642128",
+      "properties": {
+        "type": "way",
+        "id": 181642128,
+        "tags": {
+          "bridge": "viaduct",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6383286,
+            24.4402761
+          ],
+          [
+            120.6780275,
+            24.5001224
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184390993",
+      "properties": {
+        "type": "way",
+        "id": 184390993,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8027673,
+            24.4926882
+          ],
+          [
+            120.8080029,
+            24.4786763
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184390998",
+      "properties": {
+        "type": "way",
+        "id": 184390998,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8280444,
+            24.4643855
+          ],
+          [
+            120.8096337,
+            24.4767451
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184390999",
+      "properties": {
+        "type": "way",
+        "id": 184390999,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8093333,
+            24.4769382
+          ],
+          [
+            120.828023,
+            24.4642997
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184391000",
+      "properties": {
+        "type": "way",
+        "id": 184391000,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8636212,
+            24.460566
+          ],
+          [
+            120.8280444,
+            24.4643855
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184391001",
+      "properties": {
+        "type": "way",
+        "id": 184391001,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.828023,
+            24.4642997
+          ],
+          [
+            120.8636427,
+            24.4604802
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184391002",
+      "properties": {
+        "type": "way",
+        "id": 184391002,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8022308,
+            24.4949841
+          ],
+          [
+            120.8027673,
+            24.4926882
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/184391003",
+      "properties": {
+        "type": "way",
+        "id": 184391003,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8028531,
+            24.4927311
+          ],
+          [
+            120.8023167,
+            24.4950056
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/187899846",
+      "properties": {
+        "type": "way",
+        "id": 187899846,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7812709,
+            24.4589272
+          ],
+          [
+            120.7809387,
+            24.4622813
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/187899847",
+      "properties": {
+        "type": "way",
+        "id": 187899847,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7814115,
+            24.4576668
+          ],
+          [
+            120.7812709,
+            24.4589272
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/187899849",
+      "properties": {
+        "type": "way",
+        "id": 187899849,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7809387,
+            24.4622813
+          ],
+          [
+            120.7841877,
+            24.5058055
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/190306379",
+      "properties": {
+        "type": "way",
+        "id": 190306379,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8428502,
+            24.5628548
+          ],
+          [
+            120.80266,
+            24.5021725
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/190306380",
+      "properties": {
+        "type": "way",
+        "id": 190306380,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8023167,
+            24.4950056
+          ],
+          [
+            120.8027673,
+            24.5021725
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192391792",
+      "properties": {
+        "type": "way",
+        "id": 192391792,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8153629,
+            24.5371914
+          ],
+          [
+            120.8405219,
+            24.5678503
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192391793",
+      "properties": {
+        "type": "way",
+        "id": 192391793,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8402236,
+            24.5673934
+          ],
+          [
+            120.8155346,
+            24.5374274
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196471448",
+      "properties": {
+        "type": "way",
+        "id": 196471448,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8080673,
+            24.4787192
+          ],
+          [
+            120.8028531,
+            24.4927311
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196471450",
+      "properties": {
+        "type": "way",
+        "id": 196471450,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8096337,
+            24.4767451
+          ],
+          [
+            120.8080673,
+            24.4787192
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196471451",
+      "properties": {
+        "type": "way",
+        "id": 196471451,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "layer": "1",
+          "maxspeed": "80",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8080029,
+            24.4786763
+          ],
+          [
+            120.8093333,
+            24.4769382
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196471464",
+      "properties": {
+        "type": "way",
+        "id": 196471464,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8248043,
+            24.5127296
+          ],
+          [
+            120.8187532,
+            24.5289946
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/197885799",
+      "properties": {
+        "type": "way",
+        "id": 197885799,
+        "tags": {
+          "highway": "primary",
+          "maxspeed": "50",
+          "name": "國華路",
+          "oneway": "yes",
+          "ref": "台13線",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8136429,
+            24.5565166
+          ],
+          [
+            120.8137859,
+            24.5624575
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/197885805",
+      "properties": {
+        "type": "way",
+        "id": 197885805,
+        "tags": {
+          "highway": "primary",
+          "layer": "-1",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8140473,
+            24.5554531
+          ],
+          [
+            120.8136429,
+            24.5565166
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/199700730",
+      "properties": {
+        "type": "way",
+        "id": 199700730,
+        "tags": {
+          "highway": "primary",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7641743,
+            24.4025248
+          ],
+          [
+            120.7592265,
+            24.3953685
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/199700731",
+      "properties": {
+        "type": "way",
+        "id": 199700731,
+        "tags": {
+          "highway": "primary",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7719111,
+            24.4133162
+          ],
+          [
+            120.7641743,
+            24.4025248
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733599",
+      "properties": {
+        "type": "way",
+        "id": 219733599,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6319598,
+            24.4326335
+          ],
+          [
+            120.6317017,
+            24.4324228
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733601",
+      "properties": {
+        "type": "way",
+        "id": 219733601,
+        "tags": {
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6345046,
+            24.4356624
+          ],
+          [
+            120.6339239,
+            24.4349441
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733602",
+      "properties": {
+        "type": "way",
+        "id": 219733602,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6345646,
+            24.4357365
+          ],
+          [
+            120.6345046,
+            24.4356624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733603",
+      "properties": {
+        "type": "way",
+        "id": 219733603,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6317796,
+            24.4323624
+          ],
+          [
+            120.6320305,
+            24.4325699
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733604",
+      "properties": {
+        "type": "way",
+        "id": 219733604,
+        "tags": {
+          "bridge": "yes",
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6346012,
+            24.4356221
+          ],
+          [
+            120.6346567,
+            24.4356924
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733606",
+      "properties": {
+        "type": "way",
+        "id": 219733606,
+        "tags": {
+          "highway": "trunk",
+          "layer": "1",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6346567,
+            24.4356924
+          ],
+          [
+            120.6375738,
+            24.4392954
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733607",
+      "properties": {
+        "type": "way",
+        "id": 219733607,
+        "tags": {
+          "highway": "trunk",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6320305,
+            24.4325699
+          ],
+          [
+            120.6340035,
+            24.4348654
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733608",
+      "properties": {
+        "type": "way",
+        "id": 219733608,
+        "tags": {
+          "highway": "trunk",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6317017,
+            24.4324228
+          ],
+          [
+            120.6241816,
+            24.4262219
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/219733609",
+      "properties": {
+        "type": "way",
+        "id": 219733609,
+        "tags": {
+          "highway": "trunk",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6242541,
+            24.4261529
+          ],
+          [
+            120.6317796,
+            24.4323624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221005681",
+      "properties": {
+        "type": "way",
+        "id": 221005681,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7425007,
+            24.3659057
+          ],
+          [
+            120.7592265,
+            24.3953685
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221005693",
+      "properties": {
+        "type": "way",
+        "id": 221005693,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "highway": "primary",
+          "layer": "2",
+          "motorcycle": "no",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7397461,
+            24.3628049
+          ],
+          [
+            120.7352185,
+            24.3527627
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221005694",
+      "properties": {
+        "type": "way",
+        "id": 221005694,
+        "tags": {
+          "bridge": "viaduct",
+          "highway": "primary",
+          "layer": "2",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7353044,
+            24.3527198
+          ],
+          [
+            120.7398319,
+            24.3627834
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221005695",
+      "properties": {
+        "type": "way",
+        "id": 221005695,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial High 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7398319,
+            24.3627834
+          ],
+          [
+            120.740971,
+            24.3641016
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221005697",
+      "properties": {
+        "type": "way",
+        "id": 221005697,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial High 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7409143,
+            24.3641442
+          ],
+          [
+            120.7402825,
+            24.3634272
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221005723",
+      "properties": {
+        "type": "way",
+        "id": 221005723,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial High 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7424407,
+            24.3659544
+          ],
+          [
+            120.7409143,
+            24.3641442
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221225051",
+      "properties": {
+        "type": "way",
+        "id": 221225051,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.641155,
+            24.4030668
+          ],
+          [
+            120.6496586,
+            24.3920854
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517895",
+      "properties": {
+        "type": "way",
+        "id": 223517895,
+        "tags": {
+          "highway": "primary",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8402236,
+            24.5673934
+          ],
+          [
+            120.8423861,
+            24.5839766
+          ],
+          [
+            120.8422187,
+            24.5844068
+          ],
+          [
+            120.8244181,
+            24.5937324
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517899",
+      "properties": {
+        "type": "way",
+        "id": 223517899,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8165646,
+            24.5342088
+          ],
+          [
+            120.8179593,
+            24.5307326
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517901",
+      "properties": {
+        "type": "way",
+        "id": 223517901,
+        "tags": {
+          "highway": "trunk",
+          "name": "公館交流道",
+          "oneway": "yes",
+          "source": "Bing"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8214998,
+            24.536376
+          ],
+          [
+            120.8166289,
+            24.5344019
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517904",
+      "properties": {
+        "type": "way",
+        "id": 223517904,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8166289,
+            24.5344019
+          ],
+          [
+            120.8155775,
+            24.5373201
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517908",
+      "properties": {
+        "type": "way",
+        "id": 223517908,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "lanes": "2",
+          "name": "龜山橋",
+          "oneway": "yes",
+          "source": "Bing"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8147192,
+            24.5391226
+          ],
+          [
+            120.8165646,
+            24.5342088
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517911",
+      "properties": {
+        "type": "way",
+        "id": 223517911,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8153629,
+            24.5371914
+          ],
+          [
+            120.8165646,
+            24.5342088
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223517912",
+      "properties": {
+        "type": "way",
+        "id": 223517912,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "lanes": "2",
+          "name": "龜山橋",
+          "oneway": "yes",
+          "source": "Bing"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8166289,
+            24.5344019
+          ],
+          [
+            120.8148265,
+            24.5391226
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/236774577",
+      "properties": {
+        "type": "way",
+        "id": 236774577,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8440089,
+            24.6430635
+          ],
+          [
+            120.7963085,
+            24.6166277
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251440391",
+      "properties": {
+        "type": "way",
+        "id": 251440391,
+        "tags": {
+          "highway": "primary",
+          "name": "為公路",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8343919,
+            24.572646
+          ],
+          [
+            120.8426088,
+            24.5746579
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251440392",
+      "properties": {
+        "type": "way",
+        "id": 251440392,
+        "tags": {
+          "highway": "primary",
+          "name": "國華路",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8345256,
+            24.5727479
+          ],
+          [
+            120.8225622,
+            24.5756699
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251714086",
+      "properties": {
+        "type": "way",
+        "id": 251714086,
+        "tags": {
+          "highway": "primary",
+          "oneway": "no",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7969076,
+            24.5866615
+          ],
+          [
+            120.7817845,
+            24.6007385
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251714088",
+      "properties": {
+        "type": "way",
+        "id": 251714088,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路六段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8153332,
+            24.5930423
+          ],
+          [
+            120.7969076,
+            24.5866615
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251714128",
+      "properties": {
+        "type": "way",
+        "id": 251714128,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路五段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8244181,
+            24.5937324
+          ],
+          [
+            120.8225161,
+            24.5949576
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251714333",
+      "properties": {
+        "type": "way",
+        "id": 251714333,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路六段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7969076,
+            24.5866615
+          ],
+          [
+            120.8153774,
+            24.5928409
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/251714339",
+      "properties": {
+        "type": "way",
+        "id": 251714339,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路五段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8153774,
+            24.5928409
+          ],
+          [
+            120.8211488,
+            24.5953533
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/273205773",
+      "properties": {
+        "type": "way",
+        "id": 273205773,
+        "tags": {
+          "highway": "primary",
+          "oneway": "no",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7813193,
+            24.4574108
+          ],
+          [
+            120.7751327,
+            24.4269926
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/274511313",
+      "properties": {
+        "type": "way",
+        "id": 274511313,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial High 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.740971,
+            24.3641016
+          ],
+          [
+            120.7425007,
+            24.3659057
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275430084",
+      "properties": {
+        "type": "way",
+        "id": 275430084,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7815016,
+            24.6040517
+          ],
+          [
+            120.7817994,
+            24.6045051
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275430085",
+      "properties": {
+        "type": "way",
+        "id": 275430085,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7817994,
+            24.6045051
+          ],
+          [
+            120.7835841,
+            24.6071219
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275430086",
+      "properties": {
+        "type": "way",
+        "id": 275430086,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.781632,
+            24.6045497
+          ],
+          [
+            120.7813312,
+            24.6041629
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275430087",
+      "properties": {
+        "type": "way",
+        "id": 275430087,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7813312,
+            24.6041629
+          ],
+          [
+            120.7796421,
+            24.6020226
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275618225",
+      "properties": {
+        "type": "way",
+        "id": 275618225,
+        "tags": {
+          "bridge": "viaduct",
+          "highway": "motorway",
+          "layer": "2",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7568298,
+            24.560659
+          ],
+          [
+            120.7398123,
+            24.5388533
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275618226",
+      "properties": {
+        "type": "way",
+        "id": 275618226,
+        "tags": {
+          "highway": "motorway",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7569468,
+            24.5605692
+          ],
+          [
+            120.7841507,
+            24.5955818
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275618227",
+      "properties": {
+        "type": "way",
+        "id": 275618227,
+        "tags": {
+          "highway": "motorway",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7398123,
+            24.5388533
+          ],
+          [
+            120.681584,
+            24.4682616
+          ],
+          [
+            120.6810226,
+            24.4672057
+          ],
+          [
+            120.6685428,
+            24.3928715
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275618228",
+      "properties": {
+        "type": "way",
+        "id": 275618228,
+        "tags": {
+          "bridge": "viaduct",
+          "highway": "motorway",
+          "layer": "2",
+          "maxspeed": "110",
+          "name": "福爾摩沙高速公路",
+          "name:en": "Formosan Freeway",
+          "name:zh": "福爾摩沙高速公路",
+          "oneway": "yes",
+          "ref": "3",
+          "ref:en": "Freeway 3",
+          "ref:zh": "國道3號"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7398257,
+            24.5386214
+          ],
+          [
+            120.7569468,
+            24.5605692
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/289603734",
+      "properties": {
+        "type": "way",
+        "id": 289603734,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6429379,
+            24.420456
+          ],
+          [
+            120.641155,
+            24.4030668
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/289603739",
+      "properties": {
+        "type": "way",
+        "id": 289603739,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6391525,
+            24.3632126
+          ],
+          [
+            120.6201275,
+            24.3557965
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/290027212",
+      "properties": {
+        "type": "way",
+        "id": 290027212,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8141633,
+            24.5550031
+          ],
+          [
+            120.8140473,
+            24.5554531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/291753787",
+      "properties": {
+        "type": "way",
+        "id": 291753787,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.80266,
+            24.5021725
+          ],
+          [
+            120.8022308,
+            24.4949841
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/291753788",
+      "properties": {
+        "type": "way",
+        "id": 291753788,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "yes",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8027673,
+            24.5021725
+          ],
+          [
+            120.842936,
+            24.5628333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/292753474",
+      "properties": {
+        "type": "way",
+        "id": 292753474,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6431018,
+            24.4204256
+          ],
+          [
+            120.6458934,
+            24.4317932
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/292753475",
+      "properties": {
+        "type": "way",
+        "id": 292753475,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6391954,
+            24.3631268
+          ],
+          [
+            120.6435681,
+            24.3683736
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/302077580",
+      "properties": {
+        "type": "way",
+        "id": 302077580,
+        "tags": {
+          "highway": "primary",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8273363,
+            24.5034599
+          ],
+          [
+            120.8248043,
+            24.5127296
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/302174124",
+      "properties": {
+        "type": "way",
+        "id": 302174124,
+        "tags": {
+          "highway": "trunk"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.823195,
+            24.4664454
+          ],
+          [
+            120.8231306,
+            24.4662952
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/302223648",
+      "properties": {
+        "type": "way",
+        "id": 302223648,
+        "tags": {
+          "bicycle": "no",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8180818,
+            24.6003039
+          ],
+          [
+            120.7918239,
+            24.6119285
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/302223652",
+      "properties": {
+        "type": "way",
+        "id": 302223652,
+        "tags": {
+          "bicycle": "no",
+          "bridge": "viaduct",
+          "foot": "no",
+          "highway": "trunk",
+          "horse": "no",
+          "lanes": "2",
+          "maxspeed": "90",
+          "motorroad": "yes",
+          "name": "東西向快速公路 後龍汶水線",
+          "oneway": "yes",
+          "ref": "72",
+          "ref:en": "Provincial Highway 72",
+          "ref:zh": "台72線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8180596,
+            24.600224
+          ],
+          [
+            120.8453393,
+            24.5866513
+          ],
+          [
+            120.8455324,
+            24.5863724
+          ],
+          [
+            120.8428502,
+            24.5628548
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/304960878",
+      "properties": {
+        "type": "way",
+        "id": 304960878,
+        "tags": {
+          "highway": "primary",
+          "name": "後汶公路",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6",
+          "source": "Bing"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.81532,
+            24.5373201
+          ],
+          [
+            120.8153629,
+            24.5371914
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/323454277",
+      "properties": {
+        "type": "way",
+        "id": 323454277,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路五段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8211666,
+            24.5954238
+          ],
+          [
+            120.8153332,
+            24.5930423
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/323454278",
+      "properties": {
+        "type": "way",
+        "id": 323454278,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路五段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8225161,
+            24.5949576
+          ],
+          [
+            120.8211666,
+            24.5954238
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/323454279",
+      "properties": {
+        "type": "way",
+        "id": 323454279,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路五段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線",
+          "tunnel": "yes"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8211488,
+            24.5953533
+          ],
+          [
+            120.8225008,
+            24.5948873
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/323454280",
+      "properties": {
+        "type": "way",
+        "id": 323454280,
+        "tags": {
+          "highway": "primary",
+          "name": "經國路五段",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8225008,
+            24.5948873
+          ],
+          [
+            120.8244181,
+            24.5937324
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/327388774",
+      "properties": {
+        "type": "way",
+        "id": 327388774,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7963085,
+            24.6166277
+          ],
+          [
+            120.7947083,
+            24.6142583
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/327388775",
+      "properties": {
+        "type": "way",
+        "id": 327388775,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7964158,
+            24.6166062
+          ],
+          [
+            120.8441162,
+            24.6430206
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/335862071",
+      "properties": {
+        "type": "way",
+        "id": 335862071,
+        "tags": {
+          "highway": "primary",
+          "ref": "台13甲"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8493304,
+            24.6246743
+          ],
+          [
+            120.8383012,
+            24.6158981
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/352202971",
+      "properties": {
+        "type": "way",
+        "id": 352202971,
+        "tags": {
+          "construction": "trunk",
+          "highway": "construction",
+          "name": "西部濱海快速公路 白沙屯南通灣段",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6806758,
+            24.5043959
+          ],
+          [
+            120.717185,
+            24.5715973
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/352202972",
+      "properties": {
+        "type": "way",
+        "id": 352202972,
+        "tags": {
+          "construction": "trunk",
+          "highway": "construction",
+          "name": "西部濱海快速公路 白沙屯南通灣段",
+          "oneway": "yes",
+          "ref": "61",
+          "ref:en": "Provincial Highway 61",
+          "ref:zh": "台61線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7172297,
+            24.5717528
+          ],
+          [
+            120.680471,
+            24.5043952
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361895785",
+      "properties": {
+        "type": "way",
+        "id": 361895785,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8155346,
+            24.5374274
+          ],
+          [
+            120.81532,
+            24.5373201
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361901277",
+      "properties": {
+        "type": "way",
+        "id": 361901277,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8138772,
+            24.5509669
+          ],
+          [
+            120.7843047,
+            24.5067309
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361901279",
+      "properties": {
+        "type": "way",
+        "id": 361901279,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8140152,
+            24.550977
+          ],
+          [
+            120.8141633,
+            24.5550031
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361901281",
+      "properties": {
+        "type": "way",
+        "id": 361901281,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7841372,
+            24.5060338
+          ],
+          [
+            120.7808469,
+            24.462298
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361901283",
+      "properties": {
+        "type": "way",
+        "id": 361901283,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7841877,
+            24.5058055
+          ],
+          [
+            120.7844158,
+            24.5067118
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361905010",
+      "properties": {
+        "type": "way",
+        "id": 361905010,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8186674,
+            24.5289731
+          ],
+          [
+            120.8248043,
+            24.5127296
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361905011",
+      "properties": {
+        "type": "way",
+        "id": 361905011,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8187532,
+            24.5289946
+          ],
+          [
+            120.8180666,
+            24.5307755
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361905892",
+      "properties": {
+        "type": "way",
+        "id": 361905892,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8179593,
+            24.5307326
+          ],
+          [
+            120.8186674,
+            24.5289731
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361905894",
+      "properties": {
+        "type": "way",
+        "id": 361905894,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref.zh": "台6線",
+          "ref:en": "Provincial Highway 6"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8180666,
+            24.5307755
+          ],
+          [
+            120.8166289,
+            24.5344019
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361908417",
+      "properties": {
+        "type": "way",
+        "id": 361908417,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "中豐公路",
+          "name:en": "Jhongfenggong Road",
+          "name:zh": "中豐公路",
+          "ref": "3",
+          "ref:en": "Provincial Highway 3",
+          "ref:zh": "台3線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8663291,
+            24.3974677
+          ],
+          [
+            120.8269637,
+            24.3440356
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361916691",
+      "properties": {
+        "type": "way",
+        "id": 361916691,
+        "tags": {
+          "highway": "primary",
+          "name": "中正路(尖豐公路)",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7725649,
+            24.4146862
+          ],
+          [
+            120.7719111,
+            24.4133162
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361917979",
+      "properties": {
+        "type": "way",
+        "id": 361917979,
+        "tags": {
+          "highway": "primary",
+          "name": "中正路(尖豐公路)",
+          "ref": "13"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7730161,
+            24.4156621
+          ],
+          [
+            120.7725649,
+            24.4146862
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361917980",
+      "properties": {
+        "type": "way",
+        "id": 361917980,
+        "tags": {
+          "bicycle": "no",
+          "highway": "primary",
+          "motorcycle": "no",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial High 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7402825,
+            24.3634272
+          ],
+          [
+            120.7397461,
+            24.3628049
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920927",
+      "properties": {
+        "type": "way",
+        "id": 361920927,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7851406,
+            24.6108008
+          ],
+          [
+            120.7936692,
+            24.6125722
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920928",
+      "properties": {
+        "type": "way",
+        "id": 361920928,
+        "tags": {
+          "bridge": "yes",
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.784257,
+            24.6102079
+          ],
+          [
+            120.7834983,
+            24.6071649
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920929",
+      "properties": {
+        "type": "way",
+        "id": 361920929,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7796421,
+            24.6020226
+          ],
+          [
+            120.7795822,
+            24.601954
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920930",
+      "properties": {
+        "type": "way",
+        "id": 361920930,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7796421,
+            24.6020226
+          ],
+          [
+            120.7770092,
+            24.6036024
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920931",
+      "properties": {
+        "type": "way",
+        "id": 361920931,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7797397,
+            24.6018938
+          ],
+          [
+            120.7797808,
+            24.6019415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920932",
+      "properties": {
+        "type": "way",
+        "id": 361920932,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7797397,
+            24.6018938
+          ],
+          [
+            120.7801612,
+            24.6017131
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920933",
+      "properties": {
+        "type": "way",
+        "id": 361920933,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7769126,
+            24.6035831
+          ],
+          [
+            120.7795822,
+            24.601954
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920935",
+      "properties": {
+        "type": "way",
+        "id": 361920935,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7770092,
+            24.6036024
+          ],
+          [
+            120.7741314,
+            24.6049513
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920936",
+      "properties": {
+        "type": "way",
+        "id": 361920936,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7741314,
+            24.6049513
+          ],
+          [
+            120.7588873,
+            24.6114489
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361920937",
+      "properties": {
+        "type": "way",
+        "id": 361920937,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7741088,
+            24.6048897
+          ],
+          [
+            120.7769126,
+            24.6035831
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361991765",
+      "properties": {
+        "type": "way",
+        "id": 361991765,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.645686,
+            24.4316487
+          ],
+          [
+            120.6429379,
+            24.420456
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361991767",
+      "properties": {
+        "type": "way",
+        "id": 361991767,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6569765,
+            24.4507553
+          ],
+          [
+            120.6754826,
+            24.4792332
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361991769",
+      "properties": {
+        "type": "way",
+        "id": 361991769,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6569183,
+            24.4508521
+          ],
+          [
+            120.645686,
+            24.4316487
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361991770",
+      "properties": {
+        "type": "way",
+        "id": 361991770,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6754826,
+            24.4792332
+          ],
+          [
+            120.6842242,
+            24.4818553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361991772",
+      "properties": {
+        "type": "way",
+        "id": 361991772,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6754038,
+            24.4792878
+          ],
+          [
+            120.6569183,
+            24.4508521
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361993977",
+      "properties": {
+        "type": "way",
+        "id": 361993977,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7797808,
+            24.6019415
+          ],
+          [
+            120.7796421,
+            24.6020226
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361993978",
+      "properties": {
+        "type": "way",
+        "id": 361993978,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7797808,
+            24.6019415
+          ],
+          [
+            120.7815016,
+            24.6040517
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361993979",
+      "properties": {
+        "type": "way",
+        "id": 361993979,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7795822,
+            24.601954
+          ],
+          [
+            120.7534983,
+            24.5638085
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361993980",
+      "properties": {
+        "type": "way",
+        "id": 361993980,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "6",
+          "ref:en": "Provincial Highway 6",
+          "ref:zh": "台6線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7795822,
+            24.601954
+          ],
+          [
+            120.7797397,
+            24.6018938
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361993981",
+      "properties": {
+        "type": "way",
+        "id": 361993981,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6891483,
+            24.5069845
+          ],
+          [
+            120.6851052,
+            24.4838111
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/361993982",
+      "properties": {
+        "type": "way",
+        "id": 361993982,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6888321,
+            24.5046605
+          ],
+          [
+            120.7116903,
+            24.5685619
+          ],
+          [
+            120.7118284,
+            24.568918
+          ],
+          [
+            120.7347838,
+            24.5734245
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362006226",
+      "properties": {
+        "type": "way",
+        "id": 362006226,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6518411,
+            24.3836008
+          ],
+          [
+            120.6484403,
+            24.3765402
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362006228",
+      "properties": {
+        "type": "way",
+        "id": 362006228,
+        "tags": {
+          "highway": "primary",
+          "name:zh": "經國路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台一線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6520341,
+            24.3835074
+          ],
+          [
+            120.6498255,
+            24.3921792
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362022333",
+      "properties": {
+        "type": "way",
+        "id": 362022333,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7843047,
+            24.5067309
+          ],
+          [
+            120.7841372,
+            24.5060338
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362022335",
+      "properties": {
+        "type": "way",
+        "id": 362022335,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "13",
+          "ref:en": "Provincial Highway 13",
+          "ref:zh": "台13線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7844158,
+            24.5067118
+          ],
+          [
+            120.8140152,
+            24.550977
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362022340",
+      "properties": {
+        "type": "way",
+        "id": 362022340,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7534983,
+            24.5638085
+          ],
+          [
+            120.7348359,
+            24.5735127
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362022346",
+      "properties": {
+        "type": "way",
+        "id": 362022346,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7535533,
+            24.5636998
+          ],
+          [
+            120.7797397,
+            24.6018938
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362022354",
+      "properties": {
+        "type": "way",
+        "id": 362022354,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7348359,
+            24.5735127
+          ],
+          [
+            120.7119323,
+            24.5692456
+          ],
+          [
+            120.7117248,
+            24.5689825
+          ],
+          [
+            120.6891483,
+            24.5069845
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362022364",
+      "properties": {
+        "type": "way",
+        "id": 362022364,
+        "tags": {
+          "highway": "primary",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7347838,
+            24.5734245
+          ],
+          [
+            120.7535533,
+            24.5636998
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362025941",
+      "properties": {
+        "type": "way",
+        "id": 362025941,
+        "tags": {
+          "highway": "primary",
+          "ref": "13甲",
+          "ref:en": "Provincial Highway 13A",
+          "ref:zh": "台13甲"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.8288169,
+            24.6002984
+          ],
+          [
+            120.8383012,
+            24.6158981
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362025951",
+      "properties": {
+        "type": "way",
+        "id": 362025951,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7946824,
+            24.6142201
+          ],
+          [
+            120.793615,
+            24.6126295
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362025954",
+      "properties": {
+        "type": "way",
+        "id": 362025954,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.793615,
+            24.6126295
+          ],
+          [
+            120.7846018,
+            24.6106806
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362025955",
+      "properties": {
+        "type": "way",
+        "id": 362025955,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7936692,
+            24.6125722
+          ],
+          [
+            120.7948772,
+            24.6141635
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/362025957",
+      "properties": {
+        "type": "way",
+        "id": 362025957,
+        "tags": {
+          "highway": "primary",
+          "lanes": "4",
+          "maxspeed": "60",
+          "name": "縱貫公路",
+          "oneway": "yes",
+          "ref": "1",
+          "ref:en": "Provincial Highway 1",
+          "ref:zh": "台1線",
+          "surface": "asphalt"
+        },
+        "relations": [],
+        "meta": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7948772,
+            24.6141635
+          ],
+          [
+            120.7964158,
+            24.6166062
+          ]
+        ]
+      }
+    }
+  ]
+}
