@@ -1,21 +1,26 @@
 'use strict'
 
 require('debug').enable('*')
-var debug = require('debug')('animalStore')
+var debug = require('debug')('animalMap')
 
 var d3 = require('d3')
 d3.hexbin = require('../lib/d3-plugins/hexbin')
-var animalStore = require('./animalStore')
-var componentName
+
+var store = require('./store')
+
+var componentName = 'animal-map'
 
 module.exports = function (name, p) {
+
   componentName = name
+
   var state = {
     width: 800,
     height: 600,
     projection: d3.geo.mercator().center([121.05, 24.50]).scale(40000),
     date: (new Date('2006-01-01')).getTime()
   }
+
   var props = Object.assign(p || {}, {
     margin: { top: 0, right: 0, bottom: 0, left: 0 }
   })
@@ -39,20 +44,10 @@ module.exports = function (name, p) {
   }
 
   function draw (selection) {
-    var tesriSvg = selection.append('g')
+    var g = selection.append('g')
       .attr('class', componentName + ' tesri hexbin')
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    var roadKillSvg = selection.append('g')
-      .attr('class', componentName + ' roadkill hexbin')
-      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    animalStore.on('tesriReady', function (data) {
-      drawHexbin(tesriSvg, data)
-    })
-    animalStore.loadTesri()
-    animalStore.on('roadkillReady', function (data) {
-      drawHexbin(roadKillSvg, data)
-    })
-    animalStore.loadRoadkill()
+    store.on('animalUpdate', drawHexbin.bind(undefined, g))
   }
 
   ;['width', 'height', 'projection'].forEach(function (n) {

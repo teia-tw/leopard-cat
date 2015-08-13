@@ -4,11 +4,9 @@ require('debug').enable('*')
 var debug = require('debug')('map')
 
 var d3 = require('d3')
-var topojson = require('topojson')
 
 var geoMap = require('./geoMap')
 var animalMap = require('./animalMap')
-var actMap = require('./actMap')
 
 var map = d3.select('.map')
   .append('svg')
@@ -24,4 +22,5 @@ map
 map
   .call(geoMap('geo-map'))
   .call(animalMap('animal-map'))
-  .call(actMap('act-map'))
+
+debug('start')
