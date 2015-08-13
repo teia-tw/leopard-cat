@@ -8,7 +8,8 @@ var topojson = require('topojson')
 var store = {}
 var dispatch = d3.dispatch(
     'geoLoading', 'geoUpdate',
-    'animalLoading', 'animalUpdate'
+    'animalLoading', 'animalUpdate',
+    'timelineLoading', 'timelineUpdate'
 )
 d3.rebind(store, dispatch, 'on')
 
@@ -49,10 +50,25 @@ store.loadAnimal = function () {
     })
 }
 
+store.loadTimeline = function () {
+  d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv')
+    .on('progress', function () {
+      dispatch.timelineLoading(d3.event.loading)
+    })
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      dispatch.timelineUpdate(data)
+    })
+}
+
 store.load = function () {
   debug('load')
   store.loadCounty()
   store.loadAnimal()
+  store.loadTimeline()
 }
 
 module.exports = store
