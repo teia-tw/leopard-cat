@@ -8,7 +8,7 @@ d3.layout.timeline = require('./d3-timeline')
 
 var store = require('./store')
 
-function timeline (name, p) {
+module.exports = function (p) {
   var state = {
     width: 30,
     height: undefined
@@ -67,6 +67,3 @@ function timeline (name, p) {
 
   return draw
 }
-
-d3.select('.timeline')
-  .call(timeline('timeline'))

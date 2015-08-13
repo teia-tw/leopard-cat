@@ -8,11 +8,9 @@ d3.hexbin = require('../lib/d3-plugins/hexbin')
 
 var store = require('./store')
 
-var componentName = 'animal-map'
+var componentName = 'animalMap'
 
-module.exports = function (name, p) {
-
-  componentName = name
+module.exports = function (p) {
 
   var state = {
     width: 800,
@@ -33,30 +31,40 @@ module.exports = function (name, p) {
     .range(['rgb(253, 208, 162, 0.8)', 'rgb(230, 85, 13)'])
     .interpolate(d3.interpolateLab)
 
-  function drawHexbin (selection, data) {
-    selection.selectAll('.hexagon')
+  var g
+
+  function mount (selection) {
+    g = selection.append('g')
+      .attr('class', componentName + ' tesri hexbin')
+      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
+    draw()
+    store.on('animalUpdate', drawHexbin)
+  }
+
+  function drawHexbin (data) {
+    var hexagon = g.selectAll('.hexagon')
       .data(hexbin(data.map(function (d) { return state.projection(d.lngLat) })))
-    .enter().append('path')
+      .attr('d', hexbin.hexagon())
+      .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
+      .style('fill', function (d) { return colorScale(d.length) })
+    hexagon.enter().append('path')
       .attr('class', 'hexagon')
       .attr('d', hexbin.hexagon())
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', function (d) { return colorScale(d.length) })
+    hexagon.exit().remove()
   }
 
-  function draw (selection) {
-    var g = selection.append('g')
-      .attr('class', componentName + ' tesri hexbin')
-      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    store.on('animalUpdate', drawHexbin.bind(undefined, g))
+  function draw () {
+    store.get('animal', drawHexbin)
   }
 
-  ;['width', 'height', 'projection'].forEach(function (n) {
-    draw[n] = function () {
-      if (arguments.length === 0) { return state[n] }
-      state[n] = arguments[0]
-      return draw
-    }
-  })
+  mount.state = function () {
+    if (arguments.length === 0) { return state }
+    state = Object.assign(state, arguments[0])
+    draw()
+    return mount
+  }
 
-  return draw
+  return mount
 }

@@ -2,10 +2,11 @@
 
 require('debug').enable('*')
 var debug = require('debug')('store')
+
 var d3 = require('d3')
 var topojson = require('topojson')
 
-var store = {}
+var store = { data: {} }
 var dispatch = d3.dispatch(
     'geoLoading', 'geoUpdate',
     'animalLoading', 'animalUpdate',
@@ -13,7 +14,8 @@ var dispatch = d3.dispatch(
 )
 d3.rebind(store, dispatch, 'on')
 
-store.loadCounty = function () {
+store.loadGeo = function () {
+  store.data.geo = {}
   d3.json('/data/twCounty2010.topo.json')
     .on('progress', function () {
       dispatch.geoLoading(d3.event.loaded)
@@ -24,11 +26,13 @@ store.loadCounty = function () {
         return
       }
       var topo = topojson.feature(data, data.objects.layer1)
-      dispatch.geoUpdate(topo.features)
+      store.data.geo = topo.features
+      dispatch.geoUpdate(store.data.geo)
     })
 }
 
 store.loadAnimal = function () {
+  store.data.animal = []
   d3.csv('/data/topic_animal.csv')
     .on('progress', function () {
       dispatch.animalLoading(d3.event.loaded)
@@ -38,7 +42,7 @@ store.loadAnimal = function () {
         debug(err)
         return
       }
-      dispatch.animalUpdate(data.map(function (d) {
+      store.data.animal = data.map(function (d) {
         var date = new Date(d.CollectedDateTime)
         return {
           id: 'tesri-' + date.getTime(),
@@ -46,7 +50,8 @@ store.loadAnimal = function () {
           lngLat: [+d.Longitude, +d.Latitude],
           latLng: [+d.Latitude, +d.Longitude]
         }
-      }))
+      })
+      dispatch.animalUpdate(store.data.animal)
     })
 }
 
@@ -65,10 +70,13 @@ store.loadTimeline = function () {
 }
 
 store.load = function () {
-  debug('load')
-  store.loadCounty()
+  store.loadGeo()
   store.loadAnimal()
   store.loadTimeline()
+}
+
+store.get = function (name) {
+  return store.data[name]
 }
 
 module.exports = store
