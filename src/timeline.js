@@ -5,8 +5,11 @@ var debug = require('debug')('timeline')
 
 var d3 = require('d3')
 d3.layout.timeline = require('./d3-timeline')
+var $ = require('jquery')
 
 var store = require('./store')
+
+var scrollPoints = {}
 
 module.exports = function (p) {
   var state = {
@@ -61,6 +64,10 @@ module.exports = function (p) {
           .attr('class', 'content')
           .html(d.content)
           .attr('style', 'position: absolute; left: ' + (props.margin.left + 30) + 'px; top: ' + d.x + 'px;')
+      })
+
+      node.each(function (d) {
+        debug($(this).offset().top)
       })
     })
   }

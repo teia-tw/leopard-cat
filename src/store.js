@@ -70,6 +70,7 @@ store.loadTimeline = function () {
 }
 
 store.load = function () {
+  store.data.scroll = 0
   store.loadGeo()
   store.loadAnimal()
   store.loadTimeline()
