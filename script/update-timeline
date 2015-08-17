@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec curl -so src/timeline.csv 'https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv'
