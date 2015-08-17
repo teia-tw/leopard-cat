@@ -7,16 +7,17 @@ var breakPoint = 500
 var $content, $trend, $map, $timeline
 
 var store = require('./store')
-var action = require('./action')
 
 var timeline = require('./timeline')
 var map = require('./map')
 
 function init () {
+  var width = parseInt(d3.select('body').style('width'), 10)
+
   $content = d3.select('.app.content')
   $trend = d3.select('.trend')
-  $map = d3.select('.map').call(map())
-  $timeline = d3.select('.timeline').call(timeline())
+  $map = d3.select('.map').call(map({ width: width / 2 }))
+  $timeline = d3.select('.timeline').call(timeline({ width: width / 2 }))
 
   store.init()
 }
@@ -30,5 +31,11 @@ function debounce (func) {
   }
 }
 
+function resize () {
+  var width = parseInt(d3.select('body').style('width'), 10)
+  $map.call(map({ width: width / 2 }))
+  $timeline.call(timeline({ width: width / 2 }))
+}
+
 d3.select(window).on('load', init)
-d3.select(window).on('resize', debounce(action.action.bind(action, 'resize')))
+d3.select(window).on('resize', debounce(resize))

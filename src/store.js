@@ -3,17 +3,16 @@
 var debug = require('debug')('store')
 
 var d3 = require('d3')
-var $ = require('jquery')
 var topojson = require('topojson')
 var action = require('./action')
 
 var store = { data: {} }
 var dispatch = d3.dispatch(
-    'ready',
-    'resize', 'center',
-    'geoLoading', 'geoUpdate',
-    'animalLoading', 'animalUpdate',
-    'timelineLoading', 'timelineUpdate'
+  'ready',
+  'resize', 'center',
+  'geoLoading', 'geoUpdate',
+  'animalLoading', 'animalUpdate',
+  'timelineLoading', 'timelineUpdate'
 )
 d3.rebind(store, dispatch, 'on')
 
@@ -45,7 +44,7 @@ store.loadAnimal = function () {
         debug(err)
         return
       }
-      var a = data.map(function (d) {
+      store.data.animal = data.map(function (d) {
         var date = new Date(d.CollectedDateTime)
         return {
           id: 'tesri-' + date.getTime(),
@@ -54,12 +53,7 @@ store.loadAnimal = function () {
           latLng: [+d.Latitude, +d.Longitude]
         }
       })
-      var n = 0
-      setInterval(function () {
-        n++
-        store.data.animal = a.slice(n)
-        dispatch.animalUpdate(store.data.animal)
-      }, 5000)
+      dispatch.animalUpdate(store.data.animal)
     })
 }
 
@@ -77,24 +71,8 @@ store.loadTimeline = function () {
     })
 }
 
-store.loadLayout = function () {
-  var width = parseInt(d3.select('body').style('width'), 10)
-  store.data.layout = {
-    width: width,
-    mapWidth: width / 2
-  }
-  store.data.mapProjection = d3.geo.mercator().center([120.58, 24.52]).scale(40000)
-}
-
 store.handle = function (act) {
   debug('handle ' + act.name)
-  if (act.name === 'resize') {
-    store.loadLayout()
-    dispatch.resize()
-  } else if (act.name === 'center') {
-    store.loadLayout()
-    dispatch.center()
-  }
 }
 
 store.init = function () {
@@ -102,7 +80,6 @@ store.init = function () {
   store.loadGeo()
   store.loadAnimal()
   store.loadTimeline()
-  store.loadLayout()
   action.on('action', store.handle.bind(store))
   dispatch.ready()
 }
