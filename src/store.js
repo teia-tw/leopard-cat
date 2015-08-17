@@ -45,7 +45,7 @@ store.loadAnimal = function () {
         debug(err)
         return
       }
-      store.data.animal = data.map(function (d) {
+      var a = data.map(function (d) {
         var date = new Date(d.CollectedDateTime)
         return {
           id: 'tesri-' + date.getTime(),
@@ -54,7 +54,12 @@ store.loadAnimal = function () {
           latLng: [+d.Latitude, +d.Longitude]
         }
       })
-      dispatch.animalUpdate(store.data.animal)
+      var n = 0
+      setInterval(function () {
+        n++
+        store.data.animal = a.slice(n)
+        dispatch.animalUpdate(store.data.animal)
+      }, 5000)
     })
 }
 
@@ -78,7 +83,7 @@ store.loadLayout = function () {
     width: width,
     mapWidth: width / 2
   }
-  store.data.mapProjection = d3.geo.mercator().center([121.28, 24.52]).scale(40000)
+  store.data.mapProjection = d3.geo.mercator().center([120.58, 24.52]).scale(40000)
 }
 
 store.handle = function (act) {

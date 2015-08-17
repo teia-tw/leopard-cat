@@ -3,7 +3,6 @@
 var debug = require('debug')('map')
 
 var d3 = require('d3')
-var store = require('./store')
 
 var geoMap = require('./geoMap')
 var animalMap = require('./animalMap')
@@ -19,47 +18,34 @@ module.exports = function (p) {
     projection: d3.geo.mercator().center([121.05, 24.50]).scale(40000)
   }, p || {})
 
-  var state = Object.assign({}, props)
+  function draw (selection) {
+    debug('draw with %o', props)
 
-  var svg
-  var rect
+    var svg = selection.selectAll('svg.' + componentName)
+      .data([0])
+      .attr('width', props.width)
+      .attr('height', props.height)
+    svg.enter().append('svg')
+      .classed(componentName, true)
+      .attr('width', props.width)
+      .attr('height', props.height)
+    svg.exit().remove()
 
-  function mount (selection) {
-    svg = selection.append('svg')
-    rect = svg.append('rect')
+    var rect = svg.selectAll('rect')
+      .data([0])
+      .classed('background', true)
+      .attr('width', props.width)
+      .attr('height', props.height)
+    rect.enter().append('rect')
+      .classed('background', true)
+      .attr('width', props.width)
+      .attr('height', props.height)
+    rect.exit().remove()
+
     svg
-      .call(geoMap(props).attach(mount))
-      .call(animalMap(props).attach(mount))
-    store.on('ready', function () {
-      setState({ width: store.get('layout').mapWidth })
-    })
-    store.on('resize', function () {
-      setState({ width: store.get('layout').mapWidth })
-    })
-    //store.on('center', function () {
-      //setState({ projection: store.get('mapProjection') })
-    //})
+      .call(geoMap(props))
+      .call(animalMap(props))
   }
 
-  var dispatch = d3.dispatch('draw')
-  d3.rebind(mount, dispatch, 'on')
-
-  function draw (p) {
-    props = Object.assign(props, p || {})
-    svg
-      .attr('width', state.width)
-      .attr('height', state.height)
-    rect
-      .attr('class', 'background')
-      .attr('width', state.width)
-      .attr('height', state.height)
-    dispatch.draw(props)
-  }
-
-  function setState () {
-    state = Object.assign(state, arguments[0])
-    draw()
-  }
-
-  return mount
+  return draw
 }

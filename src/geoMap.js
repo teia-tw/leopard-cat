@@ -14,33 +14,27 @@ module.exports = function (p) {
   // stateless component
 
   var g
-  var path
 
-  function mount (selection) {
-    g = selection.append('g')
-      .attr('class', componentName)
+  function draw (selection) {
+    debug('draw with %o', props)
+
+    g = selection.selectAll('g.' + componentName)
+      .data([0])
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    path = d3.geo.path().projection(props.projection)
+    g.enter().append('g')
+      .classed(componentName, true)
+      .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
+    g.exit().remove()
+
+    store.get('geo', drawGeo)
     store.on('geoUpdate', drawGeo)
   }
 
-  var dispatch = d3.dispatch('draw')
-  d3.rebind(mount, dispatch, 'on')
-
-  mount.attach = function (upper) {
-    upper.on('draw', draw)
-    return mount
-  }
-
-  function draw (p) {
-    props = Object.assign(props, p || {})
-    g.attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
-    path = d3.geo.path().projection(props.projection)
-    store.get('geo', drawGeo)
-    dispatch.draw(props)
-  }
-
   function drawGeo (data) {
+    debug('drawGeo with %o', data)
+
+    var path = d3.geo.path().projection(props.projection)
+
     var geo = g.selectAll('path')
       .data(data)
       .attr('d', path)
@@ -61,5 +55,5 @@ module.exports = function (p) {
     geo.exit().remove()
   }
 
-  return mount
+  return draw
 }
