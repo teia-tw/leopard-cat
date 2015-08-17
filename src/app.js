@@ -9,20 +9,20 @@ var $content, $trend, $map, $timeline
 var store = require('./store')
 var action = require('./action')
 
-var timeline = require('./timeline')()
-var map = require('./map')()
+var timeline = require('./timeline')
+var map = require('./map')
 
 function init () {
   $content = d3.select('.app.content')
   $trend = d3.select('.trend')
-  $map = d3.select('.map').call(map)
-  $timeline = d3.select('.timeline').call(timeline)
+  $map = d3.select('.map').call(map())
+  $timeline = d3.select('.timeline').call(timeline())
 
   store.init()
 }
 
 function debounce (func) {
-  var wait = 50
+  var wait = 20
   var count
   return function () {
     if (count) { clearTimeout(count) }

@@ -2,49 +2,50 @@
 
 var debug = require('debug')('map')
 
+var d3 = require('d3')
 var store = require('./store')
 
-var geoMap = require('./geoMap')()
-var animalMap = require('./animalMap')()
+var geoMap = require('./geoMap')
+var animalMap = require('./animalMap')
 
 var componentName = 'map'
 
 module.exports = function (p) {
 
   var props = Object.assign({
-    margin: { top: 0, right: 0, bottom: 0, left: 0 }
+    margin: { top: 0, right: 0, bottom: 0, left: 0 },
+    width: 800,
+    height: 600,
+    projection: d3.geo.mercator().center([121.05, 24.50]).scale(40000)
   }, p || {})
 
-  var state = {
-    width: 0,
-    height: 0,
-    projection: undefined,
-    date: (new Date('2006-01-01')).getTime()
-  }
+  var state = Object.assign({}, props)
 
-  var svg, rect
+  var svg
+  var rect
 
   function mount (selection) {
     svg = selection.append('svg')
     rect = svg.append('rect')
     svg
-      .call(geoMap)
-      .call(animalMap)
+      .call(geoMap(props).attach(mount))
+      .call(animalMap(props).attach(mount))
     store.on('ready', function () {
-      mount.state({ width: store.get('layout').mapWidth })
-      draw()
+      setState({ width: store.get('layout').mapWidth })
     })
     store.on('resize', function () {
-      mount.state({ width: store.get('layout').mapWidth })
-      draw()
+      setState({ width: store.get('layout').mapWidth })
     })
-    store.on('center', function () {
-      mount.state({ projection: store.get('mapProjection') })
-      draw()
-    })
+    //store.on('center', function () {
+      //setState({ projection: store.get('mapProjection') })
+    //})
   }
 
-  function draw () {
+  var dispatch = d3.dispatch('draw')
+  d3.rebind(mount, dispatch, 'on')
+
+  function draw (p) {
+    props = Object.assign(props, p || {})
     svg
       .attr('width', state.width)
       .attr('height', state.height)
@@ -52,15 +53,12 @@ module.exports = function (p) {
       .attr('class', 'background')
       .attr('width', state.width)
       .attr('height', state.height)
-    animalMap.state(state)
-    geoMap.state(state)
+    dispatch.draw(props)
   }
 
-  mount.state = function () {
-    if (arguments.length === 0) { return state }
+  function setState () {
     state = Object.assign(state, arguments[0])
     draw()
-    return mount
   }
 
   return mount
