@@ -22,6 +22,11 @@ function init () {
   store.init()
 }
 
+store.on('focusedUpdate', function () {
+  var width = parseInt(d3.select('body').style('width'), 10)
+  $timeline.call(timeline({ width: width / 2, focused: store.data.focused }))
+})
+
 function debounce (func) {
   var wait = 20
   var count

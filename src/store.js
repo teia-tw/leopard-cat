@@ -9,6 +9,7 @@ var action = require('./action')
 var store = { data: {} }
 var dispatch = d3.dispatch(
   'ready',
+  'focusedUpdate',
   'geoLoading', 'geoUpdate',
   'animalLoading', 'animalUpdate',
   'timelineLoading', 'timelineUpdate'
@@ -57,6 +58,7 @@ store.loadAnimal = function () {
 }
 
 store.loadTimeline = function () {
+  store.data.timeline = []
   d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv')
     .on('progress', function () {
       dispatch.timelineLoading(d3.event.loading)
@@ -66,24 +68,31 @@ store.loadTimeline = function () {
         debug(err)
         return
       }
+      store.data.timeline = data
       dispatch.timelineUpdate(data)
     })
 }
 
 store.handle = function (act) {
   debug('handle ' + act.name)
+  if (act.name === 'focused') {
+    store.data.focused = act.opts.value
+    dispatch.focusedUpdate()
+  }
 }
 
 store.init = function () {
   store.loadGeo()
   store.loadAnimal()
   store.loadTimeline()
-  action.on('action', store.handle.bind(store))
+  action.on('run', store.handle.bind(store))
   dispatch.ready()
 }
 
-store.get = function (name) {
-  return store.data[name]
+store.get = function (name, func) {
+  if (store.data[name]) {
+    return func(store.data[name])
+  }
 }
 
 module.exports = store

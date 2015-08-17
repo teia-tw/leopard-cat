@@ -28,7 +28,7 @@ module.exports = function (p) {
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.exit().remove()
 
-    store.get('animal', drawHexbin)
+    //store.get('animal', drawHexbin)
     store.on('animalUpdate', drawHexbin)
   }
 
