@@ -9,7 +9,6 @@ var action = require('./action')
 var store = { data: {} }
 var dispatch = d3.dispatch(
   'ready',
-  'resize', 'center',
   'geoLoading', 'geoUpdate',
   'animalLoading', 'animalUpdate',
   'timelineLoading', 'timelineUpdate'
@@ -76,7 +75,6 @@ store.handle = function (act) {
 }
 
 store.init = function () {
-  store.data.scroll = 0
   store.loadGeo()
   store.loadAnimal()
   store.loadTimeline()
