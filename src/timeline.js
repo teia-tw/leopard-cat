@@ -23,26 +23,31 @@ module.exports = function (p) {
 
   var div
   var tops = []
+
+  // hack
+  $(window).off('scroll')
   $(window).on('scroll', debounce(handleScroll))
 
   store.on('timelineUpdate', drawTimeline)
 
   function debounce (func) {
-    var wait = 5
+    var wait = 10
     var count
     return function () {
-      if (count) { clearTimeout(count) }
+      if (count) { debug(count); clearTimeout(count) }
       count = setTimeout(func, wait)
     }
   }
 
   function handleScroll () {
+
     if (tops.length === 0) return
     var i = props.focused
     var scroll = $(window).scrollTop()
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
     if (i !== props.focused) {
+      debug('%d <=> %d', i, props.focused)
       action.run('focused', { value: i })
     }
   }

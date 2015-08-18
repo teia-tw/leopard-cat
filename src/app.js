@@ -28,7 +28,7 @@ store.on('focusedUpdate', function () {
 })
 
 function debounce (func) {
-  var wait = 20
+  var wait = 10
   var count
   return function () {
     if (count) { clearTimeout(count) }
