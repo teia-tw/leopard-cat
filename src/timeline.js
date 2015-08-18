@@ -34,7 +34,7 @@ module.exports = function (p) {
     var wait = 10
     var count
     return function () {
-      if (count) { debug(count); clearTimeout(count) }
+      if (count) { clearTimeout(count) }
       count = setTimeout(func, wait)
     }
   }
@@ -47,7 +47,6 @@ module.exports = function (p) {
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
     if (i !== props.focused) {
-      debug('%d <=> %d', i, props.focused)
       action.run('focused', { value: i })
     }
   }
@@ -57,7 +56,7 @@ module.exports = function (p) {
   }
 
   function drawTimeline (data) {
-    debug('drawTimeline')
+    debug('drawTimeline with %o', data)
 
     var events = div.selectAll('div.event')
       .data(data)
