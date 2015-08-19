@@ -3,8 +3,7 @@
 require('debug').enable('*')
 
 var d3 = require('d3')
-var breakPoint = 500
-var $content, $trend, $map, $timeline
+var $map, $timeline
 
 var store = require('./store')
 
@@ -14,8 +13,6 @@ var map = require('./map')
 function init () {
   var width = parseInt(d3.select('body').style('width'), 10)
 
-  $content = d3.select('.app.content')
-  $trend = d3.select('.trend')
   $map = d3.select('.map').call(map({ width: width / 2 }))
   $timeline = d3.select('.timeline').call(timeline({ width: width / 2 }))
 
