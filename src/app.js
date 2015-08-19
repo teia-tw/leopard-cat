@@ -19,9 +19,10 @@ function init () {
   store.init()
 }
 
-store.on('focusedUpdate', function () {
+store.on('focusedUpdate', function (focused) {
   var width = parseInt(d3.select('body').style('width'), 10)
-  $timeline.call(timeline({ width: width / 2, focused: store.data.focused }))
+  $timeline.call(timeline({ width: width / 2, focused: focused.value }))
+  $map.call(map({ width: width / 2, date: focused.date }))
 })
 
 function debounce (func) {

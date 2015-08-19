@@ -4,6 +4,7 @@ var debug = require('debug')('store')
 
 var d3 = require('d3')
 var topojson = require('topojson')
+var crossfilter = require('crossfilter')
 var action = require('./action')
 
 var store = { data: {} }
@@ -53,7 +54,11 @@ store.loadAnimal = function () {
           latLng: [+d.Latitude, +d.Longitude]
         }
       })
-      dispatch.animalUpdate(store.data.animal)
+      store.data.animalFilter = crossfilter(store.data.animal)
+      store.data.animalDate = store.data.animalFilter.dimension(function (d) {
+        return d.date
+      })
+      dispatch.animalUpdate(store.data.animalDate)
     })
 }
 
@@ -76,8 +81,9 @@ store.loadTimeline = function () {
 store.handle = function (act) {
   debug('handle ' + act.name)
   if (act.name === 'focused') {
-    store.data.focused = act.opts.value
-    dispatch.focusedUpdate()
+    debug(act.opts)
+    store.data.focused = act.opts
+    dispatch.focusedUpdate(store.data.focused)
   }
 }
 
