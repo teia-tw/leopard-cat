@@ -28,8 +28,6 @@ module.exports = function (p) {
   $(window).off('scroll')
   $(window).on('scroll', debounce(handleScroll))
 
-  store.on('timelineUpdate', drawTimeline)
-
   function debounce (func) {
     var wait = 10
     var count
@@ -71,7 +69,7 @@ module.exports = function (p) {
     tops = []
     events[0].forEach(function (e, i) {
       tops.push({
-        date: data[i].date,
+        date: new Date(data[i].date),
         top: $(e).offset().top
       })
     })
@@ -94,7 +92,7 @@ module.exports = function (p) {
       .style('margin-left', props.margin.left + 'px')
     div.exit().remove()
 
-    store.get('timeline', drawTimeline)
+    drawTimeline(store.get('timeline') || [])
   }
 
   return draw

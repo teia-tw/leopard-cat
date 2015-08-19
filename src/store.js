@@ -7,21 +7,26 @@ var topojson = require('topojson')
 var crossfilter = require('crossfilter')
 var action = require('./action')
 
-var store = { data: {} }
+var store = {
+  data: {
+  },
+  filters: {
+    animal: crossfilter()
+  },
+  dimensions: {}
+}
+
 var dispatch = d3.dispatch(
+  'loading',
   'ready',
-  'focusedUpdate',
-  'geoLoading', 'geoUpdate',
-  'animalLoading', 'animalUpdate',
-  'timelineLoading', 'timelineUpdate'
+  'update'
 )
 d3.rebind(store, dispatch, 'on')
 
 store.loadGeo = function () {
-  store.data.geo = {}
   d3.json('/data/twCounty2010.topo.json')
     .on('progress', function () {
-      dispatch.geoLoading(d3.event.loaded)
+      dispatch.loading(d3.event.loaded)
     })
     .get(function (err, data) {
       if (err) {
@@ -30,22 +35,21 @@ store.loadGeo = function () {
       }
       var topo = topojson.feature(data, data.objects.layer1)
       store.data.geo = topo.features
-      dispatch.geoUpdate(store.data.geo)
+      dispatch.update()
     })
 }
 
 store.loadAnimal = function () {
-  store.data.animal = []
   d3.csv('/data/topic_animal.csv')
     .on('progress', function () {
-      dispatch.animalLoading(d3.event.loaded)
+      dispatch.loading(d3.event.loaded)
     })
     .get(function (err, data) {
       if (err) {
         debug(err)
         return
       }
-      store.data.animal = data.map(function (d) {
+      store.filters.animal.add(data.map(function (d) {
         var date = new Date(d.CollectedDateTime)
         return {
           id: 'tesri-' + date.getTime(),
@@ -53,20 +57,21 @@ store.loadAnimal = function () {
           lngLat: [+d.Longitude, +d.Latitude],
           latLng: [+d.Latitude, +d.Longitude]
         }
-      })
-      store.data.animalFilter = crossfilter(store.data.animal)
-      store.data.animalDate = store.data.animalFilter.dimension(function (d) {
-        return d.date
-      })
-      dispatch.animalUpdate(store.data.animalDate)
+      }))
+      store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
+      if (store.data.focused) {
+        store.dimensions.animal.filter(function (d) {
+          return d < store.data.focused.date
+        })
+      }
+      dispatch.update()
     })
 }
 
 store.loadTimeline = function () {
-  store.data.timeline = []
   d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv')
     .on('progress', function () {
-      dispatch.timelineLoading(d3.event.loading)
+      dispatch.loading(d3.event.loading)
     })
     .get(function (err, data) {
       if (err) {
@@ -85,7 +90,7 @@ store.loadTimeline = function () {
       })
       store.data.timelineFilter = crossfilter(store.data.timeline)
       store.data.timelineDate = store.data.timelineFilter.dimension(function (d) { return d.date })
-      dispatch.timelineUpdate(store.data.timeline)
+      dispatch.update()
     })
 }
 
@@ -94,7 +99,13 @@ store.handle = function (act) {
   if (act.name === 'focused') {
     debug(act.opts)
     store.data.focused = act.opts
-    dispatch.focusedUpdate(store.data.focused)
+    if (store.dimensions.animal) {
+      store.dimensions.animal.filter(function (d) {
+        return d < store.data.focused.date
+      })
+    }
+    debug(store.dimensions.animal.top(1000))
+    dispatch.update()
   }
 }
 
@@ -106,9 +117,23 @@ store.init = function () {
   dispatch.ready()
 }
 
-store.get = function (name, func) {
-  if (store.data[name]) {
-    return func(store.data[name])
+store.get = function () {
+  if (arguments[0] === 'animal') {
+    if (store.dimensions.animal) {
+      return store.dimensions.animal.top(Infinity)
+    }
+    return []
+  }
+  if (arguments.length > 0) {
+    for (var r = store.data, i = 0; i < arguments.length; i++) {
+      r = r[arguments[i]]
+      if (r === undefined) {
+        break
+      }
+    }
+    return r
+  } else {
+    return store.data
   }
 }
 

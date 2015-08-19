@@ -26,8 +26,7 @@ module.exports = function (p) {
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.exit().remove()
 
-    //store.get('geo', drawGeo)
-    store.on('geoUpdate', drawGeo)
+    drawGeo(store.get('geo') || {})
   }
 
   function drawGeo (data) {

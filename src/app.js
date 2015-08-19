@@ -11,19 +11,18 @@ var timeline = require('./timeline')
 var map = require('./map')
 
 function init () {
-  var width = parseInt(d3.select('body').style('width'), 10)
-
-  $map = d3.select('.map').call(map({ width: width / 2 }))
-  $timeline = d3.select('.timeline').call(timeline({ width: width / 2 }))
-
+  $map = d3.select('.map')
+  $timeline = d3.select('.timeline')
   store.init()
 }
 
-store.on('focusedUpdate', function (focused) {
+function draw () {
   var width = parseInt(d3.select('body').style('width'), 10)
-  $timeline.call(timeline({ width: width / 2, focused: focused.value }))
-  $map.call(map({ width: width / 2, date: focused.date }))
-})
+  $timeline.call(timeline({ width: width / 2, focused: store.get('focused') !== undefined ? store.get('focused').value : 0 }))
+  $map.call(map({ width: width / 2, date: store.get('focused') !== undefined ? store.get('focused').date : undefined }))
+}
+
+store.on('update', draw)
 
 function debounce (func) {
   var wait = 10
@@ -34,11 +33,5 @@ function debounce (func) {
   }
 }
 
-function resize () {
-  var width = parseInt(d3.select('body').style('width'), 10)
-  $map.call(map({ width: width / 2 }))
-  $timeline.call(timeline({ width: width / 2 }))
-}
-
 d3.select(window).on('load', init)
-d3.select(window).on('resize', debounce(resize))
+d3.select(window).on('resize', debounce(draw))

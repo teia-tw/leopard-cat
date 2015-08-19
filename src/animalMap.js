@@ -28,7 +28,7 @@ module.exports = function (p) {
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.exit().remove()
 
-    store.on('animalUpdate', drawHexbin)
+    drawHexbin(store.get('animal'))
   }
 
   function drawHexbin (data) {
@@ -42,11 +42,8 @@ module.exports = function (p) {
       .range(['rgb(253, 208, 162, 0.8)', 'rgb(230, 85, 13)'])
       .interpolate(d3.interpolateLab)
 
-    if (props.date) {
-      data.filterRange([new Date('2000/01/01'), new Date(props.date)])
-    }
     var hexagon = g.selectAll('path.hexagon')
-      .data(hexbin(data.top(200).map(function (d) { return props.projection(d.lngLat) })))
+      .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })))
       .attr('d', hexbin.hexagon())
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', function (d) { return colorScale(d.length) })
