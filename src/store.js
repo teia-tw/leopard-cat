@@ -73,8 +73,19 @@ store.loadTimeline = function () {
         debug(err)
         return
       }
-      store.data.timeline = data
-      dispatch.timelineUpdate(data)
+      store.data.timeline = data.map(function (d) {
+        return {
+          date: d['日期 '],
+          category: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
+          link: d['資訊連結'],
+          title: d['事件'],
+          ref: d['資料來源（e-info或其他媒體）'],
+          location: (d['經度（路殺或目擊事件才需登）'] ? [d['經度（路殺或目擊事件才需登）'], d['緯度（路殺或目擊事件才需登）']] : undefined)
+        }
+      })
+      store.data.timelineFilter = crossfilter(store.data.timeline)
+      store.data.timelineDate = store.data.timelineFilter.dimension(function (d) { return d.date })
+      dispatch.timelineUpdate(store.data.timeline)
     })
 }
 

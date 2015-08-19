@@ -47,12 +47,12 @@ module.exports = function (p) {
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
     if (i !== props.focused) {
-      action.run('focused', { value: i })
+      action.run('focused', { value: i, date: tops[i].date })
     }
   }
 
   function eventHTML (d) {
-    return '<h3>' + d['日期 '] + '</h3><p>' + ' [' + d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/).join('][') + '] ' + '<a href="' + d['資訊連結'] + '" target="_blank">' + d['事件'] + '</a></p><div style="font-size: 12px">' + d['資料來源（e-info或其他媒體）'] + (d['經度（路殺或目擊事件才需登）'] ? ' (' + d['經度（路殺或目擊事件才需登）'] + ',' + d['緯度（路殺或目擊事件才需登）'] + ')' : '') + '</div>'
+    return '<h3>' + d.date + '</h3><p>' + ' [' + d.category.join('][') + '] ' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + d.ref + (d.location ? '(' + d.location.join(',') + ')' : '') + '</div>'
   }
 
   function drawTimeline (data) {
@@ -71,7 +71,7 @@ module.exports = function (p) {
     tops = []
     events[0].forEach(function (e, i) {
       tops.push({
-        date: data[i]['日期 '],
+        date: data[i].date,
         top: $(e).offset().top
       })
     })
