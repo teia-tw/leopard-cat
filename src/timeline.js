@@ -15,7 +15,7 @@ var action = require('./action')
 module.exports = function (p) {
 
   var props = Object.assign({
-    margin: { top: 0, right: 0, bottom: 0, left: 30 },
+    margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 0,
     height: 0,
     focused: 0
@@ -84,12 +84,14 @@ module.exports = function (p) {
       .style('margin-right', props.margin.right + 'px')
       .style('margin-bottom', props.margin.bottom + 'px')
       .style('margin-left', props.margin.left + 'px')
+      .style('width', props.width + 'px')
     div.enter().append('div')
       .classed(componentName, true)
       .style('margin-top', props.margin.top + 'px')
       .style('margin-right', props.margin.right + 'px')
       .style('margin-bottom', props.margin.bottom + 'px')
       .style('margin-left', props.margin.left + 'px')
+      .style('width', props.width + 'px')
     div.exit().remove()
 
     drawTimeline(store.get('timeline') || [])
