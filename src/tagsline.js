@@ -9,28 +9,22 @@ var componentName = 'tagsline'
 
 function tagAxis (p) {
   var props = Object.assign({
-    'strok-width': 4,
+    'stroke-width': 2,
     length: 0
   }, p || {})
 
   function draw (selection) {
     debug('draw with %o', props)
 
-    var axis = selection.selectAll('line')
+    var axis = selection.selectAll('rect')
       .data([0])
-      .attr('x1', 0)
-      .attr('y1', 0)
-      .attr('x2', 0)
-      .attr('y2', props.length)
-      .style('stroke', 'black')
-      .style('stroke-width', props['stroke-width'] + 'px')
-    axis.enter().append('line')
-      .attr('x1', 0)
-      .attr('y1', 0)
-      .attr('x2', 0)
-      .attr('y2', props.length)
-      .style('stroke', 'black')
-      .style('stroke-width', props['stroke-width'] + 'px')
+      .attr('width', 4)
+      .attr('height', props.length)
+      .style('fill', props.tag.color)
+    axis.enter().append('rect')
+      .attr('width', 4)
+      .attr('height', props.length)
+      .style('fill', props.tag.color)
     axis.exit().remove()
   }
 
@@ -55,22 +49,32 @@ module.exports = function (p) {
       .style('height', props.height + 'px')
     svg.exit().remove()
 
+    var lineScale = d3.scale.linear()
+      .domain([0, store.get('tag').length - 1])
+      .range([20, props.width - 20])
+
     var axises = svg.selectAll('g.tag.axis')
       .data(store.get('tag'))
       .classed({ tag: true, axis: true })
       .attr('transform', function (d, i) {
-        return 'translate(' + i * 10 + ',0)'
+        return 'translate(' + lineScale(i) + ',0)'
       })
       .each(function (d, i) {
-        d3.select(this).call(tagAxis({ top: 0, left: i * 30, length: props.height }))
+        d3.select(this).call(tagAxis({
+          length: props.height,
+          tag: d
+        }))
       })
     axises.enter().append('g')
       .classed({ tag: true, axis: true })
       .attr('transform', function (d, i) {
-        return 'translate(' + i * 10 + ',0)'
+        return 'translate(' + lineScale(i) + ',0)'
       })
       .each(function (d, i) {
-        d3.select(this).call(tagAxis({ top: 0, left: i * 30, length: props.height }))
+        d3.select(this).call(tagAxis({
+          length: props.height,
+          tag: d
+        }))
       })
     axises.exit().remove()
   }

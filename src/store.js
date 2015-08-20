@@ -136,8 +136,6 @@ store.loadTimeline = function () {
           location: (d['經度（路殺或目擊事件才需登）'] ? [d['經度（路殺或目擊事件才需登）'], d['緯度（路殺或目擊事件才需登）']] : undefined)
         }
       })
-      store.data.timelineFilter = crossfilter(store.data.timeline)
-      store.data.timelineDate = store.data.timelineFilter.dimension(function (d) { return d.date })
       dispatch.update()
     })
 }
@@ -183,7 +181,40 @@ store.get = function () {
     return []
   }
   if (arguments[0] === 'tag') {
-    return ['衝突', '獸鋏', '路殺', '石虎研究', '友善農耕', '苗50線', '三義外環道', '後龍殯葬園區']
+    return [
+      {
+        name: '路殺',
+        color: 'red'
+      },
+      {
+        name: '獸鋏',
+        color: 'rgb(228, 26, 28)'
+      },
+      {
+        name: '衝突',
+        color: 'rgb(214, 39, 40)'
+      },
+      {
+        name: '苗50線',
+        color: 'rgb(255, 127, 0)'
+      },
+      {
+        name: '三義外環道',
+        color: 'rgb(255, 217, 47)'
+      },
+      {
+        name: '後龍殯葬園區',
+        color: 'rgb(229, 196, 148)'
+      },
+      {
+        name: '石虎研究',
+        color: 'rgb(116, 196, 118)'
+      },
+      {
+        name: '友善農耕',
+        color: 'rgb(44, 160, 44)'
+      }
+    ]
   }
   if (arguments.length > 0) {
     for (var r = store.data, i = 0; i < arguments.length; i++) {
