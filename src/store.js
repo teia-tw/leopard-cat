@@ -11,7 +11,8 @@ var store = {
   data: {
   },
   filters: {
-    animal: crossfilter()
+    animal: crossfilter(),
+    roadkill: crossfilter()
   },
   dimensions: {}
 }
@@ -68,6 +69,31 @@ store.loadAnimal = function () {
     })
 }
 
+store.loadRoadkill = function () {
+  d3.csv('/data/roadkill.csv')
+    .on('progress', function () {
+      dispatch.loading(d3.event.loaded)
+    })
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.filters.roadkill.add(data.map(function (d) {
+        return {
+          id: 'roadkilltw-' + d.SerialNo,
+          date: new Date(d.ObserveDate),
+          lngLat: [+d.WGS84Lon, +d.WGS84Lat],
+          latlng: [+d.WGS84Lat, +d.WGS84Lon]
+        }
+      }))
+      store.dimensions.roadkill = store.filters.roadkill.dimension(function (d) {
+        return d.date
+      })
+      dispatch.update()
+    })
+}
+
 store.loadTimeline = function () {
   d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv')
     .on('progress', function () {
@@ -112,6 +138,7 @@ store.handle = function (act) {
 store.init = function () {
   store.loadGeo()
   store.loadAnimal()
+  store.loadRoadkill()
   store.loadTimeline()
   action.on('run', store.handle.bind(store))
   dispatch.ready()
@@ -121,6 +148,12 @@ store.get = function () {
   if (arguments[0] === 'animal') {
     if (store.dimensions.animal) {
       return store.dimensions.animal.top(Infinity)
+    }
+    return []
+  }
+  if (arguments[0] === 'roadkill') {
+    if (store.dimensions.roadkill) {
+      return store.dimensions.roadkill.top(Infinity)
     }
     return []
   }

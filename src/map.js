@@ -4,8 +4,9 @@ var debug = require('debug')('map')
 
 var d3 = require('d3')
 
+var store = require('./store')
 var geoMap = require('./geoMap')
-var animalMap = require('./animalMap')
+var hexbinMap = require('./hexbinMap')
 
 var componentName = 'map'
 
@@ -44,7 +45,16 @@ module.exports = function (p) {
 
     svg
       .call(geoMap(props))
-      .call(animalMap(props))
+      .call(hexbinMap(Object.assign({
+        className: 'animal',
+        color: 'orange',
+        data: store.get('animal')
+      }, props)))
+      .call(hexbinMap(Object.assign({
+        className: 'roadkill',
+        color: 'red',
+        data: store.get('roadkill')
+      }, props)))
   }
 
   return draw

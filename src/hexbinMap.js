@@ -1,13 +1,11 @@
 'use strict'
 
-var debug = require('debug')('animalMap')
+var debug = require('debug')('hexbinMap')
 
 var d3 = require('d3')
 d3.hexbin = require('../lib/d3-plugins/hexbin')
 
-var store = require('./store')
-
-var componentName = 'animalMap'
+var componentName = 'hexbinMap'
 
 module.exports = function (p) {
 
@@ -20,15 +18,16 @@ module.exports = function (p) {
   function draw (selection) {
     debug('draw with %o', props)
 
-    g = selection.selectAll('g.' + componentName)
+    g = selection.selectAll('g.' + componentName + '.' + props.className)
       .data([0])
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.enter().append('g')
       .classed(componentName, true)
+      .classed(props.className, true)
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.exit().remove()
 
-    drawHexbin(store.get('animal'))
+    drawHexbin(props.data)
   }
 
   function drawHexbin (data) {
@@ -37,21 +36,21 @@ module.exports = function (p) {
     var hexbin = d3.hexbin()
       .size([props.width, props.height])
     var radiusScale = d3.scale.sqrt()
-      .domain([1, 16])
-      .range([1, 16])
+      .domain([4, 16])
+      .range([4, 16])
 
     var hexagon = g.selectAll('path.hexagon')
       .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })))
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
-      .style('fill', 'orange')
+      .style('fill', p.color)
       .style('stroke', 'black')
       .style('stroke-width', '1px')
     hexagon.enter().append('path')
       .classed('hexagon', true)
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
-      .style('fill', 'orange')
+      .style('fill', p.color)
     hexagon.exit().remove()
   }
 
