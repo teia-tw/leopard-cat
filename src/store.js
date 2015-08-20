@@ -25,7 +25,7 @@ var dispatch = d3.dispatch(
 d3.rebind(store, dispatch, 'on')
 
 store.loadGeo = function () {
-  d3.json('/data/twCounty2010.topo.json')
+  d3.json('data/twCounty2010.topo.json')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -41,7 +41,7 @@ store.loadGeo = function () {
 }
 
 store.loadAnimal = function () {
-  d3.csv('/data/topic_animal.csv')
+  d3.csv('data/topic_animal.csv')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -70,7 +70,7 @@ store.loadAnimal = function () {
 }
 
 store.loadRoadkill = function () {
-  d3.csv('/data/roadkill.csv')
+  d3.csv('data/roadkill.csv')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
