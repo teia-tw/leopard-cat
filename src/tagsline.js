@@ -10,10 +10,12 @@ var componentName = 'tagsline'
 function tagAxis (p) {
   var props = Object.assign({
     'strok-width': 4,
-    length: 500
+    length: 0
   }, p || {})
 
   function draw (selection) {
+    debug('draw with %o', props)
+
     var axis = selection.selectAll('line')
       .data([0])
       .attr('x1', 0)
@@ -40,15 +42,17 @@ module.exports = function (p) {
   }, p || {})
 
   function draw (selection) {
-    debug('draw')
+    debug('draw with %o', props)
 
     var svg = selection.selectAll('svg.' + componentName)
       .data([0])
       .classed(componentName, true)
       .style('width', props.width + 'px')
+      .style('height', props.height + 'px')
     svg.enter().append('svg')
       .classed(componentName, true)
       .style('width', props.width + 'px')
+      .style('height', props.height + 'px')
     svg.exit().remove()
 
     var axises = svg.selectAll('g.tag.axis')
@@ -58,7 +62,7 @@ module.exports = function (p) {
         return 'translate(' + i * 10 + ',0)'
       })
       .each(function (d, i) {
-        d3.select(this).call(tagAxis({ top: 0, left: i * 30 }))
+        d3.select(this).call(tagAxis({ top: 0, left: i * 30, length: props.height }))
       })
     axises.enter().append('g')
       .classed({ tag: true, axis: true })
@@ -66,7 +70,7 @@ module.exports = function (p) {
         return 'translate(' + i * 10 + ',0)'
       })
       .each(function (d, i) {
-        d3.select(this).call(tagAxis({ top: 0, left: i * 30 }))
+        d3.select(this).call(tagAxis({ top: 0, left: i * 30, length: props.height }))
       })
     axises.exit().remove()
   }

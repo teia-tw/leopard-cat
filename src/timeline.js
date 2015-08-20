@@ -73,6 +73,13 @@ module.exports = function (p) {
         top: $(e).offset().top
       })
     })
+    if (events[0].length > 0) {
+      var lastEvent = $(events[0][events[0].length - 1])
+      var timelineHeight = lastEvent.offset().top + lastEvent.outerHeight()
+      if (props.height !== timelineHeight) {
+        action.run('setHeight', timelineHeight)
+      }
+    }
   }
 
   function draw (selection) {

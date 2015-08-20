@@ -154,6 +154,9 @@ store.handle = function (act) {
     }
     debug(store.dimensions.animal.top(1000))
     dispatch.update()
+  } else if (act.name === 'setHeight') {
+    store.data.height = act.opts
+    dispatch.update()
   }
 }
 

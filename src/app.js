@@ -20,9 +20,9 @@ function init () {
 
 function draw () {
   var width = parseInt(d3.select('body').style('width'), 10)
-  $timeline.call(timeline({ width: ((width - 100) / 2) - 1, focused: store.get('focused') !== undefined ? store.get('focused').value : 0 }))
+  $timeline.call(timeline({ width: ((width - 100) / 2) - 1, height: store.get('height') || 0, focused: store.get('focused') !== undefined ? store.get('focused').value : 0 }))
   $map.call(map({ width: ((width - 100) / 2) - 1, date: store.get('focused') !== undefined ? store.get('focused').date : undefined }))
-  $tagsline.call(tagsline({ width: 100 }))
+  $tagsline.call(tagsline({ width: 100, height: store.get('height') || 0 }))
 }
 
 store.on('update', draw)
