@@ -183,7 +183,7 @@ store.get = function () {
     return []
   }
   if (arguments[0] === 'tag') {
-    return ['開發案', '衝突', '石虎研究', '苗50線', '獸鋏', '路殺', '友善農耕', '三義外環道', '後龍殯葬園區']
+    return ['衝突', '獸鋏', '路殺', '石虎研究', '友善農耕', '苗50線', '三義外環道', '後龍殯葬園區']
   }
   if (arguments.length > 0) {
     for (var r = store.data, i = 0; i < arguments.length; i++) {
