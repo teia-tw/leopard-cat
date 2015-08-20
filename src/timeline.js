@@ -1,6 +1,5 @@
 'use strict'
 
-require('debug').enable('*')
 var debug = require('debug')('timeline')
 
 var d3 = require('d3')
@@ -50,7 +49,7 @@ module.exports = function (p) {
   }
 
   function eventHTML (d) {
-    return '<h3>' + d.date + '</h3><p>' + ' [' + d.category.join('][') + '] ' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + d.ref + (d.location ? '(' + d.location.join(',') + ')' : '') + '</div>'
+    return '<h3>' + d.date + '</h3><p>' + ' [' + d.category.join('][') + '] ' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + '</div>'
   }
 
   function drawTimeline (data) {
