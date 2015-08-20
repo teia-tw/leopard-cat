@@ -35,9 +35,10 @@ module.exports = function (p) {
 
     var hexbin = d3.hexbin()
       .size([props.width, props.height])
+      .radius(8)
     var radiusScale = d3.scale.sqrt()
-      .domain([4, 16])
-      .range([4, 16])
+      .domain([1, 16])
+      .range([2, 8])
 
     var hexagon = g.selectAll('path.hexagon')
       .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })))
