@@ -15,7 +15,7 @@ module.exports = function (p) {
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 800,
     height: 600,
-    projection: d3.geo.mercator().center([121.05, 24.50]).scale(40000)
+    projection: d3.geo.mercator().center([121.65, 24.20]).scale(20000)
   }, p || {})
 
   function draw (selection) {
