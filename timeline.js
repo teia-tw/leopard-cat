@@ -21295,6 +21295,28 @@ store.loadAnimal = function () {
       }
       dispatch.update()
     })
+  d3.json('data/lin-2014.geojson')
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.filters.animal.add(data.features.map(function (d, i) {
+        return {
+          id: 'lin2014-' + i,
+          date: new Date(d.properties.date),
+          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]],
+          lngLat: d.geometry.coordinates
+        }
+      }))
+      store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
+      if (store.data.focused) {
+        store.dimensions.animal.filter(function (d) {
+          return d < store.data.focused.date
+        })
+      }
+      dispatch.update()
+    })
 }
 
 store.loadRoadkill = function () {
