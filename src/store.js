@@ -129,7 +129,7 @@ store.loadTimeline = function () {
       store.data.timeline = data.map(function (d) {
         return {
           date: d['日期 '],
-          category: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
+          tags: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
           link: d['資訊連結'],
           title: d['事件'],
           ref: d['資料來源（e-info或其他媒體）'],

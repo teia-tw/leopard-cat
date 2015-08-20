@@ -49,7 +49,7 @@ module.exports = function (p) {
   }
 
   function eventHTML (d) {
-    return '<h3>' + d.date + '</h3><p>' + ' [' + d.category.join('][') + '] ' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + '</div>'
+    return '<h3>' + d.date + '</h3><p>' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + '</div>'
   }
 
   function drawTimeline (data) {
