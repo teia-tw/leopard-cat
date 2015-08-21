@@ -41,7 +41,7 @@ store.loadGeo = function () {
 }
 
 store.loadAnimal = function () {
-  d3.csv('data/topic_animal.csv')
+  d3.csv('data/tapir.csv')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -51,18 +51,18 @@ store.loadAnimal = function () {
         return
       }
       store.filters.animal.add(data.map(function (d) {
-        var date = new Date(d.CollectedDateTime)
+        var date = new Date(d['採集日'])
         return {
-          id: 'tesri-' + date.getTime(),
+          id: d['永久識別碼'],
           date: date,
-          lngLat: [+d.Longitude, +d.Latitude],
-          latLng: [+d.Latitude, +d.Longitude]
+          latLng: [+d['緯度'], +d['經度']],
+          lngLat: [+d['經度'], +d['緯度']]
         }
       }))
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
-      if (store.data.focused) {
+      if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focused.date
+          return d < store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -82,9 +82,9 @@ store.loadAnimal = function () {
         }
       }))
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
-      if (store.data.focused) {
+      if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focused.date
+          return d < store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -142,12 +142,12 @@ store.loadTimeline = function () {
 
 store.handle = function (act) {
   debug('handle ' + act.name)
-  if (act.name === 'focused') {
+  if (act.name === 'focuseEvent') {
     debug(act.opts)
-    store.data.focused = act.opts
+    store.data.focusedEvent = act.opts
     if (store.dimensions.animal) {
       store.dimensions.animal.filter(function (d) {
-        return d < store.data.focused.date
+        return d < store.data.focusedEvent.date
       })
     }
     debug(store.dimensions.animal.top(1000))
