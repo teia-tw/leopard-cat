@@ -38,10 +38,13 @@ module.exports = function (p) {
       .radius(8)
     var radiusScale = d3.scale.sqrt()
       .domain([1, 16])
-      .range([2, 8])
+      .range([2, 12])
 
     var hexagon = g.selectAll('path.hexagon')
-      .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })))
+      .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })), function (d) { return [d.i, d.j] })
+    hexagon
+      .transition()
+      .delay(0.5)
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', p.color)
