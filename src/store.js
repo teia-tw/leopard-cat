@@ -186,14 +186,14 @@ store.get = function () {
         name: '路殺',
         color: 'red'
       },
-      {
-        name: '獸鋏',
-        color: 'rgb(228, 26, 28)'
-      },
-      {
-        name: '衝突',
-        color: 'rgb(214, 39, 40)'
-      },
+      //{
+        //name: '獸鋏',
+        //color: 'rgb(228, 26, 28)'
+      //},
+      //{
+        //name: '衝突',
+        //color: 'rgb(214, 39, 40)'
+      //},
       {
         name: '苗50線',
         color: 'rgb(255, 127, 0)'
@@ -206,10 +206,10 @@ store.get = function () {
         name: '後龍殯葬園區',
         color: 'rgb(229, 196, 148)'
       },
-      {
-        name: '石虎研究',
-        color: 'rgb(116, 196, 118)'
-      },
+      //{
+        //name: '石虎研究',
+        //color: 'rgb(116, 196, 118)'
+      //},
       {
         name: '友善農耕',
         color: 'rgb(44, 160, 44)'

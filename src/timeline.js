@@ -44,12 +44,12 @@ module.exports = function (p) {
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
     if (i !== props.focused) {
-      action.run('focused', { value: i, date: tops[i].date })
+      action.run('focused', { value: i, date: tops[i].date, tags: tops[i].tags })
     }
   }
 
   function eventHTML (d) {
-    return '<h3>' + d.date + '</h3><p>' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + '</div>'
+    return '<h3>' + d.date + '</h3><p>' + d.title + '<a href="' + d.link + '" target="_blank">&raquo;</a></p>'
   }
 
   function drawTimeline (data) {
@@ -69,7 +69,8 @@ module.exports = function (p) {
     events[0].forEach(function (e, i) {
       tops.push({
         date: new Date(data[i].date),
-        top: $(e).offset().top
+        top: $(e).offset().top,
+        tags: data[i].tags
       })
     })
     if (events[0].length > 0) {
