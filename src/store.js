@@ -25,7 +25,7 @@ var dispatch = d3.dispatch(
 d3.rebind(store, dispatch, 'on')
 
 store.loadGeo = function () {
-  d3.json('data/twCounty2010.topo.json')
+  d3.json('data/twcounty.topo.json')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -34,7 +34,7 @@ store.loadGeo = function () {
         debug(err)
         return
       }
-      var topo = topojson.feature(data, data.objects.layer1)
+      var topo = topojson.feature(data, data.objects.twcounty)
       store.data.geo = topo.features
       dispatch.update()
     })
