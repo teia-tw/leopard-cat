@@ -1,6 +1,6 @@
 'use strict'
 
-require('debug').enable('*')
+require('debug').enable('timeline')
 
 var d3 = require('d3')
 var $map, $timeline, $tagsline
@@ -20,7 +20,7 @@ function init () {
 
 function draw () {
   var width = parseInt(d3.select('body').style('width'), 10)
-  $timeline.call(timeline({ width: ((width - 20) / 2) - 1, height: store.get('height') || 0, focused: store.get('focused') !== undefined ? store.get('focused').value : 0 }))
+  $timeline.call(timeline({ width: ((width - 20) / 2) - 1, height: store.get('height') || 0, focusedEvent: store.get('focusedEvent') }))
   $map.call(map({ width: ((width - 20) / 2) - 1, date: store.get('focused') !== undefined ? store.get('focused').date : undefined }))
   // $tagsline.call(tagsline({ width: 100, height: store.get('height') || 0 }))
 }

@@ -16,8 +16,7 @@ module.exports = function (p) {
   var props = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 0,
-    height: 0,
-    focused: 0
+    height: 0
   }, p || {})
 
   var div
@@ -37,14 +36,13 @@ module.exports = function (p) {
   }
 
   function handleScroll () {
-
     if (tops.length === 0) return
-    var i = props.focused
+    var i = props.focusedEvent ? props.focusedEvent.value : 0
     var scroll = $(window).scrollTop()
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
-    if (i !== props.focused) {
-      action.run('focused', { value: i, date: tops[i].date, tags: tops[i].tags })
+    if (undefined === props.focusedEvent || i !== props.focusedEvent.value) {
+      action.run('focuseEvent', { value: i, date: tops[i].date, tags: tops[i].tags })
     }
   }
 
@@ -57,11 +55,11 @@ module.exports = function (p) {
 
     var events = div.selectAll('div.event')
       .data(data)
-      .classed('focused', function (d, i) { return i === props.focused })
+      .classed('focused', function (d, i) { return props.focusedEvent && i === props.focusedEvent.value })
       .html(eventHTML)
     events.enter().append('div')
       .classed('event', true)
-      .classed('focused', function (d, i) { return i === props.focused })
+      .classed('focused', function (d, i) { return props.focusedEvent && i === props.focusedEvent.value })
       .html(eventHTML)
     events.exit().remove()
 
