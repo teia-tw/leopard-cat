@@ -27,7 +27,7 @@ module.exports = function (p) {
   $(window).on('scroll', debounce(handleScroll))
 
   function debounce (func) {
-    var wait = 10
+    var wait = 0
     var count
     return function () {
       if (count) { clearTimeout(count) }

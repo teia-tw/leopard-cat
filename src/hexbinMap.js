@@ -44,7 +44,7 @@ module.exports = function (p) {
       .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })), function (d) { return [d.i, d.j] })
     hexagon
       .transition()
-      .delay(0.5)
+      .delay(2)
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', p.color)
