@@ -155,6 +155,9 @@ store.handle = function (act) {
   } else if (act.name === 'setHeight') {
     store.data.height = act.opts
     dispatch.update()
+  } else if (act.name === 'focusTag') {
+    store.data.focusTags = act.opts
+    dispatch.update()
   }
 }
 

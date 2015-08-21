@@ -4,6 +4,7 @@ var debug = require('debug')('tagsline')
 
 var d3 = require('d3')
 var store = require('./store')
+var action = require('./action')
 
 var componentName = 'tagsline'
 
@@ -53,9 +54,14 @@ module.exports = function (p) {
       .domain([0, store.get('tag').length - 1])
       .range([20, props.width - 20])
 
+    debug(store.get('focusTags'))
+
     var axises = svg.selectAll('g.tag.axis')
       .data(store.get('tag'))
       .classed({ tag: true, axis: true })
+      .classed('focused', function (d) {
+        return store.get('focusTags') && store.get('focusTags').name === d.name
+      })
       .attr('transform', function (d, i) {
         return 'translate(' + lineScale(i) + ',0)'
       })
@@ -67,6 +73,9 @@ module.exports = function (p) {
       })
     axises.enter().append('g')
       .classed({ tag: true, axis: true })
+      .classed('focused', function (d) {
+        return store.get('focusTags') && store.get('focusTags').name === d.name
+      })
       .attr('transform', function (d, i) {
         return 'translate(' + lineScale(i) + ',0)'
       })
@@ -77,6 +86,11 @@ module.exports = function (p) {
         }))
       })
     axises.exit().remove()
+
+    axises.on('click', function (d) {
+      debug(d)
+      action.run('focusTag', d)
+    })
   }
 
   return draw
