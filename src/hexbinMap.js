@@ -55,6 +55,8 @@ module.exports = function (p) {
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', p.color)
+      .style('stroke', 'black')
+      .style('stroke-width', '1px')
     hexagon.exit().remove()
   }
 

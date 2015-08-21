@@ -1,6 +1,6 @@
 'use strict'
 
-// require('debug').enable('*')
+require('debug').disable('*')
 
 var d3 = require('d3')
 var $map, $timeline, $tagsline
