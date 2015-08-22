@@ -13,7 +13,7 @@ var store = {
   filters: {
     animal: crossfilter(),
     roadkill: crossfilter(),
-    case: crossfilter()
+    construct: crossfilter()
   },
   dimensions: {}
 }
@@ -141,20 +141,24 @@ store.loadTimeline = function () {
     })
 }
 
-store.loadCase = function () {
-  d3.json('data/case.geojson')
+store.loadConstruct = function () {
+  d3.json('data/construct.geojson')
     .get(function (err, data) {
       if (err) {
         debug(err)
         return
       }
-      store.data.case.add(data.features.map(function (d) {
+      store.filters.construct.add(data.features.map(function (d) {
         return {
           name: d.properties.name,
+          date: new Date('2008/01/01'),
           lngLat: d.geometry.coordinates,
           latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
         }
       }))
+      store.dimensions.construct = store.filters.construct.dimension(function (d) {
+        return d.date
+      })
       dispatch.update()
     })
 }
@@ -183,7 +187,7 @@ store.handle = function (act) {
 store.init = function () {
   store.loadGeo()
   store.loadAnimal()
-  store.loadCase()
+  store.loadConstruct()
   store.loadRoadkill()
   store.loadTimeline()
   action.on('run', store.handle.bind(store))
@@ -202,6 +206,11 @@ store.get = function () {
       return store.dimensions.roadkill.top(Infinity)
     }
     return []
+  }
+  if (arguments[0] === 'construct') {
+    if (store.dimensions.construct) {
+      return store.dimensions.construct.top(Infinity)
+    }
   }
   if (arguments[0] === 'tag') {
     return [

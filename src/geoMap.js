@@ -14,6 +14,7 @@ module.exports = function (p) {
   // stateless component
 
   var g
+  var construct
 
   function draw (selection) {
     debug('draw with %o', props)
@@ -26,7 +27,17 @@ module.exports = function (p) {
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.exit().remove()
 
+    construct = g.selectAll('g.construct')
+      .data([0])
+    construct.enter().append('g')
+      .classed('construct', true)
+    construct.exit().remove()
+
     drawGeo(store.get('geo') || {})
+  }
+
+  function hightCounty (d) {
+    return d.properties.COUNTYNAME === '苗栗縣' || d.properties.COUNTYNAME === '南投縣'
   }
 
   function drawGeo (data) {
@@ -38,19 +49,15 @@ module.exports = function (p) {
       .data(data)
       .attr('d', path)
       .attr('fill', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#fff' : '#ccc'
+        return hightCounty(d) ? '#fff' : '#ccc'
       })
-      .attr('stroke', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#333' : '#fff'
-      })
+      .attr('stroke', '#fff')
     geo.enter().append('path')
       .attr('d', path)
       .attr('fill', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#fff' : '#ccc'
+        return hightCounty(d) ? '#fff' : '#ccc'
       })
-      .attr('stroke', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#333' : '#fff'
-      })
+      .attr('stroke', '#fff')
     geo.exit().remove()
   }
 

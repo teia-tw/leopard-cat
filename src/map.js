@@ -7,6 +7,7 @@ var d3 = require('d3')
 var store = require('./store')
 var geoMap = require('./geoMap')
 var hexbinMap = require('./hexbinMap')
+var eventMap = require('./eventMap')
 
 var componentName = 'map'
 
@@ -54,6 +55,11 @@ module.exports = function (p) {
         className: 'roadkill',
         color: 'red',
         data: store.get('roadkill')
+      }, props)))
+      .call(eventMap(Object.assign({
+        className: 'construct',
+        color: 'red',
+        data: store.get('construct')
       }, props)))
   }
 
