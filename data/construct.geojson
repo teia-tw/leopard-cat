@@ -8,6 +8,7 @@
         "@id": "way/275327162",
         "construction": "cemetery",
         "landuse": "construction",
+        "date": "2012/07/11",
         "name": "後龍殯葬園區"
       },
       "geometry": {
@@ -23,11 +24,9 @@
       "id": "way/263305572",
       "properties": {
         "@id": "way/263305572",
-        "bicycle": "yes",
-        "foot": "yes",
         "highway": "tertiary",
-        "oneway": "no",
-        "ref": "苗50線"
+        "date": "2010/01/01",
+        "name": "苗50線"
       },
       "geometry": {
         "type": "Point",
@@ -43,6 +42,7 @@
       "properties": {
         "@id": "way/253145383",
         "highway": "unclassified",
+        "date": "2010/01/01",
         "name": "華南路"
       },
       "geometry": {
