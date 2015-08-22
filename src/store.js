@@ -63,7 +63,7 @@ store.loadAnimal = function () {
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
       if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -85,7 +85,7 @@ store.loadAnimal = function () {
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
       if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -115,7 +115,7 @@ store.loadRoadkill = function () {
       })
       if (store.data.focusedEvent) {
         store.dimensions.roadkill.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -142,7 +142,7 @@ store.loadConstruct = function () {
       })
       if (store.data.focusedEvent) {
         store.dimensions.construct.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -180,17 +180,17 @@ store.handle = function (act) {
     store.data.focusedEvent = act.opts
     if (store.dimensions.animal) {
       store.dimensions.animal.filter(function (d) {
-        return d < store.data.focusedEvent.date
+        return d <= store.data.focusedEvent.date
       })
     }
     if (store.dimensions.roadkill) {
       store.dimensions.roadkill.filter(function (d) {
-        return d < store.data.focusedEvent.date
+        return d <= store.data.focusedEvent.date
       })
     }
     if (store.dimensions.construct) {
       store.dimensions.construct.filter(function (d) {
-        return d < store.data.focusedEvent.date
+        return d <= store.data.focusedEvent.date
       })
     }
     dispatch.update()
