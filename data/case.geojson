@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/275327162",
+      "properties": {
+        "@id": "way/275327162",
+        "construction": "cemetery",
+        "landuse": "construction",
+        "name": "後龍殯葬園區"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.77527999877928,
+          24.59891411493535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/263305572",
+      "properties": {
+        "@id": "way/263305572",
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "tertiary",
+        "oneway": "no",
+        "ref": "苗50線"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.70678710937499,
+          24.402682708433268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/253145383",
+      "properties": {
+        "@id": "way/253145383",
+        "highway": "unclassified",
+        "name": "華南路"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.56074619293211,
+          24.155133619966076
+        ]
+      }
+    }
+  ]
+}

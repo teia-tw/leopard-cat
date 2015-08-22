@@ -12,7 +12,8 @@ var store = {
   },
   filters: {
     animal: crossfilter(),
-    roadkill: crossfilter()
+    roadkill: crossfilter(),
+    case: crossfilter()
   },
   dimensions: {}
 }
@@ -25,7 +26,7 @@ var dispatch = d3.dispatch(
 d3.rebind(store, dispatch, 'on')
 
 store.loadGeo = function () {
-  d3.json('data/twcounty.topo.json')
+  d3.json('data/twCounty2010.topo.json')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -34,7 +35,7 @@ store.loadGeo = function () {
         debug(err)
         return
       }
-      var topo = topojson.feature(data, data.objects.twcounty)
+      var topo = topojson.feature(data, data.objects.layer1)
       store.data.geo = topo.features
       dispatch.update()
     })
@@ -106,7 +107,7 @@ store.loadRoadkill = function () {
           id: 'roadkilltw-' + d.SerialNo,
           date: new Date(d.ObserveDate),
           lngLat: [+d.WGS84Lon, +d.WGS84Lat],
-          latlng: [+d.WGS84Lat, +d.WGS84Lon]
+          latLng: [+d.WGS84Lat, +d.WGS84Lon]
         }
       }))
       store.dimensions.roadkill = store.filters.roadkill.dimension(function (d) {
@@ -140,6 +141,24 @@ store.loadTimeline = function () {
     })
 }
 
+store.loadCase = function () {
+  d3.json('data/case.geojson')
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.data.case.add(data.features.map(function (d) {
+        return {
+          name: d.properties.name,
+          lngLat: d.geometry.coordinates,
+          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
+        }
+      }))
+      dispatch.update()
+    })
+}
+
 store.handle = function (act) {
   debug('handle ' + act.name)
   if (act.name === 'focuseEvent') {
@@ -164,6 +183,7 @@ store.handle = function (act) {
 store.init = function () {
   store.loadGeo()
   store.loadAnimal()
+  store.loadCase()
   store.loadRoadkill()
   store.loadTimeline()
   action.on('run', store.handle.bind(store))
@@ -189,14 +209,14 @@ store.get = function () {
         name: '路殺',
         color: 'red'
       },
-      //{
-        //name: '獸鋏',
-        //color: 'rgb(228, 26, 28)'
-      //},
-      //{
-        //name: '衝突',
-        //color: 'rgb(214, 39, 40)'
-      //},
+      // {
+        // name: '獸鋏',
+        // color: 'rgb(228, 26, 28)'
+      // },
+      // {
+        // name: '衝突',
+        // color: 'rgb(214, 39, 40)'
+      // },
       {
         name: '苗50線',
         color: 'rgb(255, 127, 0)'
@@ -209,10 +229,10 @@ store.get = function () {
         name: '後龍殯葬園區',
         color: 'rgb(229, 196, 148)'
       },
-      //{
-        //name: '石虎研究',
-        //color: 'rgb(116, 196, 118)'
-      //},
+      // {
+        // name: '石虎研究',
+        // color: 'rgb(116, 196, 118)'
+      // },
       {
         name: '友善農耕',
         color: 'rgb(44, 160, 44)'
