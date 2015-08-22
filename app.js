@@ -21341,23 +21341,26 @@ module.exports = action
 require('debug').enable('*')
 
 var d3 = require('d3')
-var $map, $timeline
+var $map, $timeline, $tagsline
 
 var store = require('./store')
 
-var timeline = require('./timeline')
 var map = require('./map')
+var timeline = require('./timeline')
+// var tagsline = require('./tagsline')
 
 function init () {
   $map = d3.select('.map')
   $timeline = d3.select('.timeline')
+  $tagsline = d3.select('.tagsline')
   store.init()
 }
 
 function draw () {
   var width = parseInt(d3.select('body').style('width'), 10)
-  $timeline.call(timeline({ width: width / 2, focused: store.get('focused') !== undefined ? store.get('focused').value : 0 }))
-  $map.call(map({ width: width / 2, date: store.get('focused') !== undefined ? store.get('focused').date : undefined }))
+  $timeline.call(timeline({ width: ((width - 20) / 2) - 1, height: store.get('height') || 0, focusedEvent: store.get('focusedEvent') }))
+  $map.call(map({ width: ((width - 20) / 2) - 1, date: store.get('focused') !== undefined ? store.get('focused').date : undefined }))
+  // $tagsline.call(tagsline({ width: 100, height: store.get('height') || 0 }))
 }
 
 store.on('update', draw)
@@ -21374,7 +21377,67 @@ function debounce (func) {
 d3.select(window).on('load', init)
 d3.select(window).on('resize', debounce(draw))
 
-},{"./map":15,"./store":16,"./timeline":17,"d3":5,"debug":6}],13:[function(require,module,exports){
+},{"./map":16,"./store":17,"./timeline":18,"d3":5,"debug":6}],13:[function(require,module,exports){
+'use strict'
+
+var debug = require('debug')('eventMap')
+
+var d3 = require('d3')
+
+var componentName = 'eventMapMap'
+
+module.exports = function (p) {
+  var props = Object.assign({
+    projection: d3.geo.mercator().center([121.65, 24.20]).scale(20000)
+  }, p || {})
+
+  var construct
+
+  function draw (selection) {
+    debug('draw with %o', props)
+
+    construct = selection.selectAll('g.' + componentName)
+      .data(['construct'])
+    construct.enter().append('g')
+      .attr('class', function (d) {
+        return componentName + ' ' + d
+      })
+    construct.exit().remove()
+
+    drawConstruct(props.data || [])
+  }
+
+  function drawConstruct (data) {
+    var circle = construct.selectAll('circle')
+      .data(data)
+      .attr('r', 3)
+      .attr('cx', function (d) {
+        return props.projection(d.lngLat)[0]
+      })
+      .attr('cy', function (d) {
+        return props.projection(d.lngLat)[1]
+      })
+      .style('fill', 'rgba(255, 64, 255, 0.77)')
+      .style('stroke', '1px')
+      .style('stroke', 'black')
+    circle.enter().append('circle')
+      .attr('r', 3)
+      .attr('cx', function (d) {
+        return props.projection(d.lngLat)[0]
+      })
+      .attr('cy', function (d) {
+        return props.projection(d.lngLat)[1]
+      })
+      .style('fill', 'rgba(255, 64, 255, 0.77)')
+      .style('stroke', '1px')
+      .style('stroke', 'black')
+    circle.exit().remove()
+  }
+
+  return draw
+}
+
+},{"d3":5,"debug":6}],14:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('geoMap')
@@ -21391,6 +21454,7 @@ module.exports = function (p) {
   // stateless component
 
   var g
+  var construct
 
   function draw (selection) {
     debug('draw with %o', props)
@@ -21403,7 +21467,17 @@ module.exports = function (p) {
       .attr('transform', 'translate(' + props.margin.left + ',' + props.margin.top + ')')
     g.exit().remove()
 
+    construct = g.selectAll('g.construct')
+      .data([0])
+    construct.enter().append('g')
+      .classed('construct', true)
+    construct.exit().remove()
+
     drawGeo(store.get('geo') || {})
+  }
+
+  function hightCounty (d) {
+    return d.properties.COUNTYNAME === '苗栗縣' || d.properties.COUNTYNAME === '南投縣'
   }
 
   function drawGeo (data) {
@@ -21415,26 +21489,22 @@ module.exports = function (p) {
       .data(data)
       .attr('d', path)
       .attr('fill', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#fff' : '#ccc'
+        return hightCounty(d) ? '#fff' : '#ccc'
       })
-      .attr('stroke', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#333' : '#fff'
-      })
+      .attr('stroke', '#fff')
     geo.enter().append('path')
       .attr('d', path)
       .attr('fill', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#fff' : '#ccc'
+        return hightCounty(d) ? '#fff' : '#ccc'
       })
-      .attr('stroke', function (d) {
-        return d.properties.COUNTYNAME === '苗栗縣' ? '#333' : '#fff'
-      })
+      .attr('stroke', '#fff')
     geo.exit().remove()
   }
 
   return draw
 }
 
-},{"./store":16,"d3":5,"debug":6}],14:[function(require,module,exports){
+},{"./store":17,"d3":5,"debug":6}],15:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('hexbinMap')
@@ -21475,10 +21545,13 @@ module.exports = function (p) {
       .radius(8)
     var radiusScale = d3.scale.sqrt()
       .domain([1, 16])
-      .range([2, 8])
+      .range([2, 12])
 
     var hexagon = g.selectAll('path.hexagon')
-      .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })))
+      .data(hexbin(data.map(function (d) { return props.projection(d.lngLat) })), function (d) { return [d.i, d.j] })
+    hexagon
+      .transition()
+      .delay(2)
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', p.color)
@@ -21489,13 +21562,15 @@ module.exports = function (p) {
       .attr('d', function (d) { return hexbin.hexagon(radiusScale(d.length)) })
       .attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ')' })
       .style('fill', p.color)
+      .style('stroke', 'black')
+      .style('stroke-width', '1px')
     hexagon.exit().remove()
   }
 
   return draw
 }
 
-},{"../lib/d3-plugins/hexbin":1,"d3":5,"debug":6}],15:[function(require,module,exports){
+},{"../lib/d3-plugins/hexbin":1,"d3":5,"debug":6}],16:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('map')
@@ -21505,6 +21580,7 @@ var d3 = require('d3')
 var store = require('./store')
 var geoMap = require('./geoMap')
 var hexbinMap = require('./hexbinMap')
+var eventMap = require('./eventMap')
 
 var componentName = 'map'
 
@@ -21553,12 +21629,17 @@ module.exports = function (p) {
         color: 'red',
         data: store.get('roadkill')
       }, props)))
+      .call(eventMap(Object.assign({
+        className: 'construct',
+        color: 'red',
+        data: store.get('construct')
+      }, props)))
   }
 
   return draw
 }
 
-},{"./geoMap":13,"./hexbinMap":14,"./store":16,"d3":5,"debug":6}],16:[function(require,module,exports){
+},{"./eventMap":13,"./geoMap":14,"./hexbinMap":15,"./store":17,"d3":5,"debug":6}],17:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('store')
@@ -21573,7 +21654,8 @@ var store = {
   },
   filters: {
     animal: crossfilter(),
-    roadkill: crossfilter()
+    roadkill: crossfilter(),
+    construct: crossfilter()
   },
   dimensions: {}
 }
@@ -21602,7 +21684,7 @@ store.loadGeo = function () {
 }
 
 store.loadAnimal = function () {
-  d3.csv('data/topic_animal.csv')
+  d3.csv('data/tapir.csv')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -21612,18 +21694,18 @@ store.loadAnimal = function () {
         return
       }
       store.filters.animal.add(data.map(function (d) {
-        var date = new Date(d.CollectedDateTime)
+        var date = new Date(d['採集日'])
         return {
-          id: 'tesri-' + date.getTime(),
+          id: d['永久識別碼'],
           date: date,
-          lngLat: [+d.Longitude, +d.Latitude],
-          latLng: [+d.Latitude, +d.Longitude]
+          latLng: [+d['緯度'], +d['經度']],
+          lngLat: [+d['經度'], +d['緯度']]
         }
       }))
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
-      if (store.data.focused) {
+      if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focused.date
+          return d < store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -21643,9 +21725,9 @@ store.loadAnimal = function () {
         }
       }))
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
-      if (store.data.focused) {
+      if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focused.date
+          return d < store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -21667,7 +21749,7 @@ store.loadRoadkill = function () {
           id: 'roadkilltw-' + d.SerialNo,
           date: new Date(d.ObserveDate),
           lngLat: [+d.WGS84Lon, +d.WGS84Lat],
-          latlng: [+d.WGS84Lat, +d.WGS84Lon]
+          latLng: [+d.WGS84Lat, +d.WGS84Lon]
         }
       }))
       store.dimensions.roadkill = store.filters.roadkill.dimension(function (d) {
@@ -21690,30 +21772,56 @@ store.loadTimeline = function () {
       store.data.timeline = data.map(function (d) {
         return {
           date: d['日期 '],
-          category: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
+          tags: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
           link: d['資訊連結'],
           title: d['事件'],
           ref: d['資料來源（e-info或其他媒體）'],
           location: (d['經度（路殺或目擊事件才需登）'] ? [d['經度（路殺或目擊事件才需登）'], d['緯度（路殺或目擊事件才需登）']] : undefined)
         }
       })
-      store.data.timelineFilter = crossfilter(store.data.timeline)
-      store.data.timelineDate = store.data.timelineFilter.dimension(function (d) { return d.date })
+      dispatch.update()
+    })
+}
+
+store.loadConstruct = function () {
+  d3.json('data/construct.geojson')
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.filters.construct.add(data.features.map(function (d) {
+        return {
+          name: d.properties.name,
+          date: new Date('2008/01/01'),
+          lngLat: d.geometry.coordinates,
+          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
+        }
+      }))
+      store.dimensions.construct = store.filters.construct.dimension(function (d) {
+        return d.date
+      })
       dispatch.update()
     })
 }
 
 store.handle = function (act) {
   debug('handle ' + act.name)
-  if (act.name === 'focused') {
+  if (act.name === 'focuseEvent') {
     debug(act.opts)
-    store.data.focused = act.opts
+    store.data.focusedEvent = act.opts
     if (store.dimensions.animal) {
       store.dimensions.animal.filter(function (d) {
-        return d < store.data.focused.date
+        return d < store.data.focusedEvent.date
       })
     }
     debug(store.dimensions.animal.top(1000))
+    dispatch.update()
+  } else if (act.name === 'setHeight') {
+    store.data.height = act.opts
+    dispatch.update()
+  } else if (act.name === 'focusTag') {
+    store.data.focusTags = act.opts
     dispatch.update()
   }
 }
@@ -21721,6 +21829,7 @@ store.handle = function (act) {
 store.init = function () {
   store.loadGeo()
   store.loadAnimal()
+  store.loadConstruct()
   store.loadRoadkill()
   store.loadTimeline()
   action.on('run', store.handle.bind(store))
@@ -21740,6 +21849,47 @@ store.get = function () {
     }
     return []
   }
+  if (arguments[0] === 'construct') {
+    if (store.dimensions.construct) {
+      return store.dimensions.construct.top(Infinity)
+    }
+  }
+  if (arguments[0] === 'tag') {
+    return [
+      {
+        name: '路殺',
+        color: 'red'
+      },
+      // {
+        // name: '獸鋏',
+        // color: 'rgb(228, 26, 28)'
+      // },
+      // {
+        // name: '衝突',
+        // color: 'rgb(214, 39, 40)'
+      // },
+      {
+        name: '苗50線',
+        color: 'rgb(255, 127, 0)'
+      },
+      {
+        name: '三義外環道',
+        color: 'rgb(255, 217, 47)'
+      },
+      {
+        name: '後龍殯葬園區',
+        color: 'rgb(229, 196, 148)'
+      },
+      // {
+        // name: '石虎研究',
+        // color: 'rgb(116, 196, 118)'
+      // },
+      {
+        name: '友善農耕',
+        color: 'rgb(44, 160, 44)'
+      }
+    ]
+  }
   if (arguments.length > 0) {
     for (var r = store.data, i = 0; i < arguments.length; i++) {
       r = r[arguments[i]]
@@ -21755,10 +21905,9 @@ store.get = function () {
 
 module.exports = store
 
-},{"./action":11,"crossfilter":4,"d3":5,"debug":6,"topojson":10}],17:[function(require,module,exports){
+},{"./action":11,"crossfilter":4,"d3":5,"debug":6,"topojson":10}],18:[function(require,module,exports){
 'use strict'
 
-require('debug').enable('*')
 var debug = require('debug')('timeline')
 
 var d3 = require('d3')
@@ -21773,10 +21922,9 @@ var action = require('./action')
 module.exports = function (p) {
 
   var props = Object.assign({
-    margin: { top: 0, right: 0, bottom: 0, left: 30 },
+    margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 0,
-    height: 0,
-    focused: 0
+    height: 0
   }, p || {})
 
   var div
@@ -21787,7 +21935,7 @@ module.exports = function (p) {
   $(window).on('scroll', debounce(handleScroll))
 
   function debounce (func) {
-    var wait = 10
+    var wait = 0
     var count
     return function () {
       if (count) { clearTimeout(count) }
@@ -21796,19 +21944,18 @@ module.exports = function (p) {
   }
 
   function handleScroll () {
-
     if (tops.length === 0) return
-    var i = props.focused
+    var i = props.focusedEvent ? props.focusedEvent.value : 0
     var scroll = $(window).scrollTop()
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
-    if (i !== props.focused) {
-      action.run('focused', { value: i, date: tops[i].date })
+    if (undefined === props.focusedEvent || i !== props.focusedEvent.value) {
+      action.run('focuseEvent', { value: i, date: tops[i].date, tags: tops[i].tags })
     }
   }
 
   function eventHTML (d) {
-    return '<h3>' + d.date + '</h3><p>' + ' [' + d.category.join('][') + '] ' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + d.ref + (d.location ? '(' + d.location.join(',') + ')' : '') + '</div>'
+    return '<h3>' + d.date + '</h3><p>' + d.title + '<a href="' + d.link + '" target="_blank">&raquo;</a></p>'
   }
 
   function drawTimeline (data) {
@@ -21816,11 +21963,11 @@ module.exports = function (p) {
 
     var events = div.selectAll('div.event')
       .data(data)
-      .classed('focused', function (d, i) { return i === props.focused })
+      .classed('focused', function (d, i) { return props.focusedEvent && i === props.focusedEvent.value })
       .html(eventHTML)
     events.enter().append('div')
       .classed('event', true)
-      .classed('focused', function (d, i) { return i === props.focused })
+      .classed('focused', function (d, i) { return props.focusedEvent && i === props.focusedEvent.value })
       .html(eventHTML)
     events.exit().remove()
 
@@ -21828,9 +21975,17 @@ module.exports = function (p) {
     events[0].forEach(function (e, i) {
       tops.push({
         date: new Date(data[i].date),
-        top: $(e).offset().top
+        top: $(e).offset().top,
+        tags: data[i].tags
       })
     })
+    if (events[0].length > 0) {
+      var lastEvent = $(events[0][events[0].length - 1])
+      var timelineHeight = lastEvent.offset().top + lastEvent.outerHeight()
+      if (props.height !== timelineHeight) {
+        action.run('setHeight', timelineHeight)
+      }
+    }
   }
 
   function draw (selection) {
@@ -21842,12 +21997,14 @@ module.exports = function (p) {
       .style('margin-right', props.margin.right + 'px')
       .style('margin-bottom', props.margin.bottom + 'px')
       .style('margin-left', props.margin.left + 'px')
+      .style('width', props.width + 'px')
     div.enter().append('div')
       .classed(componentName, true)
       .style('margin-top', props.margin.top + 'px')
       .style('margin-right', props.margin.right + 'px')
       .style('margin-bottom', props.margin.bottom + 'px')
       .style('margin-left', props.margin.left + 'px')
+      .style('width', props.width + 'px')
     div.exit().remove()
 
     drawTimeline(store.get('timeline') || [])
@@ -21856,4 +22013,4 @@ module.exports = function (p) {
   return draw
 }
 
-},{"../lib/d3-plugins/timeline":2,"./action":11,"./store":16,"d3":5,"debug":6,"jquery":9}]},{},[12]);
+},{"../lib/d3-plugins/timeline":2,"./action":11,"./store":17,"d3":5,"debug":6,"jquery":9}]},{},[12]);

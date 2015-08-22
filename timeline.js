@@ -21240,7 +21240,8 @@ var store = {
   },
   filters: {
     animal: crossfilter(),
-    roadkill: crossfilter()
+    roadkill: crossfilter(),
+    construct: crossfilter()
   },
   dimensions: {}
 }
@@ -21269,7 +21270,7 @@ store.loadGeo = function () {
 }
 
 store.loadAnimal = function () {
-  d3.csv('data/topic_animal.csv')
+  d3.csv('data/tapir.csv')
     .on('progress', function () {
       dispatch.loading(d3.event.loaded)
     })
@@ -21279,18 +21280,18 @@ store.loadAnimal = function () {
         return
       }
       store.filters.animal.add(data.map(function (d) {
-        var date = new Date(d.CollectedDateTime)
+        var date = new Date(d['採集日'])
         return {
-          id: 'tesri-' + date.getTime(),
+          id: d['永久識別碼'],
           date: date,
-          lngLat: [+d.Longitude, +d.Latitude],
-          latLng: [+d.Latitude, +d.Longitude]
+          latLng: [+d['緯度'], +d['經度']],
+          lngLat: [+d['經度'], +d['緯度']]
         }
       }))
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
-      if (store.data.focused) {
+      if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focused.date
+          return d < store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -21310,9 +21311,9 @@ store.loadAnimal = function () {
         }
       }))
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
-      if (store.data.focused) {
+      if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focused.date
+          return d < store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -21334,7 +21335,7 @@ store.loadRoadkill = function () {
           id: 'roadkilltw-' + d.SerialNo,
           date: new Date(d.ObserveDate),
           lngLat: [+d.WGS84Lon, +d.WGS84Lat],
-          latlng: [+d.WGS84Lat, +d.WGS84Lon]
+          latLng: [+d.WGS84Lat, +d.WGS84Lon]
         }
       }))
       store.dimensions.roadkill = store.filters.roadkill.dimension(function (d) {
@@ -21357,30 +21358,56 @@ store.loadTimeline = function () {
       store.data.timeline = data.map(function (d) {
         return {
           date: d['日期 '],
-          category: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
+          tags: d['分類（以逗號分隔：開發案, 路殺, 衝突, 友善農耕,石虎研究）'].split(/,\s*/),
           link: d['資訊連結'],
           title: d['事件'],
           ref: d['資料來源（e-info或其他媒體）'],
           location: (d['經度（路殺或目擊事件才需登）'] ? [d['經度（路殺或目擊事件才需登）'], d['緯度（路殺或目擊事件才需登）']] : undefined)
         }
       })
-      store.data.timelineFilter = crossfilter(store.data.timeline)
-      store.data.timelineDate = store.data.timelineFilter.dimension(function (d) { return d.date })
+      dispatch.update()
+    })
+}
+
+store.loadConstruct = function () {
+  d3.json('data/construct.geojson')
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.filters.construct.add(data.features.map(function (d) {
+        return {
+          name: d.properties.name,
+          date: new Date('2008/01/01'),
+          lngLat: d.geometry.coordinates,
+          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
+        }
+      }))
+      store.dimensions.construct = store.filters.construct.dimension(function (d) {
+        return d.date
+      })
       dispatch.update()
     })
 }
 
 store.handle = function (act) {
   debug('handle ' + act.name)
-  if (act.name === 'focused') {
+  if (act.name === 'focuseEvent') {
     debug(act.opts)
-    store.data.focused = act.opts
+    store.data.focusedEvent = act.opts
     if (store.dimensions.animal) {
       store.dimensions.animal.filter(function (d) {
-        return d < store.data.focused.date
+        return d < store.data.focusedEvent.date
       })
     }
     debug(store.dimensions.animal.top(1000))
+    dispatch.update()
+  } else if (act.name === 'setHeight') {
+    store.data.height = act.opts
+    dispatch.update()
+  } else if (act.name === 'focusTag') {
+    store.data.focusTags = act.opts
     dispatch.update()
   }
 }
@@ -21388,6 +21415,7 @@ store.handle = function (act) {
 store.init = function () {
   store.loadGeo()
   store.loadAnimal()
+  store.loadConstruct()
   store.loadRoadkill()
   store.loadTimeline()
   action.on('run', store.handle.bind(store))
@@ -21407,6 +21435,47 @@ store.get = function () {
     }
     return []
   }
+  if (arguments[0] === 'construct') {
+    if (store.dimensions.construct) {
+      return store.dimensions.construct.top(Infinity)
+    }
+  }
+  if (arguments[0] === 'tag') {
+    return [
+      {
+        name: '路殺',
+        color: 'red'
+      },
+      // {
+        // name: '獸鋏',
+        // color: 'rgb(228, 26, 28)'
+      // },
+      // {
+        // name: '衝突',
+        // color: 'rgb(214, 39, 40)'
+      // },
+      {
+        name: '苗50線',
+        color: 'rgb(255, 127, 0)'
+      },
+      {
+        name: '三義外環道',
+        color: 'rgb(255, 217, 47)'
+      },
+      {
+        name: '後龍殯葬園區',
+        color: 'rgb(229, 196, 148)'
+      },
+      // {
+        // name: '石虎研究',
+        // color: 'rgb(116, 196, 118)'
+      // },
+      {
+        name: '友善農耕',
+        color: 'rgb(44, 160, 44)'
+      }
+    ]
+  }
   if (arguments.length > 0) {
     for (var r = store.data, i = 0; i < arguments.length; i++) {
       r = r[arguments[i]]
@@ -21425,7 +21494,6 @@ module.exports = store
 },{"./action":10,"crossfilter":3,"d3":4,"debug":5,"topojson":9}],12:[function(require,module,exports){
 'use strict'
 
-require('debug').enable('*')
 var debug = require('debug')('timeline')
 
 var d3 = require('d3')
@@ -21440,10 +21508,9 @@ var action = require('./action')
 module.exports = function (p) {
 
   var props = Object.assign({
-    margin: { top: 0, right: 0, bottom: 0, left: 30 },
+    margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 0,
-    height: 0,
-    focused: 0
+    height: 0
   }, p || {})
 
   var div
@@ -21454,7 +21521,7 @@ module.exports = function (p) {
   $(window).on('scroll', debounce(handleScroll))
 
   function debounce (func) {
-    var wait = 10
+    var wait = 0
     var count
     return function () {
       if (count) { clearTimeout(count) }
@@ -21463,19 +21530,18 @@ module.exports = function (p) {
   }
 
   function handleScroll () {
-
     if (tops.length === 0) return
-    var i = props.focused
+    var i = props.focusedEvent ? props.focusedEvent.value : 0
     var scroll = $(window).scrollTop()
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
-    if (i !== props.focused) {
-      action.run('focused', { value: i, date: tops[i].date })
+    if (undefined === props.focusedEvent || i !== props.focusedEvent.value) {
+      action.run('focuseEvent', { value: i, date: tops[i].date, tags: tops[i].tags })
     }
   }
 
   function eventHTML (d) {
-    return '<h3>' + d.date + '</h3><p>' + ' [' + d.category.join('][') + '] ' + '<a href="' + d.link + '" target="_blank">' + d.title + '</a></p><div style="font-size: 12px">' + d.ref + (d.location ? '(' + d.location.join(',') + ')' : '') + '</div>'
+    return '<h3>' + d.date + '</h3><p>' + d.title + '<a href="' + d.link + '" target="_blank">&raquo;</a></p>'
   }
 
   function drawTimeline (data) {
@@ -21483,11 +21549,11 @@ module.exports = function (p) {
 
     var events = div.selectAll('div.event')
       .data(data)
-      .classed('focused', function (d, i) { return i === props.focused })
+      .classed('focused', function (d, i) { return props.focusedEvent && i === props.focusedEvent.value })
       .html(eventHTML)
     events.enter().append('div')
       .classed('event', true)
-      .classed('focused', function (d, i) { return i === props.focused })
+      .classed('focused', function (d, i) { return props.focusedEvent && i === props.focusedEvent.value })
       .html(eventHTML)
     events.exit().remove()
 
@@ -21495,9 +21561,17 @@ module.exports = function (p) {
     events[0].forEach(function (e, i) {
       tops.push({
         date: new Date(data[i].date),
-        top: $(e).offset().top
+        top: $(e).offset().top,
+        tags: data[i].tags
       })
     })
+    if (events[0].length > 0) {
+      var lastEvent = $(events[0][events[0].length - 1])
+      var timelineHeight = lastEvent.offset().top + lastEvent.outerHeight()
+      if (props.height !== timelineHeight) {
+        action.run('setHeight', timelineHeight)
+      }
+    }
   }
 
   function draw (selection) {
@@ -21509,12 +21583,14 @@ module.exports = function (p) {
       .style('margin-right', props.margin.right + 'px')
       .style('margin-bottom', props.margin.bottom + 'px')
       .style('margin-left', props.margin.left + 'px')
+      .style('width', props.width + 'px')
     div.enter().append('div')
       .classed(componentName, true)
       .style('margin-top', props.margin.top + 'px')
       .style('margin-right', props.margin.right + 'px')
       .style('margin-bottom', props.margin.bottom + 'px')
       .style('margin-left', props.margin.left + 'px')
+      .style('width', props.width + 'px')
     div.exit().remove()
 
     drawTimeline(store.get('timeline') || [])
