@@ -21338,10 +21338,10 @@ module.exports = action
 },{"d3":5,"debug":6}],12:[function(require,module,exports){
 'use strict'
 
-require('debug').enable('*')
+require('debug').disable('*')
 
 var d3 = require('d3')
-var $map, $timeline, $tagsline
+var $header, $map, $timeline
 
 var store = require('./store')
 
@@ -21350,9 +21350,9 @@ var timeline = require('./timeline')
 // var tagsline = require('./tagsline')
 
 function init () {
+  $header = d3.select('header')
   $map = d3.select('.map')
   $timeline = d3.select('.timeline')
-  $tagsline = d3.select('.tagsline')
   store.init()
 }
 
@@ -21705,7 +21705,7 @@ store.loadAnimal = function () {
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
       if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -21727,7 +21727,7 @@ store.loadAnimal = function () {
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
       if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -21755,6 +21755,38 @@ store.loadRoadkill = function () {
       store.dimensions.roadkill = store.filters.roadkill.dimension(function (d) {
         return d.date
       })
+      if (store.data.focusedEvent) {
+        store.dimensions.roadkill.filter(function (d) {
+          return d <= store.data.focusedEvent.date
+        })
+      }
+      dispatch.update()
+    })
+}
+
+store.loadConstruct = function () {
+  d3.json('data/construct.geojson')
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.filters.construct.add(data.features.map(function (d) {
+        return {
+          name: d.properties.name,
+          date: new Date(d.properties.date),
+          lngLat: d.geometry.coordinates,
+          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
+        }
+      }))
+      store.dimensions.construct = store.filters.construct.dimension(function (d) {
+        return d.date
+      })
+      if (store.data.focusedEvent) {
+        store.dimensions.construct.filter(function (d) {
+          return d <= store.data.focusedEvent.date
+        })
+      }
       dispatch.update()
     })
 }
@@ -21783,28 +21815,6 @@ store.loadTimeline = function () {
     })
 }
 
-store.loadConstruct = function () {
-  d3.json('data/construct.geojson')
-    .get(function (err, data) {
-      if (err) {
-        debug(err)
-        return
-      }
-      store.filters.construct.add(data.features.map(function (d) {
-        return {
-          name: d.properties.name,
-          date: new Date('2008/01/01'),
-          lngLat: d.geometry.coordinates,
-          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
-        }
-      }))
-      store.dimensions.construct = store.filters.construct.dimension(function (d) {
-        return d.date
-      })
-      dispatch.update()
-    })
-}
-
 store.handle = function (act) {
   debug('handle ' + act.name)
   if (act.name === 'focuseEvent') {
@@ -21812,10 +21822,19 @@ store.handle = function (act) {
     store.data.focusedEvent = act.opts
     if (store.dimensions.animal) {
       store.dimensions.animal.filter(function (d) {
-        return d < store.data.focusedEvent.date
+        return d <= store.data.focusedEvent.date
       })
     }
-    debug(store.dimensions.animal.top(1000))
+    if (store.dimensions.roadkill) {
+      store.dimensions.roadkill.filter(function (d) {
+        return d <= store.data.focusedEvent.date
+      })
+    }
+    if (store.dimensions.construct) {
+      store.dimensions.construct.filter(function (d) {
+        return d <= store.data.focusedEvent.date
+      })
+    }
     dispatch.update()
   } else if (act.name === 'setHeight') {
     store.data.height = act.opts
@@ -21853,6 +21872,7 @@ store.get = function () {
     if (store.dimensions.construct) {
       return store.dimensions.construct.top(Infinity)
     }
+    return []
   }
   if (arguments[0] === 'tag') {
     return [
@@ -21923,6 +21943,7 @@ module.exports = function (p) {
 
   var props = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
+    scrollSpace: 70,
     width: 0,
     height: 0
   }, p || {})
@@ -21946,7 +21967,7 @@ module.exports = function (p) {
   function handleScroll () {
     if (tops.length === 0) return
     var i = props.focusedEvent ? props.focusedEvent.value : 0
-    var scroll = $(window).scrollTop()
+    var scroll = $(window).scrollTop() + props.scrollSpace
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
     if (undefined === props.focusedEvent || i !== props.focusedEvent.value) {

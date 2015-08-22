@@ -12400,7 +12400,7 @@ store.loadAnimal = function () {
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
       if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -12422,7 +12422,7 @@ store.loadAnimal = function () {
       store.dimensions.animal = store.filters.animal.dimension(function (d) { return d.date })
       if (store.data.focusedEvent) {
         store.dimensions.animal.filter(function (d) {
-          return d < store.data.focusedEvent.date
+          return d <= store.data.focusedEvent.date
         })
       }
       dispatch.update()
@@ -12450,6 +12450,38 @@ store.loadRoadkill = function () {
       store.dimensions.roadkill = store.filters.roadkill.dimension(function (d) {
         return d.date
       })
+      if (store.data.focusedEvent) {
+        store.dimensions.roadkill.filter(function (d) {
+          return d <= store.data.focusedEvent.date
+        })
+      }
+      dispatch.update()
+    })
+}
+
+store.loadConstruct = function () {
+  d3.json('data/construct.geojson')
+    .get(function (err, data) {
+      if (err) {
+        debug(err)
+        return
+      }
+      store.filters.construct.add(data.features.map(function (d) {
+        return {
+          name: d.properties.name,
+          date: new Date(d.properties.date),
+          lngLat: d.geometry.coordinates,
+          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
+        }
+      }))
+      store.dimensions.construct = store.filters.construct.dimension(function (d) {
+        return d.date
+      })
+      if (store.data.focusedEvent) {
+        store.dimensions.construct.filter(function (d) {
+          return d <= store.data.focusedEvent.date
+        })
+      }
       dispatch.update()
     })
 }
@@ -12478,28 +12510,6 @@ store.loadTimeline = function () {
     })
 }
 
-store.loadConstruct = function () {
-  d3.json('data/construct.geojson')
-    .get(function (err, data) {
-      if (err) {
-        debug(err)
-        return
-      }
-      store.filters.construct.add(data.features.map(function (d) {
-        return {
-          name: d.properties.name,
-          date: new Date('2008/01/01'),
-          lngLat: d.geometry.coordinates,
-          latLng: [d.geometry.coordinates[1], d.geometry.coordinates[0]]
-        }
-      }))
-      store.dimensions.construct = store.filters.construct.dimension(function (d) {
-        return d.date
-      })
-      dispatch.update()
-    })
-}
-
 store.handle = function (act) {
   debug('handle ' + act.name)
   if (act.name === 'focuseEvent') {
@@ -12507,10 +12517,19 @@ store.handle = function (act) {
     store.data.focusedEvent = act.opts
     if (store.dimensions.animal) {
       store.dimensions.animal.filter(function (d) {
-        return d < store.data.focusedEvent.date
+        return d <= store.data.focusedEvent.date
       })
     }
-    debug(store.dimensions.animal.top(1000))
+    if (store.dimensions.roadkill) {
+      store.dimensions.roadkill.filter(function (d) {
+        return d <= store.data.focusedEvent.date
+      })
+    }
+    if (store.dimensions.construct) {
+      store.dimensions.construct.filter(function (d) {
+        return d <= store.data.focusedEvent.date
+      })
+    }
     dispatch.update()
   } else if (act.name === 'setHeight') {
     store.data.height = act.opts
@@ -12548,6 +12567,7 @@ store.get = function () {
     if (store.dimensions.construct) {
       return store.dimensions.construct.top(Infinity)
     }
+    return []
   }
   if (arguments[0] === 'tag') {
     return [
