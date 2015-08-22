@@ -52,6 +52,21 @@
           24.155133619966076
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "highway": "unclassified",
+        "date": "2014/03/07",
+        "name": "三義外環道"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7645,
+          24.4058
+        ]
+      }
     }
   ]
 }
