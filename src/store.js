@@ -150,7 +150,7 @@ store.loadConstruct = function () {
 }
 
 store.loadTimeline = function () {
-  d3.csv('http://cors.io/?u=https://docs.google.com/spreadsheets/d/1J3Sm3MURwI9ZErjcxdxNEkm9Cfactw0Na6KD65NcYcA/pub?output=csv')
+  d3.csv('data/timeline.csv')
     .on('progress', function () {
       dispatch.loading(d3.event.loading)
     })
