@@ -3,7 +3,7 @@
 require('debug').disable('*')
 
 var d3 = require('d3')
-var $map, $timeline, $tagsline
+var $header, $map, $timeline
 
 var store = require('./store')
 
@@ -12,9 +12,9 @@ var timeline = require('./timeline')
 // var tagsline = require('./tagsline')
 
 function init () {
+  $header = d3.select('header')
   $map = d3.select('.map')
   $timeline = d3.select('.timeline')
-  $tagsline = d3.select('.tagsline')
   store.init()
 }
 

@@ -15,6 +15,7 @@ module.exports = function (p) {
 
   var props = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
+    scrollSpace: 70,
     width: 0,
     height: 0
   }, p || {})
@@ -38,7 +39,7 @@ module.exports = function (p) {
   function handleScroll () {
     if (tops.length === 0) return
     var i = props.focusedEvent ? props.focusedEvent.value : 0
-    var scroll = $(window).scrollTop()
+    var scroll = $(window).scrollTop() + props.scrollSpace
     while (i >= tops.length || (i >= 0 && tops[i].top > scroll)) i--
     while (i < 0 || tops[i].top <= scroll) i++
     if (undefined === props.focusedEvent || i !== props.focusedEvent.value) {
