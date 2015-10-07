@@ -21409,7 +21409,7 @@ function debounce (func) {
 d3.select(window).on('load', init)
 d3.select(window).on('resize', debounce(draw))
 
-},{"./map":16,"./store":17,"./timeline":18,"d3":5,"debug":6}],13:[function(require,module,exports){
+},{"./map":17,"./store":18,"./timeline":19,"d3":5,"debug":6}],13:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('eventMap')
@@ -21536,7 +21536,7 @@ module.exports = function (p) {
   return draw
 }
 
-},{"./store":17,"d3":5,"debug":6}],15:[function(require,module,exports){
+},{"./store":18,"d3":5,"debug":6}],15:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('hexbinMap')
@@ -21605,6 +21605,56 @@ module.exports = function (p) {
 },{"../lib/d3-plugins/hexbin":1,"d3":5,"debug":6}],16:[function(require,module,exports){
 'use strict'
 
+var componentName = 'legend'
+
+module.exports = function (p) {
+  var props = Object.assign({
+    itemWidth: 40,
+    itemHeight: 20
+  }, p || {})
+
+  var hexLegends = [
+    {
+      radius: 12,
+      text: '10~12 次'
+    },
+    {
+      radius: 2,
+      text: '2~4 次'
+    }
+  ]
+
+  function drawHexLegend (selection) {
+    var section = selection.append('div')
+      .classed('hexbin', true)
+    section.append('div')
+      .classed('title', true)
+      .text('石虎出現次數')
+    var item = section.selectAll('div.item')
+      .data(hexLegends)
+    //item.append('svg')
+  }
+
+  function drawDotLegend (selection) {
+  }
+
+  function draw (selection) {
+    var g = selection.selectAll('div.' + componentName)
+      .data([0])
+      .style({ top: props.top + 'px', left: props.left + 'px' })
+    g.enter().append('div')
+      .classed(componentName, true)
+      .style({ top: props.top + 'px', left: props.left + 'px' })
+      .call(drawHexLegend)
+      .call(drawDotLegend)
+  }
+
+  return draw
+}
+
+},{}],17:[function(require,module,exports){
+'use strict'
+
 var debug = require('debug')('map')
 
 var d3 = require('d3')
@@ -21613,11 +21663,11 @@ var store = require('./store')
 var geoMap = require('./geoMap')
 var hexbinMap = require('./hexbinMap')
 var eventMap = require('./eventMap')
+var legend = require('./legend')
 
 var componentName = 'map'
 
 module.exports = function (p) {
-
   var props = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 800,
@@ -21666,12 +21716,20 @@ module.exports = function (p) {
         color: 'red',
         data: store.get('construct')
       }, props)))
+
+    selection
+      .call(legend({
+        width: 120,
+        height: 240,
+        top: props.height - 240 - 80,
+        left: props.width - 120 - 20
+      }))
   }
 
   return draw
 }
 
-},{"./eventMap":13,"./geoMap":14,"./hexbinMap":15,"./store":17,"d3":5,"debug":6}],17:[function(require,module,exports){
+},{"./eventMap":13,"./geoMap":14,"./hexbinMap":15,"./legend":16,"./store":18,"d3":5,"debug":6}],18:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('store')
@@ -21957,7 +22015,7 @@ store.get = function () {
 
 module.exports = store
 
-},{"./action":11,"crossfilter":4,"d3":5,"debug":6,"topojson":10}],18:[function(require,module,exports){
+},{"./action":11,"crossfilter":4,"d3":5,"debug":6,"topojson":10}],19:[function(require,module,exports){
 'use strict'
 
 var debug = require('debug')('timeline')
@@ -22066,4 +22124,4 @@ module.exports = function (p) {
   return draw
 }
 
-},{"../lib/d3-plugins/timeline":2,"./action":11,"./store":17,"d3":5,"debug":6,"jquery":9}]},{},[12]);
+},{"../lib/d3-plugins/timeline":2,"./action":11,"./store":18,"d3":5,"debug":6,"jquery":9}]},{},[12]);

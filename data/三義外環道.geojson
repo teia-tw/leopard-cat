@@ -1,0 +1,2862 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2015-08-25T17:52:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/274485525",
+      "properties": {
+        "@id": "way/274485525",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7809236,
+            24.4625762
+          ],
+          [
+            120.7802549,
+            24.4613838
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/274485526",
+      "properties": {
+        "@id": "way/274485526",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7570047,
+            24.3936192
+          ],
+          [
+            120.7566867,
+            24.393874
+          ],
+          [
+            120.7564663,
+            24.394042
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054990",
+      "properties": {
+        "@id": "way/275054990",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7604906,
+            24.4072344
+          ],
+          [
+            120.761962,
+            24.4085269
+          ],
+          [
+            120.762172,
+            24.4088241
+          ],
+          [
+            120.7627501,
+            24.4095406
+          ],
+          [
+            120.7636383,
+            24.4107519
+          ],
+          [
+            120.7641675,
+            24.4112157
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054991",
+      "properties": {
+        "@id": "way/275054991",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "tunnel": "yes",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7603957,
+            24.4073162
+          ],
+          [
+            120.7592127,
+            24.4062707
+          ],
+          [
+            120.7582892,
+            24.4049525
+          ],
+          [
+            120.757413,
+            24.4033318
+          ],
+          [
+            120.7573807,
+            24.4031433
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054992",
+      "properties": {
+        "@id": "way/275054992",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "tunnel": "yes",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7574706,
+            24.4031342
+          ],
+          [
+            120.7575155,
+            24.4033251
+          ],
+          [
+            120.7583891,
+            24.4048934
+          ],
+          [
+            120.7592826,
+            24.4061798
+          ],
+          [
+            120.7604906,
+            24.4072344
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054993",
+      "properties": {
+        "@id": "way/275054993",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7573807,
+            24.4031433
+          ],
+          [
+            120.7573109,
+            24.4029115
+          ],
+          [
+            120.7572381,
+            24.4027307
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054994",
+      "properties": {
+        "@id": "way/275054994",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "tunnel": "yes",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7572381,
+            24.4027307
+          ],
+          [
+            120.7567418,
+            24.4014977
+          ],
+          [
+            120.7566205,
+            24.4008889
+          ],
+          [
+            120.7557634,
+            24.3990475
+          ],
+          [
+            120.7548885,
+            24.3973524
+          ],
+          [
+            120.7547789,
+            24.3968448
+          ],
+          [
+            120.7547606,
+            24.3963122
+          ],
+          [
+            120.7550987,
+            24.3952221
+          ],
+          [
+            120.7554967,
+            24.394774
+          ],
+          [
+            120.7559221,
+            24.3943058
+          ],
+          [
+            120.7564128,
+            24.3939624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054995",
+      "properties": {
+        "@id": "way/275054995",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7573151,
+            24.4027079
+          ],
+          [
+            120.7573907,
+            24.4029069
+          ],
+          [
+            120.7574706,
+            24.4031342
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054996",
+      "properties": {
+        "@id": "way/275054996",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "tunnel": "yes",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7564663,
+            24.394042
+          ],
+          [
+            120.7559577,
+            24.3944084
+          ],
+          [
+            120.7556732,
+            24.3947323
+          ],
+          [
+            120.7551992,
+            24.3952637
+          ],
+          [
+            120.7551078,
+            24.3955549
+          ],
+          [
+            120.7548611,
+            24.3963455
+          ],
+          [
+            120.7548899,
+            24.3968609
+          ],
+          [
+            120.7549947,
+            24.39732
+          ],
+          [
+            120.7558682,
+            24.3990248
+          ],
+          [
+            120.7567069,
+            24.4008477
+          ],
+          [
+            120.7568416,
+            24.4014613
+          ],
+          [
+            120.7573151,
+            24.4027079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054997",
+      "properties": {
+        "@id": "way/275054997",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7564128,
+            24.3939624
+          ],
+          [
+            120.756954,
+            24.3935426
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075262",
+      "properties": {
+        "@id": "way/275075262",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7701136,
+            24.4192097
+          ],
+          [
+            120.7717425,
+            24.4207556
+          ],
+          [
+            120.772234,
+            24.4215496
+          ],
+          [
+            120.7722481,
+            24.422259
+          ],
+          [
+            120.7721406,
+            24.4233337
+          ],
+          [
+            120.7720892,
+            24.4240069
+          ],
+          [
+            120.7722473,
+            24.4254936
+          ],
+          [
+            120.7726145,
+            24.4269773
+          ],
+          [
+            120.7730444,
+            24.4289186
+          ],
+          [
+            120.7731505,
+            24.4300292
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075264",
+      "properties": {
+        "@id": "way/275075264",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7699317,
+            24.4192817
+          ],
+          [
+            120.7689519,
+            24.4181079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075265",
+      "properties": {
+        "@id": "way/275075265",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.773038,
+            24.4300291
+          ],
+          [
+            120.772882,
+            24.4288837
+          ],
+          [
+            120.77247,
+            24.4270318
+          ],
+          [
+            120.7721485,
+            24.4254864
+          ],
+          [
+            120.7719823,
+            24.4239779
+          ],
+          [
+            120.7720209,
+            24.4233185
+          ],
+          [
+            120.7721065,
+            24.4222547
+          ],
+          [
+            120.7720923,
+            24.4215969
+          ],
+          [
+            120.7716079,
+            24.4208757
+          ],
+          [
+            120.7699317,
+            24.4192817
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075267",
+      "properties": {
+        "@id": "way/275075267",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7731505,
+            24.4300292
+          ],
+          [
+            120.7733051,
+            24.4311163
+          ],
+          [
+            120.7738571,
+            24.4355838
+          ],
+          [
+            120.7751003,
+            24.4460249
+          ],
+          [
+            120.7771392,
+            24.452058
+          ],
+          [
+            120.777906,
+            24.4567108
+          ],
+          [
+            120.7786292,
+            24.4582436
+          ],
+          [
+            120.7792141,
+            24.4592771
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075269",
+      "properties": {
+        "@id": "way/275075269",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7690679,
+            24.4180114
+          ],
+          [
+            120.7701136,
+            24.4192097
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075270",
+      "properties": {
+        "@id": "way/275075270",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7689519,
+            24.4181079
+          ],
+          [
+            120.7687128,
+            24.417725
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075272",
+      "properties": {
+        "@id": "way/275075272",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7688547,
+            24.4176701
+          ],
+          [
+            120.7690679,
+            24.4180114
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075274",
+      "properties": {
+        "@id": "way/275075274",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7687128,
+            24.417725
+          ],
+          [
+            120.767217,
+            24.41533
+          ],
+          [
+            120.7667235,
+            24.4146428
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075275",
+      "properties": {
+        "@id": "way/275075275",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7668622,
+            24.4145922
+          ],
+          [
+            120.7673624,
+            24.4152813
+          ],
+          [
+            120.7688547,
+            24.4176701
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075277",
+      "properties": {
+        "@id": "way/275075277",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7665118,
+            24.4141095
+          ],
+          [
+            120.7668622,
+            24.4145922
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075278",
+      "properties": {
+        "@id": "way/275075278",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7667235,
+            24.4146428
+          ],
+          [
+            120.7663701,
+            24.4141507
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075280",
+      "properties": {
+        "@id": "way/275075280",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7663701,
+            24.4141507
+          ],
+          [
+            120.7647305,
+            24.4118676
+          ],
+          [
+            120.764375,
+            24.411565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075281",
+      "properties": {
+        "@id": "way/275075281",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7644836,
+            24.4114928
+          ],
+          [
+            120.7648377,
+            24.4118032
+          ],
+          [
+            120.7665118,
+            24.4141095
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075283",
+      "properties": {
+        "@id": "way/275075283",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.764375,
+            24.411565
+          ],
+          [
+            120.7640442,
+            24.4112833
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075285",
+      "properties": {
+        "@id": "way/275075285",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7641675,
+            24.4112157
+          ],
+          [
+            120.7644836,
+            24.4114928
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075287",
+      "properties": {
+        "@id": "way/275075287",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7640442,
+            24.4112833
+          ],
+          [
+            120.7635264,
+            24.4108424
+          ],
+          [
+            120.7626309,
+            24.4096057
+          ],
+          [
+            120.7620706,
+            24.4088946
+          ],
+          [
+            120.761868,
+            24.4085907
+          ],
+          [
+            120.7603957,
+            24.4073162
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075289",
+      "properties": {
+        "@id": "way/275075289",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7802549,
+            24.4613838
+          ],
+          [
+            120.7800563,
+            24.4609911
+          ],
+          [
+            120.7790703,
+            24.4593082
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075290",
+      "properties": {
+        "@id": "way/275075290",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7803322,
+            24.4611881
+          ],
+          [
+            120.7810009,
+            24.4625312
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075292",
+      "properties": {
+        "@id": "way/275075292",
+        "bridge": "yes",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7792141,
+            24.4592771
+          ],
+          [
+            120.780181,
+            24.4608905
+          ],
+          [
+            120.7803322,
+            24.4611881
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075293",
+      "properties": {
+        "@id": "way/275075293",
+        "highway": "proposed",
+        "name": "台13線外環道路三義段",
+        "oneway": "yes",
+        "proposed": "primary",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7790703,
+            24.4593082
+          ],
+          [
+            120.7784785,
+            24.4582911
+          ],
+          [
+            120.7777711,
+            24.4567289
+          ],
+          [
+            120.777,
+            24.4520369
+          ],
+          [
+            120.7749424,
+            24.445968
+          ],
+          [
+            120.773681,
+            24.4354968
+          ],
+          [
+            120.7731873,
+            24.4311366
+          ],
+          [
+            120.773038,
+            24.4300291
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/274485526",
+      "properties": {
+        "@id": "way/274485526",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7570047,
+            24.3936192
+          ],
+          [
+            120.7566867,
+            24.393874
+          ],
+          [
+            120.7564663,
+            24.394042
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054994",
+      "properties": {
+        "@id": "way/275054994",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7572381,
+            24.4027307
+          ],
+          [
+            120.7567418,
+            24.4014977
+          ],
+          [
+            120.7566205,
+            24.4008889
+          ],
+          [
+            120.7557634,
+            24.3990475
+          ],
+          [
+            120.7548885,
+            24.3973524
+          ],
+          [
+            120.7547789,
+            24.3968448
+          ],
+          [
+            120.7547606,
+            24.3963122
+          ],
+          [
+            120.7550987,
+            24.3952221
+          ],
+          [
+            120.7554967,
+            24.394774
+          ],
+          [
+            120.7559221,
+            24.3943058
+          ],
+          [
+            120.7564128,
+            24.3939624
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054996",
+      "properties": {
+        "@id": "way/275054996",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7564663,
+            24.394042
+          ],
+          [
+            120.7559577,
+            24.3944084
+          ],
+          [
+            120.7556732,
+            24.3947323
+          ],
+          [
+            120.7551992,
+            24.3952637
+          ],
+          [
+            120.7551078,
+            24.3955549
+          ],
+          [
+            120.7548611,
+            24.3963455
+          ],
+          [
+            120.7548899,
+            24.3968609
+          ],
+          [
+            120.7549947,
+            24.39732
+          ],
+          [
+            120.7558682,
+            24.3990248
+          ],
+          [
+            120.7567069,
+            24.4008477
+          ],
+          [
+            120.7568416,
+            24.4014613
+          ],
+          [
+            120.7573151,
+            24.4027079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054997",
+      "properties": {
+        "@id": "way/275054997",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7564128,
+            24.3939624
+          ],
+          [
+            120.756954,
+            24.3935426
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075267",
+      "properties": {
+        "@id": "way/275075267",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7731505,
+            24.4300292
+          ],
+          [
+            120.7733051,
+            24.4311163
+          ],
+          [
+            120.7738571,
+            24.4355838
+          ],
+          [
+            120.7751003,
+            24.4460249
+          ],
+          [
+            120.7771392,
+            24.452058
+          ],
+          [
+            120.777906,
+            24.4567108
+          ],
+          [
+            120.7786292,
+            24.4582436
+          ],
+          [
+            120.7792141,
+            24.4592771
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075293",
+      "properties": {
+        "@id": "way/275075293",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7790703,
+            24.4593082
+          ],
+          [
+            120.7784785,
+            24.4582911
+          ],
+          [
+            120.7777711,
+            24.4567289
+          ],
+          [
+            120.777,
+            24.4520369
+          ],
+          [
+            120.7749424,
+            24.445968
+          ],
+          [
+            120.773681,
+            24.4354968
+          ],
+          [
+            120.7731873,
+            24.4311366
+          ],
+          [
+            120.773038,
+            24.4300291
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054990",
+      "properties": {
+        "@id": "way/275054990",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7604906,
+            24.4072344
+          ],
+          [
+            120.761962,
+            24.4085269
+          ],
+          [
+            120.762172,
+            24.4088241
+          ],
+          [
+            120.7627501,
+            24.4095406
+          ],
+          [
+            120.7636383,
+            24.4107519
+          ],
+          [
+            120.7641675,
+            24.4112157
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075287",
+      "properties": {
+        "@id": "way/275075287",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7640442,
+            24.4112833
+          ],
+          [
+            120.7635264,
+            24.4108424
+          ],
+          [
+            120.7626309,
+            24.4096057
+          ],
+          [
+            120.7620706,
+            24.4088946
+          ],
+          [
+            120.761868,
+            24.4085907
+          ],
+          [
+            120.7603957,
+            24.4073162
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054991",
+      "properties": {
+        "@id": "way/275054991",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7603957,
+            24.4073162
+          ],
+          [
+            120.7592127,
+            24.4062707
+          ],
+          [
+            120.7582892,
+            24.4049525
+          ],
+          [
+            120.757413,
+            24.4033318
+          ],
+          [
+            120.7573807,
+            24.4031433
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054992",
+      "properties": {
+        "@id": "way/275054992",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7574706,
+            24.4031342
+          ],
+          [
+            120.7575155,
+            24.4033251
+          ],
+          [
+            120.7583891,
+            24.4048934
+          ],
+          [
+            120.7592826,
+            24.4061798
+          ],
+          [
+            120.7604906,
+            24.4072344
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054993",
+      "properties": {
+        "@id": "way/275054993",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7573807,
+            24.4031433
+          ],
+          [
+            120.7573109,
+            24.4029115
+          ],
+          [
+            120.7572381,
+            24.4027307
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275054995",
+      "properties": {
+        "@id": "way/275054995",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7573151,
+            24.4027079
+          ],
+          [
+            120.7573907,
+            24.4029069
+          ],
+          [
+            120.7574706,
+            24.4031342
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075277",
+      "properties": {
+        "@id": "way/275075277",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7665118,
+            24.4141095
+          ],
+          [
+            120.7668622,
+            24.4145922
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075278",
+      "properties": {
+        "@id": "way/275075278",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7667235,
+            24.4146428
+          ],
+          [
+            120.7663701,
+            24.4141507
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075280",
+      "properties": {
+        "@id": "way/275075280",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7663701,
+            24.4141507
+          ],
+          [
+            120.7647305,
+            24.4118676
+          ],
+          [
+            120.764375,
+            24.411565
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075281",
+      "properties": {
+        "@id": "way/275075281",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7644836,
+            24.4114928
+          ],
+          [
+            120.7648377,
+            24.4118032
+          ],
+          [
+            120.7665118,
+            24.4141095
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075283",
+      "properties": {
+        "@id": "way/275075283",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.764375,
+            24.411565
+          ],
+          [
+            120.7640442,
+            24.4112833
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075285",
+      "properties": {
+        "@id": "way/275075285",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7641675,
+            24.4112157
+          ],
+          [
+            120.7644836,
+            24.4114928
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075264",
+      "properties": {
+        "@id": "way/275075264",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7699317,
+            24.4192817
+          ],
+          [
+            120.7689519,
+            24.4181079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075269",
+      "properties": {
+        "@id": "way/275075269",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7690679,
+            24.4180114
+          ],
+          [
+            120.7701136,
+            24.4192097
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075274",
+      "properties": {
+        "@id": "way/275075274",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7687128,
+            24.417725
+          ],
+          [
+            120.767217,
+            24.41533
+          ],
+          [
+            120.7667235,
+            24.4146428
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075275",
+      "properties": {
+        "@id": "way/275075275",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7668622,
+            24.4145922
+          ],
+          [
+            120.7673624,
+            24.4152813
+          ],
+          [
+            120.7688547,
+            24.4176701
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075270",
+      "properties": {
+        "@id": "way/275075270",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7689519,
+            24.4181079
+          ],
+          [
+            120.7687128,
+            24.417725
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075272",
+      "properties": {
+        "@id": "way/275075272",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7688547,
+            24.4176701
+          ],
+          [
+            120.7690679,
+            24.4180114
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075262",
+      "properties": {
+        "@id": "way/275075262",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7701136,
+            24.4192097
+          ],
+          [
+            120.7717425,
+            24.4207556
+          ],
+          [
+            120.772234,
+            24.4215496
+          ],
+          [
+            120.7722481,
+            24.422259
+          ],
+          [
+            120.7721406,
+            24.4233337
+          ],
+          [
+            120.7720892,
+            24.4240069
+          ],
+          [
+            120.7722473,
+            24.4254936
+          ],
+          [
+            120.7726145,
+            24.4269773
+          ],
+          [
+            120.7730444,
+            24.4289186
+          ],
+          [
+            120.7731505,
+            24.4300292
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075265",
+      "properties": {
+        "@id": "way/275075265",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.773038,
+            24.4300291
+          ],
+          [
+            120.772882,
+            24.4288837
+          ],
+          [
+            120.77247,
+            24.4270318
+          ],
+          [
+            120.7721485,
+            24.4254864
+          ],
+          [
+            120.7719823,
+            24.4239779
+          ],
+          [
+            120.7720209,
+            24.4233185
+          ],
+          [
+            120.7721065,
+            24.4222547
+          ],
+          [
+            120.7720923,
+            24.4215969
+          ],
+          [
+            120.7716079,
+            24.4208757
+          ],
+          [
+            120.7699317,
+            24.4192817
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075289",
+      "properties": {
+        "@id": "way/275075289",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7802549,
+            24.4613838
+          ],
+          [
+            120.7800563,
+            24.4609911
+          ],
+          [
+            120.7790703,
+            24.4593082
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075290",
+      "properties": {
+        "@id": "way/275075290",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7803322,
+            24.4611881
+          ],
+          [
+            120.7810009,
+            24.4625312
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/275075292",
+      "properties": {
+        "@id": "way/275075292",
+        "@relations": [
+          {
+            "role": "north",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7792141,
+            24.4592771
+          ],
+          [
+            120.780181,
+            24.4608905
+          ],
+          [
+            120.7803322,
+            24.4611881
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/274485525",
+      "properties": {
+        "@id": "way/274485525",
+        "@relations": [
+          {
+            "role": "south",
+            "rel": 3661511,
+            "reltags": {
+              "name": "台13線外環道路三義段",
+              "network": "臺灣省道",
+              "network:en": "Taiwan Provincial Highway",
+              "network:zh": "臺灣省道",
+              "ref": "13",
+              "route": "road",
+              "status": "proposed",
+              "type": "route"
+            }
+          }
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.7809236,
+            24.4625762
+          ],
+          [
+            120.7802549,
+            24.4613838
+          ]
+        ]
+      }
+    }
+  ]
+}
