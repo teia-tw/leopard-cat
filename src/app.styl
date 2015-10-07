@@ -1,11 +1,76 @@
-header-height = 100px
+bar-height = 36px
+header-height = 410px
+//green-color = #83ad35
+green-color = #659f2d
+orange-color = #ff9500
+ocean-color = #a8c9d3
 
 body
   margin 0
   padding 0
 
+p
+  font-size 18px
+  line-height 1.8em
+
+.container
+  position relative
+
+.app.bar
+  width 100%
+  height bar-height
+  background green-color
+  color #fff
+  font-size 16px
+  position fixed
+  top 0
+
+a.app.logo
+.app.social.links a
+  line-height bar-height
+  color #fff
+  text-decoration none
+  vertical-align middle
+  display inline-block
+  height bar-height
+
+a.app.logo
+  padding 0 6px 0 1px
+
+.app.social.links a
+  padding 0 6px
+  &:hover
+    color orange-color
+
+i.logo
+  background-image url("einfo-logo.png")
+  background-size contain
+  height bar-height - 4px
+  width bar-height - 4px
+  margin 2px
+  display inline-block
+  vertical-align middle
+
+i.teia
+
+.app.bar .app.title
+  position absolute
+  left 50%
+  transform translateX(-50%)
+  line-height bar-height
+  top 0
+
+.app.social.links
+  float right
+  padding-right 4px
+
 .app.header
+  margin-top bar-height + 40px
   height header-height
+  .container
+    max-width 600px
+    margin 0 auto
+    text-align center
 
 .app.content
   width 100%
