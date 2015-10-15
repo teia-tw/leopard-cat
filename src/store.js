@@ -1,6 +1,6 @@
 'use strict'
 
-var debug = require('debug')('store')
+var debug = require('debug')('leopard-cat:store')
 
 var d3 = require('d3')
 var topojson = require('topojson')
@@ -24,6 +24,11 @@ var dispatch = d3.dispatch(
   'update'
 )
 d3.rebind(store, dispatch, 'on')
+
+store.loadLayout = function () {
+  store.data.height = 0
+  store.data.width = parseInt(d3.select('body').style('width'), 10)
+}
 
 store.loadGeo = function () {
   d3.json('data/twCounty2010.topo.json')
@@ -197,6 +202,9 @@ store.handle = function (act) {
   } else if (act.name === 'setHeight') {
     store.data.height = act.opts
     dispatch.update()
+  } else if (act.name === 'setWidth') {
+    store.data.width = act.opts
+    dispatch.update()
   } else if (act.name === 'focusTag') {
     store.data.focusTags = act.opts
     dispatch.update()
@@ -204,6 +212,7 @@ store.handle = function (act) {
 }
 
 store.init = function () {
+  store.loadLayout()
   store.loadGeo()
   store.loadAnimal()
   store.loadConstruct()

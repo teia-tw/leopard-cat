@@ -1,9 +1,8 @@
 'use strict'
 
-var debug = require('debug')('timeline')
+var debug = require('debug')('leopard-cat:timeline')
 
-var d3 = require('d3')
-d3.layout.timeline = require('../lib/d3-plugins/timeline')
+var debounce = require('debounce')
 var $ = require('jquery')
 
 var componentName = 'timeline'
@@ -12,7 +11,6 @@ var store = require('./store')
 var action = require('./action')
 
 module.exports = function (p) {
-
   var props = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     scrollSpace: 70,
@@ -25,16 +23,7 @@ module.exports = function (p) {
 
   // hack
   $(window).off('scroll')
-  $(window).on('scroll', debounce(handleScroll))
-
-  function debounce (func) {
-    var wait = 0
-    var count
-    return function () {
-      if (count) { clearTimeout(count) }
-      count = setTimeout(func, wait)
-    }
-  }
+  $(window).on('scroll', debounce(handleScroll, 10))
 
   function handleScroll () {
     if (tops.length === 0) return
