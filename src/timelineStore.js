@@ -1,10 +1,15 @@
 
 var debug = require('debug')('leopard-cat:timelineStore')
 var dispatcher = require('./dispatcher')
+var uiStore = require('./uiStore')
 var d3 = require('d3')
+var jquery = require('jquery')
+var debounce = require('debounce')
 var dispatch = d3.dispatch('loading', 'ready')
 var timelineStore = {
-  _data: []
+  _data: [],
+  _focused: undefined,
+  _focusOffsetTop: undefined
 }
 d3.rebind(timelineStore, dispatch, 'on')
 module.exports = timelineStore
@@ -12,9 +17,10 @@ module.exports = timelineStore
 dispatcher.on('action.timeline', function (action) {
   debug(action)
   if (action.type === 'load') {
+    timelineStore._focusOffsetTop = jquery(window).height() / 4
     d3.csv('data/timeline.csv')
       .on('progress', function () {
-        dispatch.loading()
+        dispatch.loading(action)
       })
       .get(function (err, data) {
         if (err) {
@@ -31,8 +37,40 @@ dispatcher.on('action.timeline', function (action) {
             location: (d['經度（路殺或目擊事件才需登）'] ? [d['經度（路殺或目擊事件才需登）'], d['緯度（路殺或目擊事件才需登）']] : undefined)
           }
         })
-        dispatch.ready()
+        dispatch.ready(action)
       })
+  } else if (action.type === 'saveOffset') {
+    timelineStore._data[action.payload.i].offsetTop = action.payload.offsetTop
+    // fires nothing
+  } else if (action.type === 'uiResize') {
+    timelineStore._data = timelineStore._data.map(function (d) {
+      d.offsetTop = undefined
+      return d
+    })
+    timelineStore._focusOffsetTop = jquery(window).height() / 4
+  } else if (action.type === 'uiScroll') {
+    // poor man's waitFor()
+    debounce(function () {
+      if (timelineStore._focused === undefined) {
+        timelineStore._focused = 0
+        timelineStore._data[timelineStore._focused].focused = true
+        dispatch.ready(action)
+      } else {
+        var i = timelineStore._focused
+        while (timelineStore._data[i].offsetTop < uiStore.scrollTop + timelineStore._focusOffsetTop) {
+          i++
+        }
+        while (i > 0 && timelineStore._data[i - 1].offsetTop > uiStore.scrollTop + timelineStore._focusOffsetTop) {
+          i--
+        }
+        if (i !== timelineStore._focused) {
+          timelineStore._data[timelineStore._focused].focused = undefined
+          timelineStore._focused = i
+          timelineStore._data[timelineStore._focused].focused = true
+          dispatch.ready(action)
+        }
+      }
+    }, 16)()
   }
 })
 

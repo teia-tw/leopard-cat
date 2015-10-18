@@ -13,12 +13,15 @@ module.exports = uiStore
 dispatcher.on('action', function (action) {
   debug(action)
   if (action.type === 'load') {
-    dispatch.loading()
+    dispatch.loading(action)
     uiStore.width = parseInt(d3.select('body').style('width'), 10)
     uiStore.height = parseInt(d3.select('body').style('height'), 10)
-    dispatch.ready()
+    dispatch.ready(action)
   } else if (action.type === 'uiResize') {
     uiStore.width = parseInt(d3.select('body').style('width'), 10)
-    dispatch.ready()
+    dispatch.ready(action)
+  } else if (action.type === 'uiScroll') {
+    uiStore.scrollTop = d3.select('html')[0][0].scrollTop
+    dispatch.ready(action)
   }
 })
