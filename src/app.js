@@ -1,18 +1,17 @@
 'use strict'
 
-require('debug').disable('*')
-
+require('debug').enable('leopard-cat:*')
+var debug = require('debug')('leopard-cat:app')
 var d3 = require('d3')
-var debounce = require('debounce')
-
-var store = require('./store')
-var action = require('./action')
-var map = require('./map')
+var timelineStore = require('./timelineStore')
+var dispatcher = require('./dispatcher')
+// var map = require('./map')
 var timeline = require('./timeline')
 // var tagsline = require('./tagsline')
 
-var $map, $timeline
+// var debounce = require('debounce')
 
+// Object.assign polyfill
 if (!Object.assign) {
   Object.defineProperty(Object, 'assign', {
     enumerable: false,
@@ -46,29 +45,37 @@ if (!Object.assign) {
   })
 }
 
-function init () {
-  $map = d3.select('.map')
-  $timeline = d3.select('.timeline')
-  store.on('update', draw)
-  d3.select(window).on('resize', debounce(handleWidth, 10))
-  store.init()
+function load () {
+  debug('load')
+  d3.select('#app').call(draw)
+  // d3.select(window).on('resize', debounce(handleWidth, 10))
+  dispatcher.action({
+    type: 'load'
+  })
 }
 
-function handleWidth () {
-  action.run('setWidth', parseInt(d3.select('body').style('width'), 10))
-}
-
-function draw () {
-  $timeline.call(timeline({
-    width: (store.get('width') / 2) - 1,
-    height: store.get('height'),
-    focusedEvent: store.get('focusedEvent')
-  }))
-  $map.call(map({
-    width: (store.get('width') / 2) - 1,
-    date: store.get('focused') !== undefined ? store.get('focused').date : undefined
-  }))
+function draw (selection) {
+  // var $map = d3.select('.map')
+  var $timeline = d3.select('.timeline')
+  // $timeline.call(timeline({
+    // width: (store.get('width') / 2) - 1,
+    // height: store.get('height'),
+    // focusedEvent: store.get('focusedEvent')
+  // }))
+  // $map.call(map({
+    // width: (store.get('width') / 2) - 1,
+    // date: store.get('focused') !== undefined ? store.get('focused').date : undefined,
+    // fixed: store.get('mapFixed')
+  // }))
 // $tagsline.call(tagsline({ width: 100, height: store.get('height') || 0 }))
+
+  function update (selection) {
+    debug('ready')
+    $timeline.call(timeline({
+      events: timelineStore.allTimeline()
+    }))
+  }
+  timelineStore.on('ready', update.bind(null, selection))
 }
 
-d3.select(window).on('load', init)
+d3.select(window).on('load', load)

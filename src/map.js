@@ -12,7 +12,6 @@ var eventMap = require('./eventMap')
 var componentName = 'map'
 
 module.exports = function (p) {
-
   var props = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     width: 800,
@@ -20,13 +19,22 @@ module.exports = function (p) {
     projection: d3.geo.mercator().center([121.65, 24.20]).scale(20000)
   }, p || {})
 
+  var svg
+
   function draw (selection) {
     debug('draw with %o', props)
 
-    var svg = selection.selectAll('svg.' + componentName)
+    svg = selection.selectAll('svg.' + componentName)
       .data([0])
       .attr('width', props.width)
       .attr('height', props.height)
+      .style(props.fixed ? {
+        position: 'fixed',
+        left: 0,
+        top: 0
+      } : {
+        position: 'inherit'
+      })
     svg.enter().append('svg')
       .classed(componentName, true)
       .attr('width', props.width)

@@ -3,9 +3,11 @@
 var debug = require('debug')('leopard-cat:store')
 
 var d3 = require('d3')
+var dispatcher = require('./dispatcher')
+var debounce = require('debounce')
+var $ = require('jquery')
 var topojson = require('topojson')
 var crossfilter = require('crossfilter')
-var action = require('./action')
 
 var store = {
   data: {
@@ -25,9 +27,16 @@ var dispatch = d3.dispatch(
 )
 d3.rebind(store, dispatch, 'on')
 
+store.updateScroll = function () {
+  store.data.scrollTop = $(window).scrollTop()
+  debug(store.data.scrollTop)
+  dispatch.update()
+}
+
 store.loadLayout = function () {
   store.data.height = 0
   store.data.width = parseInt(d3.select('body').style('width'), 10)
+  store.data.mapFixed = false
 }
 
 store.loadGeo = function () {
@@ -218,7 +227,8 @@ store.init = function () {
   store.loadConstruct()
   store.loadRoadkill()
   store.loadTimeline()
-  action.on('run', store.handle.bind(store))
+  dispatcher.on('update', store.handle.bind(store))
+  $(window).on('scroll', debounce(store.updateScroll.bind(store), 10))
   dispatch.ready()
 }
 
