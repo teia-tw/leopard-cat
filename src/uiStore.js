@@ -17,5 +17,8 @@ dispatcher.on('action', function (action) {
     uiStore.width = parseInt(d3.select('body').style('width'), 10)
     uiStore.height = parseInt(d3.select('body').style('height'), 10)
     dispatch.ready()
+  } else if (action.type === 'uiResize') {
+    uiStore.width = parseInt(d3.select('body').style('width'), 10)
+    dispatch.ready()
   }
 })

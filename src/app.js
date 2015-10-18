@@ -49,7 +49,10 @@ if (!Object.assign) {
 function load () {
   debug('load')
   d3.select('#app').call(draw)
-  // d3.select(window).on('resize', debounce(handleWidth, 10))
+  d3.select(window).on('resize', dispatcher.action.bind(null, {
+    type: 'uiResize'
+  }))
+  d3.select(window).on('scroll', function () { debug(d3.select('body')[0][0].scrollTop) })
   dispatcher.action({
     type: 'load'
   })
