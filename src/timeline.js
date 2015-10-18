@@ -11,8 +11,6 @@ module.exports = function (s) {
   var settings = Object.assign({
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     scrollSpace: 70,
-    width: 0,
-    height: 0
   }, s || {})
 
   var tops = []
@@ -80,7 +78,7 @@ module.exports = function (s) {
         'margin-right': settings.margin.right + 'px',
         'margin-bottom': settings.margin.bottom + 'px',
         'margin-left': settings.margin.left + 'px',
-        'width': settings.width + 'px'
+        'width': settings.ui.width / 2 + 'px'
       })
     container.enter().append('div')
       .classed(componentName, true)
@@ -89,7 +87,7 @@ module.exports = function (s) {
         'margin-right': settings.margin.right + 'px',
         'margin-bottom': settings.margin.bottom + 'px',
         'margin-left': settings.margin.left + 'px',
-        'width': settings.width + 'px'
+        'width': settings.ui.width / 2 + 'px'
       })
     container.exit().remove()
 

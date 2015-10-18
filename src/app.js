@@ -4,12 +4,13 @@ require('debug').enable('leopard-cat:*')
 var debug = require('debug')('leopard-cat:app')
 var d3 = require('d3')
 var timelineStore = require('./timelineStore')
+var uiStore = require('./uiStore')
 var dispatcher = require('./dispatcher')
 // var map = require('./map')
 var timeline = require('./timeline')
 // var tagsline = require('./tagsline')
 
-// var debounce = require('debounce')
+var debounce = require('debounce')
 
 // Object.assign polyfill
 if (!Object.assign) {
@@ -72,10 +73,12 @@ function draw (selection) {
   function update (selection) {
     debug('ready')
     $timeline.call(timeline({
-      events: timelineStore.allTimeline()
+      events: timelineStore.allTimeline(),
+      ui: uiStore
     }))
   }
-  timelineStore.on('ready', update.bind(null, selection))
+  timelineStore.on('ready', debounce(update.bind(null, selection), 10))
+  uiStore.on('ready', debounce(update.bind(null, selection), 10))
 }
 
 d3.select(window).on('load', load)
